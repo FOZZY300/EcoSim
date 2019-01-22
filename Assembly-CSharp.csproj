@@ -61,7 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <None Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\shader info.txt" />
+    <None Include="Assets\Foresty stuff\Trees\laxer tree pkg\README.txt" />
+    <None Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
+    <None Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Will/Documents/EcoSim/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
