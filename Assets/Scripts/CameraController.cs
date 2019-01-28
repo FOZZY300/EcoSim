@@ -11,7 +11,6 @@ public class CameraController : MonoBehaviour
         float c_Position = camera.transform.position.y;
         float speed = c_Position * 0.04f;
         
-
         Vector3 p_Velocity = new Vector3(0, 0, 0);
         
         Vector3 p_Zoom = new Vector3();        
