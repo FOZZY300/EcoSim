@@ -61,22 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <None Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\shader info.txt" />
-    <None Include="Assets\Foresty stuff\Trees\laxer tree pkg\README.txt" />
-    <None Include="Assets\Foresty stuff\Trees\Tree1\ReadMe.txt" />
-    <None Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
-    <None Include="Assets\Foresty stuff\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Will/Documents/EcoSim/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

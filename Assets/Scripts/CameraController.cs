@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
         
 
         Vector3 p_Velocity = new Vector3(0, 0, 0);
-        Vector3 p_Angle = new Vector3();
+        
         Vector3 p_Zoom = new Vector3();        
         int zoom_Speed = 10;
     
@@ -22,11 +22,11 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            p_Velocity += new Vector3(0, 1 * speed, 1 * speed);
+            p_Velocity += new Vector3(0, 0, 1 * speed);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            p_Velocity += new Vector3(0, -1 * speed, -1 * speed);
+            p_Velocity += new Vector3(0, 0, -1 * speed);
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -36,18 +36,8 @@ public class CameraController : MonoBehaviour
         {
             p_Velocity += new Vector3(1 * speed, 0, 0);
         }
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            p_Angle += new Vector3(0, 1, 0);
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            p_Angle += new Vector3(0, -1, 0);
-        }
-
+        
         transform.Translate(p_Zoom);
-        transform.Rotate(p_Angle, Space.World);
-        transform.Translate(p_Velocity);
+        transform.Translate(p_Velocity, Space.World);
     } 
 }
