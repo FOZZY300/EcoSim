@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour
 {
     public Camera m_OrthographicCamera;
     
-    void Update()
+    void FixedUpdate()
     {
         // Adjustable values
         int edgeSize = 10;                          // Size of the margin at the edge of the screen to allow the curser to move the camera
