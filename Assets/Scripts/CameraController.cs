@@ -4,14 +4,14 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
     public Camera m_OrthographicCamera;
-    
-    void FixedUpdate()
-    {
-        // Adjustable values
-        int edgeSize = 10;                          // Size of the margin at the edge of the screen to allow the curser to move the camera
-        float cameraSpeed = 1.0f;                   // Camera scroll speed
-        float zoomSpeed = 2.0f;                     // Camera zoom speed
 
+    // Adjustable values
+    public int edgeSize = 10;                          // Size of the margin at the edge of the screen to allow the curser to move the camera
+    public float cameraSpeed = 1.0f;                   // Camera scroll speed
+    public float zoomSpeed = 2.0f;                     // Camera zoom speed
+
+    void FixedUpdate()
+    {       
         //Camera restraints
         //int maxX, minX, maxY, minY, minZoom, maxZoom;
         
