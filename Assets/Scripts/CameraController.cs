@@ -6,24 +6,34 @@ public class CameraController : MonoBehaviour
     public Camera m_OrthographicCamera;
 
     // Adjustable values
-    public int edgeSize = 10;                          // Size of the margin at the edge of the screen to allow the curser to move the camera
-    public float cameraSpeed = 1.0f;                   // Camera scroll speed
-    public float zoomSpeed = 2.0f;                     // Camera zoom speed
+    public int edgeSize = 10;                           // Size of the margin at the edge of the screen to allow the curser to move the camera
+    public float cameraSpeed = 1.0f;                    // Camera scroll speed
+    public float zoomSpeed = 2.0f;                      // Camera zoom speed
+    public float minZoom = 1.0f;                        // Most zoomed in 
+    public float maxZoom = 30.0f;                       // Most zoomed out
+
+    //Camera restraints
+    //int maxX, minX, maxY, minY;
 
     void FixedUpdate()
-    {       
-        //Camera restraints
-        //int maxX, minX, maxY, minY, minZoom, maxZoom;
-        
-        
+    {              
+        float zoom = Input.GetAxis("Mouse ScrollWheel");
+        m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * m_OrthographicCamera.orthographicSize/5;                          // Camera zoom
+
+        if (m_OrthographicCamera.orthographicSize < minZoom)
+        {
+            m_OrthographicCamera.orthographicSize = minZoom;
+        }
+        if (m_OrthographicCamera.orthographicSize > maxZoom)
+        {
+            m_OrthographicCamera.orthographicSize = maxZoom;
+        }
+
         Vector3 up = new Vector3(0, 1, 0);
         Vector3 down = new Vector3(0, -1, 0);
         Vector3 left = new Vector3(-1, 0, 0);
         Vector3 right = new Vector3(1, 0, 0);
 
-        float zoom = Input.GetAxis("Mouse ScrollWheel");
-        m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed;                          // Camera zoom
-                
         Vector3 p_Velocity = new Vector3();
         Vector3 m_Position = new Vector3();
         m_Position = Input.mousePosition;
