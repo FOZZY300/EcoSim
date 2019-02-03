@@ -4,28 +4,54 @@ using UnityEngine;
 
 public class In_Game_UI : MonoBehaviour
 {
-    public void PauseMenu()
+    public GameObject pauseMenuUI;
+    public static bool GameIsFrozen = false;
+     
+    private void Start()
     {
-        //Pause menu
-        Debug.Log("Pause Menu");
-
+        pauseMenuUI.SetActive(false);
     }
+
+    public void OpenPauseMenu()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        Pause_Menu.GameIsPaused = true;
+
+        Debug.Log("Opened Pause Menu");
+    }
+
+    public void ClosePauseMenu()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        Pause_Menu.GameIsPaused = false;
+
+        Debug.Log("Closed Pause Menu");
+    }
+
 
     public void FreezTime()
     {
-        Debug.Log("Freez Time");
+        Time.timeScale = 0f;
+        GameIsFrozen = true;
 
+        Debug.Log("Freez Time");
     }
 
     public void NormalTime()
     {
-        Debug.Log("Normla Time");
+        Time.timeScale = 1f;
+        GameIsFrozen = false;
 
+        Debug.Log("Normla Time");
     }
 
     public void FastForwardTime()
     {
-        Debug.Log("Fast-forward Time");
+        Time.timeScale = 2f;
+        GameIsFrozen = false;
 
+        Debug.Log("Fast-forward Time");
     }
 }

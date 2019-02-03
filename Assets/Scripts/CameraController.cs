@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
     //Camera restraints
     //int maxX, minX, maxY, minY;
 
-    void FixedUpdate()
+    void Update()
     {              
         float zoom = Input.GetAxis("Mouse ScrollWheel");
         float speedChange = m_OrthographicCamera.orthographicSize / 5;                      //Changes the speed of the camera based on size

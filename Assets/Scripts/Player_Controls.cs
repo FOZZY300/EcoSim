@@ -4,21 +4,41 @@ using UnityEngine;
 
 public class Player_Controls : MonoBehaviour
 {
-    // Update is called once per frame
-    In_Game_UI gui = new In_Game_UI();
+    In_Game_UI igu;
 
-    void FixedUpdate()
+    private void Start()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        igu = FindObjectOfType<In_Game_UI>();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gui.PauseMenu();
-        }
-        
-        if (Input.GetKey(KeyCode.P))
-        {
-            gui.FreezTime();
+            Debug.Log("Escape");
+
+            if (!Pause_Menu.GameIsPaused)
+            {
+                igu.OpenPauseMenu();
+            }
+            else
+            {
+                igu.ClosePauseMenu();
+            }
         }
 
-        
+        if (!Pause_Menu.GameIsPaused)                                          // Stop the controls from funtioning in the pause menu.
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                if (!In_Game_UI.GameIsFrozen)
+                {
+                    igu.FreezTime();
+                }
+                else
+                {
+                    igu.NormalTime();
+                }
+            }
+        }    
     }
 }
