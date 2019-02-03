@@ -17,7 +17,7 @@ public class Day_Night_Cycle : MonoBehaviour
         sunLight.color = Color.white;
         moonLight.color = colorMoon;
         //time = 0;
-        RotationY = 72f / (600f * dayLength);
+        RotationY = 72f / (600f * dayLength);                       // should prob change this to get fixed time stamp
     }
 
     // Update is called once per frame
@@ -34,6 +34,7 @@ public class Day_Night_Cycle : MonoBehaviour
         moonLight.transform.Rotate(Direction);
 
         // To prevent sunrise and sunset being darker than night. it's kinda weird should probably come up with something better.
+        // This also fucks with day length, definitely needs changing.
         if (moonLight.transform.eulerAngles.y > 160 && moonLight.transform.eulerAngles.y < 200)
         {
             moonLight.transform.Rotate(Direction * 3);

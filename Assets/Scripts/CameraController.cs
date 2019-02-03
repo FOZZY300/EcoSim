@@ -6,11 +6,11 @@ public class CameraController : MonoBehaviour
     public Camera m_OrthographicCamera;
 
     // Adjustable values
-    public int edgeSize = 10;                           // Size of the margin at the edge of the screen to allow the curser to move the camera
-    public float cameraSpeed = 1.0f;                    // Camera scroll speed
-    public float zoomSpeed = 2.0f;                      // Camera zoom speed
-    public float minZoom = 1.0f;                        // Most zoomed in 
-    public float maxZoom = 30.0f;                       // Most zoomed out
+    public int edgeSize;                            // Size of the margin at the edge of the screen to allow the curser to move the camera
+    public float cameraSpeed;                       // Camera scroll speed
+    public float zoomSpeed;                         // Camera zoom speed
+    public float minZoom;                           // Most zoomed in 
+    public float maxZoom;                           // Most zoomed out
 
     //Camera restraints
     //int maxX, minX, maxY, minY;
@@ -18,7 +18,8 @@ public class CameraController : MonoBehaviour
     void FixedUpdate()
     {              
         float zoom = Input.GetAxis("Mouse ScrollWheel");
-        m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * m_OrthographicCamera.orthographicSize/5;                          // Camera zoom
+        float speedChange = m_OrthographicCamera.orthographicSize / 5;                      //Changes the speed of the camera based on size
+        m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * speedChange;            // Camera zoom
 
         if (m_OrthographicCamera.orthographicSize < minZoom)
         {
@@ -40,19 +41,19 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || m_Position[1] > Screen.height - edgeSize)            // up
         {
-            p_Velocity += up * cameraSpeed;
+            p_Velocity += up * cameraSpeed * speedChange;
         }
         if (Input.GetKey(KeyCode.S) || m_Position[1] < edgeSize)                            // down
         {
-            p_Velocity += down * cameraSpeed;
+            p_Velocity += down * cameraSpeed * speedChange;
         }
         if (Input.GetKey(KeyCode.A) || m_Position[0] < edgeSize)                            // left
         {
-            p_Velocity += left * cameraSpeed;
+            p_Velocity += left * cameraSpeed * speedChange;
         }
         if (Input.GetKey(KeyCode.D) || m_Position[0] > Screen.width - edgeSize)             // right
         {
-            p_Velocity += right * cameraSpeed;
+            p_Velocity += right * cameraSpeed * speedChange;
         }
 
         transform.Translate(p_Velocity, Space.World);                                       // Moves camera

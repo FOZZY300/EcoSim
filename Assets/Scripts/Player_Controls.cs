@@ -12,6 +12,13 @@ public class Player_Controls : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             gui.PauseMenu();
-        }       
+        }
+        
+        if (Input.GetKey(KeyCode.P))
+        {
+            gui.FreezTime();
+        }
+
+        
     }
 }
