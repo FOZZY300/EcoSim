@@ -12,13 +12,14 @@ public class CameraController : MonoBehaviour
     public float minZoom;                           // Most zoomed in 
     public float maxZoom;                           // Most zoomed out
 
-    //Camera restraints
+    //Camera restraints. Alos include controls to stop zoom on menu scroll.
     //int maxX, minX, maxY, minY;
 
     void Update()
     {              
         float zoom = Input.GetAxis("Mouse ScrollWheel");
         float speedChange = m_OrthographicCamera.orthographicSize / 5;                      //Changes the speed of the camera based on size
+        
         m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * speedChange;            // Camera zoom
 
         if (m_OrthographicCamera.orthographicSize < minZoom)

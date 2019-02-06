@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.46666667, g: 1, b: 0.46666667, a: 0}
     m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.7058824}
+    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -181,7 +181,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.46666667, g: 1, b: 0.46666667, a: 0}
     m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.7058824}
+    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.46666667, g: 1, b: 0.46666667, a: 0}
     m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.7058824}
+    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

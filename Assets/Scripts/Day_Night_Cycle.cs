@@ -31,17 +31,6 @@ public class Day_Night_Cycle : MonoBehaviour
 
         Vector3 Direction = new Vector3(0, RotationY, 0);
         sunLight.transform.Rotate(Direction);
-        moonLight.transform.Rotate(Direction);
-
-        // To prevent sunrise and sunset being darker than night. it's kinda weird should probably come up with something better.
-        // This also fucks with day length, definitely needs changing.
-        if (moonLight.transform.eulerAngles.y > 160 && moonLight.transform.eulerAngles.y < 200)
-        {
-            moonLight.transform.Rotate(Direction * 3);
-        }
-        if (sunLight.transform.eulerAngles.y > 160 && sunLight.transform.eulerAngles.y < 200)
-        {
-            sunLight.transform.Rotate(Direction * 3);
-        }
+        //moonLight.transform.Rotate(Direction);       
     }
 }
