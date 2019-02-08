@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Player_Controls : MonoBehaviour
 {
-    In_Game_UI igu;
-    Pause_Menu pm;
+    In_Game_UI igu;    
 
     private void Start()
     {
@@ -19,11 +18,11 @@ public class Player_Controls : MonoBehaviour
 
             if (!Pause_Menu.GameIsPaused)
             {
-                igu.MenuButtonPressed();
+                igu.OpenPauseMenu();
             }
             else
             {
-                pm.ResumeButtonPressed();
+                igu.ClosePauseMenu();
             }
         }
 
@@ -33,11 +32,11 @@ public class Player_Controls : MonoBehaviour
             {
                 if (!In_Game_UI.GameIsFrozen)
                 {
-                    igu.PauseButtonPressed();
+                    igu.FreezTime();
                 }
                 else
                 {
-                    igu.PlayButtonPressed();
+                    igu.NormalTime();
                 }
             }
         }    

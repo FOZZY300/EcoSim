@@ -16,21 +16,7 @@ public class CameraController : MonoBehaviour
     //int maxX, minX, maxY, minY;
 
     void Update()
-    {              
-        float zoom = Input.GetAxis("Mouse ScrollWheel");
-        float speedChange = m_OrthographicCamera.orthographicSize / 5;                      //Changes the speed of the camera based on size
-        
-        m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * speedChange;            // Camera zoom
-
-        if (m_OrthographicCamera.orthographicSize < minZoom)
-        {
-            m_OrthographicCamera.orthographicSize = minZoom;
-        }
-        if (m_OrthographicCamera.orthographicSize > maxZoom)
-        {
-            m_OrthographicCamera.orthographicSize = maxZoom;
-        }
-
+    {                      
         Vector3 up = new Vector3(0, 1, 0);
         Vector3 down = new Vector3(0, -1, 0);
         Vector3 left = new Vector3(-1, 0, 0);
@@ -39,6 +25,22 @@ public class CameraController : MonoBehaviour
         Vector3 p_Velocity = new Vector3();
         Vector3 m_Position = new Vector3();
         m_Position = Input.mousePosition;
+
+        float zoom = Input.GetAxis("Mouse ScrollWheel");
+        float speedChange = m_OrthographicCamera.orthographicSize / 5;                      // Changes the speed of the camera based on size
+        if (!Mouse_Over_Object.isOverUI)
+        {
+            m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * speedChange;            // Camera zoom
+        }
+        
+        if (m_OrthographicCamera.orthographicSize < minZoom)
+        {
+            m_OrthographicCamera.orthographicSize = minZoom;
+        }
+        if (m_OrthographicCamera.orthographicSize > maxZoom)
+        {
+            m_OrthographicCamera.orthographicSize = maxZoom;
+        }       
 
         if (Input.GetKey(KeyCode.W) || m_Position[1] > Screen.height - edgeSize)            // up
         {

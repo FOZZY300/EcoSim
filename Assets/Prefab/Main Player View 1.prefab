@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_OrthographicCamera: {fileID: 600974224001092568}
   edgeSize: 5
-  cameraSpeed: 0.5
+  cameraSpeed: 0.25
   zoomSpeed: 2
   minZoom: 1
   maxZoom: 30

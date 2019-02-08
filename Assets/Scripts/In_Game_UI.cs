@@ -11,6 +11,10 @@ public class In_Game_UI : MonoBehaviour
     public GameObject backButton;
     public GameObject normalBottomMiddlePanel;
     public GameObject minimisedBottomMiddlePanel;
+    public GameObject carnivoresPanel;
+    public GameObject omnivoresPanel;
+    public GameObject herbivoresPanel;
+    //public GameObject clock;
 
     public static bool GameIsFrozen = false;
 
@@ -23,27 +27,28 @@ public class In_Game_UI : MonoBehaviour
         animalsPanel.SetActive(false);
         plantsPanel.SetActive(false);
         backButton.SetActive(false);
+        carnivoresPanel.SetActive(false);
+        herbivoresPanel.SetActive(false);
+        omnivoresPanel.SetActive(false);
 
+    }   
+
+    public void CanivoresButtonPressed()
+    {
+        animalsPanel.SetActive(false);
+        carnivoresPanel.SetActive(true);
     }
 
-    public void MenuButtonPressed()
+    public void OmnivoresButtonPressed()
     {
-        OpenPauseMenu();
+        animalsPanel.SetActive(false);
+        omnivoresPanel.SetActive(true);
     }
 
-    public void PauseButtonPressed()
+    public void HerbivoresButtonPressed()
     {
-        FreezTime();
-    }
-
-    public void PlayButtonPressed()
-    {
-        NormalTime();
-    }
-
-    public void FastForwardButtonPressed()
-    {
-        FastForwardTime();
+        animalsPanel.SetActive(false);
+        herbivoresPanel.SetActive(true);
     }
 
     public void MinimiseButtonPressed()
@@ -60,32 +65,46 @@ public class In_Game_UI : MonoBehaviour
 
     public void AnimalsButtonPressed()
     {
-        CloseDefaultBottomLeftPanel();
+        deafaultBottomLeftPanel.SetActive(false);
         OpenAnimalsPanel();
     }
 
     public void PlantsButtonPressed()
     {
-        CloseDefaultBottomLeftPanel();
+        deafaultBottomLeftPanel.SetActive(false);
         OpenPlantsPanel();
-
     }
 
     public void BackButtonPressed()
     {
         if (animalsPanel.activeInHierarchy)
         {
-            CloseAnimalsPanel();
+            animalsPanel.SetActive(false);
             OpenDefaultBottomLeftPanel();
         }
         else if (plantsPanel.activeInHierarchy)
         {
-            ClosePlantsPanel();
+            plantsPanel.SetActive(false);
             OpenDefaultBottomLeftPanel();
+        }
+        else if (carnivoresPanel.activeInHierarchy)
+        {
+            animalsPanel.SetActive(true);
+            carnivoresPanel.SetActive(false);
+        }
+        else if (omnivoresPanel.activeInHierarchy)
+        {
+            animalsPanel.SetActive(true);
+            omnivoresPanel.SetActive(false);
+        }
+        else if (herbivoresPanel.activeInHierarchy)
+        {
+            animalsPanel.SetActive(true);
+            herbivoresPanel.SetActive(false);
         }
     }
 
-    private void OpenPauseMenu()
+    public void OpenPauseMenu()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -99,50 +118,39 @@ public class In_Game_UI : MonoBehaviour
         Pause_Menu.GameIsPaused = false;
     }
 
-    private void FreezTime()
+    public void FreezTime()
     {
         Time.timeScale = 0f;
         GameIsFrozen = true;
     }
 
-    private void NormalTime()
+    public void NormalTime()
     {
         Time.timeScale = 1f;
         GameIsFrozen = false;
     }
 
-    private void FastForwardTime()
+    public void FastForwardTime()
     {
         Time.timeScale = 2f;
         GameIsFrozen = false;
     }
+
     private void OpenDefaultBottomLeftPanel()
     {
         deafaultBottomLeftPanel.SetActive(true);
         backButton.SetActive(false);
     }
-    private void CloseDefaultBottomLeftPanel()
-    {
-        deafaultBottomLeftPanel.SetActive(false);
-    }
-
+    
     private void OpenAnimalsPanel()
     {
         animalsPanel.SetActive(true);
         backButton.SetActive(true);
-    }
-    private void CloseAnimalsPanel()
-    {
-        animalsPanel.SetActive(false);
-    }
+    }   
 
     private void OpenPlantsPanel()
     {
         plantsPanel.SetActive(true);
         backButton.SetActive(true);
-    }
-    private void ClosePlantsPanel()
-    {
-        plantsPanel.SetActive(false);
-    }
+    }   
 }
