@@ -13,8 +13,7 @@ public class In_Game_UI : MonoBehaviour
     public GameObject minimisedBottomMiddlePanel;
     public GameObject carnivoresPanel;
     public GameObject omnivoresPanel;
-    public GameObject herbivoresPanel;
-    //public GameObject clock;
+    public GameObject herbivoresPanel;    
 
     public static bool GameIsFrozen = false;
 
