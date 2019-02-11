@@ -113,7 +113,7 @@ public class In_Game_UI : MonoBehaviour
     public void ClosePauseMenu()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1f;                    // Bug
         Pause_Menu.GameIsPaused = false;
     }
 
