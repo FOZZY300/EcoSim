@@ -16,6 +16,7 @@ public class Day_Night_Cycle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         Vector4 colorMoon = new Vector4(0.2f, 0.2f, 0.3f, 1);
         sunLight.color = Color.white;
         moonLight.color = colorMoon;       
