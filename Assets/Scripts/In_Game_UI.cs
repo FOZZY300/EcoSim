@@ -112,9 +112,12 @@ public class In_Game_UI : MonoBehaviour
 
     public void ClosePauseMenu()
     {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;                    // Bug
+        pauseMenuUI.SetActive(false);           
         Pause_Menu.GameIsPaused = false;
+        if (!GameIsFrozen)
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     public void FreezTime()
