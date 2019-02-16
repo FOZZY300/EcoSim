@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Day_Night_Cycle.cs" />
     <Compile Include="Assets\Scripts\In_Game_UI.cs" />
+    <Compile Include="Assets\Scripts\Info_Panel.cs" />
     <Compile Include="Assets\Scripts\Main_Menu.cs" />
     <Compile Include="Assets\Scripts\Minimap_Controls.cs" />
     <Compile Include="Assets\Scripts\Mouse_Over_Minimap.cs" />
