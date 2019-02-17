@@ -18,7 +18,6 @@ public class Info_Panel : MonoBehaviour
     void Start()
     {
         box.SetActive(false);
-        OpenBox();
     }
    
     void Update()
@@ -35,6 +34,11 @@ public class Info_Panel : MonoBehaviour
         name.text = animalName;
         age.text = animalAge;
         sex.text = animalSex;
+    }
+
+    public void CloseBox()
+    {
+        box.SetActive(false);
     }
 
     /*
