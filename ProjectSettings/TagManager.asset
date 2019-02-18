@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Map
+    uniqueID: 2205482141
+    locked: 0
+  - name: Animal
+    uniqueID: 3987518789
+    locked: 0
