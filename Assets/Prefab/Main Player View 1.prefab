@@ -102,6 +102,11 @@ MonoBehaviour:
   zoomSpeed: 2
   minZoom: 1
   maxZoom: 30
+  maxX: 10
+  minX: -10
+  maxY: 10
+  minY: -10
+  cameraAccelaration: 1
 --- !u!114 &600974224001092565
 MonoBehaviour:
   m_ObjectHideFlags: 0

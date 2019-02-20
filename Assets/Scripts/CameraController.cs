@@ -11,9 +11,11 @@ public class CameraController : MonoBehaviour
     public float zoomSpeed;                         // Camera zoom speed
     public float minZoom;                           // Most zoomed in 
     public float maxZoom;                           // Most zoomed out
+    public float maxX, minX, maxY, minY;            //Camera restraints.
+    public float cameraAccelaration;
 
-    //Camera restraints. Alos include controls to stop zoom on menu scroll.
-    //int maxX, minX, maxY, minY;
+    private float acceleration;
+    private float i = 1;
 
     void Update()
     {                      
@@ -40,25 +42,55 @@ public class CameraController : MonoBehaviour
         if (m_OrthographicCamera.orthographicSize > maxZoom)
         {
             m_OrthographicCamera.orthographicSize = maxZoom;
-        }       
+        }
 
+        if (i > 5)
+        {
+            i = 5;
+        }
+        
         if (Input.GetKey(KeyCode.W) || m_Position[1] > Screen.height - edgeSize)            // up
         {
-            p_Velocity += up * cameraSpeed * speedChange;
+            p_Velocity += up * cameraSpeed * speedChange * i;
+            i = i + cameraAccelaration;
         }
         if (Input.GetKey(KeyCode.S) || m_Position[1] < edgeSize)                            // down
         {
-            p_Velocity += down * cameraSpeed * speedChange;
+            p_Velocity += down * cameraSpeed * speedChange * i;
+            i = i + cameraAccelaration;
         }
         if (Input.GetKey(KeyCode.A) || m_Position[0] < edgeSize)                            // left
         {
-            p_Velocity += left * cameraSpeed * speedChange;
+            p_Velocity += left * cameraSpeed * speedChange * i;
+            i = i + cameraAccelaration;
         }
         if (Input.GetKey(KeyCode.D) || m_Position[0] > Screen.width - edgeSize)             // right
         {
-            p_Velocity += right * cameraSpeed * speedChange;
+            p_Velocity += right * cameraSpeed * speedChange * i;
+            i = i + cameraAccelaration;
+        }
+        if (p_Velocity == new Vector3(0, 0, 0))
+        {
+            i = 1;
         }
 
         transform.Translate(p_Velocity, Space.World);                                       // Moves camera
+
+        if(m_OrthographicCamera.transform.position.x > maxX)
+        {
+            m_OrthographicCamera.transform.position = new Vector3(maxX, m_OrthographicCamera.transform.position.y, 0);
+        }
+        if (m_OrthographicCamera.transform.position.x < minX)
+        {
+            m_OrthographicCamera.transform.position = new Vector3(minX, m_OrthographicCamera.transform.position.y, 0);
+        }
+        if (m_OrthographicCamera.transform.position.y > maxY)
+        {
+            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, maxY, 0);
+        }
+        if (m_OrthographicCamera.transform.position.y < minX)
+        {
+            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, minY, 0);
+        }
     } 
 }
