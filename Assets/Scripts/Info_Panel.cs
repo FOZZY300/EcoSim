@@ -6,46 +6,69 @@ using UnityEngine.UI;
 public class Info_Panel : MonoBehaviour
 {
     public GameObject box;
+    public Transform InfoPanel;
+    public Transform[] place;
     public Image pic;
-    public Text species, age, sex;
-    public Slider sli1, sli2, sli3;
+
+    private Button close;
+    private GameObject[] clones;
+    private Slider[][] sliders;
+    private Text[][] texts;
+    private bool[] isOpen;
  
     void Start()
-    {
-        box.SetActive(false);
+    {        
+        isOpen = new bool[8];
+        clones = new GameObject[8];
+        sliders = new Slider[8][];
+        texts = new Text[8][];
+        place = new Transform[10];
+        place = InfoPanel.GetComponentsInChildren<RectTransform>();
     }
    
     void Update()
     {
-        
+                
     }
+
     public void OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex)
     {
-        box.SetActive(true);
-        sli1.value = hungerLevel;
-        sli2.value = tirednessLevel;
-        sli3.value = thirstLevel;
+        int i = 0;
+        while (isOpen[i])
+        {
+            i++;
+            if (i == 8)
+            {
+                return;
+            }
+        }
+        isOpen[i] = true;
+        clones[i] = Instantiate(box, place[i + 2]);
+        clones[i].SetActive(true);
+        
+        sliders[i] = clones[i].GetComponentsInChildren<Slider>();
+        texts[i] = clones[i].GetComponentsInChildren<Text>();
+        close = clones[i].GetComponentInChildren<Button>();
+        close.onClick.AddListener(() => CloseBox(i));
 
-        species.text = animalName;
-        age.text = animalAge;
-        sex.text = animalSex;
+        sliders[i][0].value = hungerLevel;
+        sliders[i][1].value = tirednessLevel;
+        sliders[i][2].value = thirstLevel;
+        texts[i][0].text = animalName;
+        texts[i][2].text = animalAge;
+        texts[i][3].text = animalSex;
     }
-
-    public void CloseBox()
+    
+    public void UiUpdate(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex)
     {
-        box.SetActive(false);
+            
     }
 
-    /*
-    public void OpenBox()
-    {
-        clone = Instantiate(box, parent);
-        clone.SetActive(true);
-        clone.GetComponents();
-        box.SetActive(false);
-        sli1.value = 0.5f;
-        sli2.value = 1f;
-        sli3.value = 0f;
-    }
-    */
+    public void CloseBox(int boxNum)
+    {       
+        Destroy(clones[boxNum]);
+        isOpen[boxNum] = false;
+    } 
+    
+    
 }
