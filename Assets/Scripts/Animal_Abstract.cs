@@ -11,7 +11,7 @@ public abstract class Animal_Abstract : MonoBehaviour
 
 }
 
-public class bear : Animal_Abstract
+public class Bear : Animal_Abstract
 {
     public string animalName = "Bear";
     public int currencyGain = 10;
@@ -20,7 +20,7 @@ public class bear : Animal_Abstract
 
 }
 
-public class hare : Animal_Abstract
+public class Hare : Animal_Abstract
 {
     public string animalName = "Hare";
     public int currencyGain = 3;

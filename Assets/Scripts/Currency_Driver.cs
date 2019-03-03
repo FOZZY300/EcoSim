@@ -20,12 +20,12 @@ public class Currency_Driver : MonoBehaviour
         
     }
 
-    public void addMoney(int amount)
+    public void AddMoney(int amount)
     {
         playerMoney += amount;
     }
 
-    public void subtractMoney(int amount)
+    public void SubtractMoney(int amount)
     {
         if(playerMoney < amount)
         {
@@ -38,7 +38,7 @@ public class Currency_Driver : MonoBehaviour
         
     }
 
-    public int getMoney()
+    public int GetMoney()
     {
         return playerMoney;
     }
