@@ -1,15 +1,15 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class Test_Bear : MonoBehaviour
-{    
+public class Test_Hare : MonoBehaviour
+{
     Info_Panel ip;
 
     //Test
-    private string animalName = "Bear", animalSex = "F", animalAge = "8";
-    private float hungerLevel = 0.75f, tirednessLevel = 0.5f, thirstLevel = 0f;
-    private int animalID = 1, boxNum = 8;
+    private string animalName = "Hare", animalSex = "M", animalAge = "3";
+    private float hungerLevel = 0.8f, tirednessLevel = 0.2f, thirstLevel = 0.6f;
+    private int animalID = 2, boxNum = 8;
     //Test
 
     void Start()
@@ -30,6 +30,6 @@ public class Test_Bear : MonoBehaviour
             ip.UiUpdate(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, boxNum);
         }
         
-        hungerLevel -= 0.001f;
-    }
+        hungerLevel -= 0.0001f;
+    }   
 }
