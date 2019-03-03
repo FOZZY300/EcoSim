@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class In_Game_UI : MonoBehaviour
 {
@@ -13,9 +14,12 @@ public class In_Game_UI : MonoBehaviour
     public GameObject minimisedBottomMiddlePanel;
     public GameObject carnivoresPanel;
     public GameObject omnivoresPanel;
-    public GameObject herbivoresPanel;    
+    public GameObject herbivoresPanel;
+    public Text currency;
 
     public static bool GameIsFrozen = false;
+
+    private Currency_Driver cd;
 
     private void Start()
     {
@@ -30,7 +34,12 @@ public class In_Game_UI : MonoBehaviour
         herbivoresPanel.SetActive(false);
         omnivoresPanel.SetActive(false);
 
-    }   
+        cd = FindObjectOfType<Currency_Driver>();      
+    }
+    private void Update()
+    {
+        currency.text = "Currnecy: " + cd.GetMoney();
+    }
 
     public void CanivoresButtonPressed()
     {
