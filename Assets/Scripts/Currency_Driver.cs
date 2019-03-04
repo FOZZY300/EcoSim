@@ -18,27 +18,29 @@ public class Currency_Driver : MonoBehaviour
         
     }
 
-    public void AddMoney(int amount)
+    public static void AddMoney(int amount)
     {
-        playerMoney += amount;
+        PlayerPrefsManager.money += amount;
+        PlayerPrefsManager.UpdateCoins();
     }
 
     public void SubtractMoney(int amount)
     {
-        if(playerMoney < amount)
+        if(PlayerPrefsManager.money < amount)
         {
             Debug.Log("Insufficient Funds");
        
         } else{
-            playerMoney -= amount;
+            PlayerPrefsManager.money -= amount;
+            PlayerPrefsManager.UpdateCoins();
         }
 
         
     }
 
-    public int GetMoney()
+    public static int GetMoney()
     {
-        return playerMoney;
+        return PlayerPrefsManager.money;
     }
 
 }

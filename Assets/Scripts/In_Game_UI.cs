@@ -20,6 +20,7 @@ public class In_Game_UI : MonoBehaviour
     public static bool GameIsFrozen = false;
 
     private Currency_Driver cd;
+    
 
     private void Start()
     {
@@ -38,7 +39,8 @@ public class In_Game_UI : MonoBehaviour
     }
     private void Update()
     {
-        currency.text = "Currnecy: " + cd.GetMoney();
+        currency.text = "Currency: " + Currency_Driver.GetMoney();
+       
     }
 
     public void CanivoresButtonPressed()

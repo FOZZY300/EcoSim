@@ -22,7 +22,7 @@ public class Test_Bear : MonoBehaviour
         boxNum = ip.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
     }
 
-    
+
     private void FixedUpdate()
     {
         if(boxNum != 8)
@@ -31,5 +31,8 @@ public class Test_Bear : MonoBehaviour
         }
         
         hungerLevel -= 0.001f;
+
+        Currency_Driver.AddMoney(1);
+
     }
 }
