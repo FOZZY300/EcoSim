@@ -2,28 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bear_Test : MonoBehaviour
+public class Bear_Script : MonoBehaviour
 {
     Bear b = new Bear();
 
     void OnMouseDown()
-    {
-        //b.animalID = GetInstanceID();
-        b.OMD();
+    {       
+        b.Selected();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
         
-    }
-
-    // Update is called once per frame
     private void FixedUpdate()
     {
         Currency_Driver.AddMoney(1);
-        b.hungerLevel -= 0.0001f;
-        b.tirednessLevel -= 0.0002f;
-        b.thirstLevel -= 0.0003f;
+        b.hungerLevel -= b.hungerDecayRate;
+        b.tirednessLevel -= b.tirednessDecayRate;
+        b.thirstLevel -= b.thirstDecayRate;
     }
 
     public float GetHungerLevel()

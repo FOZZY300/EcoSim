@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class In_Game_UI : MonoBehaviour
 {
     public GameObject deafaultBottomLeftPanel;
-    public static GameObject pauseMenuUI;
+    public GameObject pauseMenuUI;
     public GameObject animalsPanel;
     public GameObject plantsPanel;
     public GameObject backButton;
@@ -111,14 +111,14 @@ public class In_Game_UI : MonoBehaviour
         }
     }
 
-    public static void OpenPauseMenu()
+    public void OpenPauseMenu()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         Pause_Menu.GameIsPaused = true;      
     }
 
-    public static void ClosePauseMenu()
+    public void ClosePauseMenu()
     {
         pauseMenuUI.SetActive(false);           
         Pause_Menu.GameIsPaused = false;
@@ -128,13 +128,13 @@ public class In_Game_UI : MonoBehaviour
         }
     }
 
-    public static void FreezTime()
+    public void FreezTime()
     {
         Time.timeScale = 0f;
         GameIsFrozen = true;
     }
 
-    public static void NormalTime()
+    public void NormalTime()
     {
         Time.timeScale = 1f;
         GameIsFrozen = false;

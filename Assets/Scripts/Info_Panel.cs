@@ -29,21 +29,16 @@ public class Info_Panel : MonoBehaviour
         myList.Add("Bear", animalImages[0]);                            // Populates list for animal images
         myList.Add("Hare", animalImages[1]);
 
-
         place = new Transform[10];
         place = InfoPanel.GetComponentsInChildren<RectTransform>();     // Get array of RectTransform for placing boxes
-
         
         isOpen = new bool[8];                                           // Initilising arrays
         clones = new GameObject[8];
         sliders = new Slider[8][];
         texts = new Text[8][];        
-        animalIDs = new int[8];
-        
+        animalIDs = new int[8];        
     }
-   
-    
-
+      
     public static void OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int animalID)
     {        
         for (int j = 0; j < 8; j++)                                     // Checks if the animalID already has a UI box.
@@ -73,9 +68,7 @@ public class Info_Panel : MonoBehaviour
         close = clones[i].GetComponentInChildren<Button>();             // Gets buttons
         close.onClick.AddListener(() => CloseBox(i));                   // Adds listener for close button
         image = clones[i].GetComponentInChildren<Image>();
-
-        //Debug.Log(i);
-        
+              
         sliders[i][0].value = hungerLevel;                              // Set all required values
         sliders[i][1].value = tirednessLevel;
         sliders[i][2].value = thirstLevel;
@@ -100,19 +93,16 @@ public class Info_Panel : MonoBehaviour
     }
     
     public static void UiUpdate(int boxNum)
-    {       
-        
+    {               
         sliders[boxNum][0].value = Animal_Manager.GetHungerLevel(animalIDs[boxNum]);                         // Udates all slider values
         sliders[boxNum][1].value = Animal_Manager.GetTirednessLevel(animalIDs[boxNum]);
-        sliders[boxNum][2].value = Animal_Manager.GetThirstLevel(animalIDs[boxNum]);
-        
+        sliders[boxNum][2].value = Animal_Manager.GetThirstLevel(animalIDs[boxNum]);        
     }
 
     public static void CloseBox(int boxNum)
     {       
         Destroy(clones[boxNum]);                                                
         isOpen[boxNum] = false;
-        animalIDs[boxNum] = 0;
-        
+        animalIDs[boxNum] = 0;       
     }    
 }

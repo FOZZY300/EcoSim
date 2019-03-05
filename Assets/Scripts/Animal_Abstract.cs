@@ -19,7 +19,7 @@ public abstract class Animal_Abstract : MonoBehaviour
     public int maximumThirst;
     public int breedRate;
     public int maximumHealth;
-    public int attackDamage;
+    public int attackDamage;  
 
 }
 
@@ -46,8 +46,9 @@ public class Bear : Animal_Abstract
     public string animalSex = "F", animalAge = "8";
     public float hungerLevel = 0.8f, tirednessLevel = 0.5f, thirstLevel = 0.8f;
     public int animalID;
+    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 
-    public void OMD()
+    public void Selected()
     {
         Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
     }

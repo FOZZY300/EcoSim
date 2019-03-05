@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 public class Pause_Menu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    
+    In_Game_UI igu;
+
     private void Start()
     {
-        
+        igu = FindObjectOfType<In_Game_UI>();
     }
 
     public void ResumeButtonPressed()
     {
-        In_Game_UI.ClosePauseMenu();
+        igu.ClosePauseMenu();       
     }
 
     public void QuitButtonPressed()

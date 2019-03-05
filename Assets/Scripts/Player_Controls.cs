@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Controls : MonoBehaviour
-{     
+{
+    In_Game_UI igu;
     private void Start()
     {
-        
+        igu = FindObjectOfType<In_Game_UI>();
     }
     void Update()
     {
@@ -16,11 +17,11 @@ public class Player_Controls : MonoBehaviour
 
             if (!Pause_Menu.GameIsPaused)
             {
-                In_Game_UI.OpenPauseMenu();
+                igu.OpenPauseMenu();
             }
             else
             {
-                In_Game_UI.ClosePauseMenu();
+                igu.ClosePauseMenu();
             }
         }
 
@@ -30,11 +31,11 @@ public class Player_Controls : MonoBehaviour
             {
                 if (!In_Game_UI.GameIsFrozen)
                 {
-                    In_Game_UI.FreezTime();
+                    igu.FreezTime();
                 }
                 else
                 {
-                    In_Game_UI.NormalTime();
+                    igu.NormalTime();
                 }
             }
         }    

@@ -8,24 +8,24 @@ public class Animal_Manager : MonoBehaviour
     static GameObject temp;
     static List<GameObject> clones = new List<GameObject>();
     static Dictionary<int, GameObject> cloneID = new Dictionary<int, GameObject>();
-    static Bear_Test script;
+    static Bear_Script script;
 
     public static void NewAnimal(string animal, Vector3 place)
-        {
-            clones.Add(Instantiate(GameObject.Find(animal)));
-            clones[i].transform.position = place;
-            cloneID.Add(clones[i].GetInstanceID(), clones[i]);       
-            temp = cloneID[clones[i].GetInstanceID()];
-            script = temp.GetComponent<Bear_Test>();
-            script.SetAnimalID(clones[i].GetInstanceID());
-            i++;
-        }
+    {
+        clones.Add(Instantiate(GameObject.Find(animal)));
+        clones[i].transform.position = place;
+        cloneID.Add(clones[i].GetInstanceID(), clones[i]);       
+        temp = cloneID[clones[i].GetInstanceID()];
+        script = temp.GetComponent<Bear_Script>();
+        script.SetAnimalID(clones[i].GetInstanceID());
+        i++;
+    }
 
     public static float GetHungerLevel(int animalID)
     {
         Debug.Log(animalID + "GetHungerLevel");
         temp = cloneID[animalID];
-        script = temp.GetComponent<Bear_Test>();        
+        script = temp.GetComponent<Bear_Script>();        
         return script.GetHungerLevel();      
     }
 
@@ -33,7 +33,7 @@ public class Animal_Manager : MonoBehaviour
     {
         Debug.Log(animalID + "GetTirednessLevel");
         temp = cloneID[animalID];
-        script = temp.GetComponent<Bear_Test>();
+        script = temp.GetComponent<Bear_Script>();
         return script.GetTirednessLevel();
     }
 
@@ -41,7 +41,7 @@ public class Animal_Manager : MonoBehaviour
     {
         Debug.Log(animalID + "GetThirstLevel");
         temp = cloneID[animalID];
-        script = temp.GetComponent<Bear_Test>();
+        script = temp.GetComponent<Bear_Script>();
         return script.GetThirstLevel();
     }
 
