@@ -3,36 +3,26 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Test_Bear : MonoBehaviour
-{    
-    Info_Panel ip;
-
+{       
     //Test
     private string animalName = "Bear", animalSex = "F", animalAge = "8";
-    private float hungerLevel = 0.75f, tirednessLevel = 0.5f, thirstLevel = 0f;
+    private float hungerLevel = 0.8f, tirednessLevel = 0.8f, thirstLevel = 0.8f;
     private int animalID = 1, boxNum = 8;
     //Test
 
     void Start()
     {
-        ip = FindObjectOfType<Info_Panel>();
+        
     }
 
     void OnMouseDown()
     {
-        boxNum = ip.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+        boxNum = Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+        Debug.Log("Bear boxNum: " + boxNum);
     }
-
-
+      
     private void FixedUpdate()
-    {
-        if(boxNum != 8)
-        {
-            ip.UiUpdate(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, boxNum);
-        }
-        
-        hungerLevel -= 0.001f;
-
+    {        
         Currency_Driver.AddMoney(1);
-
-    }
+    }    
 }

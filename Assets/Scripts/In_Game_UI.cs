@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class In_Game_UI : MonoBehaviour
 {
     public GameObject deafaultBottomLeftPanel;
-    public GameObject pauseMenuUI;
+    public static GameObject pauseMenuUI;
     public GameObject animalsPanel;
     public GameObject plantsPanel;
     public GameObject backButton;
@@ -19,11 +19,10 @@ public class In_Game_UI : MonoBehaviour
 
     public static bool GameIsFrozen = false;
 
-    private Currency_Driver cd;
-    
-
+      
     private void Start()
     {
+        pauseMenuUI = GameObject.Find("Pause Menu 1");
         deafaultBottomLeftPanel.SetActive(true);
         normalBottomMiddlePanel.SetActive(true);
         minimisedBottomMiddlePanel.SetActive(false);
@@ -33,9 +32,7 @@ public class In_Game_UI : MonoBehaviour
         backButton.SetActive(false);
         carnivoresPanel.SetActive(false);
         herbivoresPanel.SetActive(false);
-        omnivoresPanel.SetActive(false);
-
-        cd = FindObjectOfType<Currency_Driver>();      
+        omnivoresPanel.SetActive(false);                    
     }
     private void Update()
     {
@@ -114,14 +111,14 @@ public class In_Game_UI : MonoBehaviour
         }
     }
 
-    public void OpenPauseMenu()
+    public static void OpenPauseMenu()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         Pause_Menu.GameIsPaused = true;      
     }
 
-    public void ClosePauseMenu()
+    public static void ClosePauseMenu()
     {
         pauseMenuUI.SetActive(false);           
         Pause_Menu.GameIsPaused = false;
@@ -131,13 +128,13 @@ public class In_Game_UI : MonoBehaviour
         }
     }
 
-    public void FreezTime()
+    public static void FreezTime()
     {
         Time.timeScale = 0f;
         GameIsFrozen = true;
     }
 
-    public void NormalTime()
+    public static void NormalTime()
     {
         Time.timeScale = 1f;
         GameIsFrozen = false;
