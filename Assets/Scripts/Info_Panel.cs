@@ -25,6 +25,7 @@ public class Info_Panel : MonoBehaviour
     void Start()
     {
         box = GameObject.Find("Info Box 1 (1)");
+        Debug.Log(box);
         Infobox.SetActive(false);        
         myList.Add("Bear", animalImages[0]);                            // Populates list for animal images
         myList.Add("Hare", animalImages[1]);
