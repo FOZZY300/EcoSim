@@ -1891,8 +1891,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 845309457172437523}
   m_HandleRect: {fileID: 4570243387710686488}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2771,7 +2771,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8014821490981065207}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4655450747285004207}
+        m_MethodName: BearButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1394483906485621807
@@ -4279,7 +4290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000336841, y: -0.00001161286}
+  m_AnchoredPosition: {x: -0.0000032007156, y: 0.000016144128}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2471393388438125991
@@ -4961,8 +4972,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8804627854746085103}
   m_HandleRect: {fileID: 3466989807198392977}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7255,7 +7266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000009253776, y: -0.00001161286}
+  m_AnchoredPosition: {x: 0.000021229607, y: 0.000016144128}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &5538886839088197040
@@ -7672,8 +7683,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638158154215584067}
   m_HandleRect: {fileID: 1903964984555569301}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8720,7 +8731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000042835404, y: -0.00001161286}
+  m_AnchoredPosition: {x: 0.000026199843, y: 0.000016144128}
   m_SizeDelta: {x: -0, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6989371795532326907
@@ -11762,6 +11773,7 @@ GameObject:
   - component: {fileID: 824139253593634661}
   - component: {fileID: 2548680123679126879}
   - component: {fileID: 126792270556904942}
+  - component: {fileID: 4655450747285004207}
   m_Layer: 5
   m_Name: Bottom Left
   m_TagString: Untagged
@@ -11834,6 +11846,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2f24b41eeaa4447bba35a899ffbc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4655450747285004207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807893955085411854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0194dc8c69b1f4cc383f7e6e9d0d7de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bear: {fileID: 0}
 --- !u!1 &8844369046893712190
 GameObject:
   m_ObjectHideFlags: 0
