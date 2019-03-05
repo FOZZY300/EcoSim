@@ -7,7 +7,7 @@ public class Test_Hare : MonoBehaviour
     //Test
     private string animalName = "Hare", animalSex = "M", animalAge = "3";
     private float hungerLevel = 0.2f, tirednessLevel = 0.2f, thirstLevel = 0.2f;
-    private int animalID = 2, boxNum = 8;
+    private static int animalID;
     //Test
 
     void Start()
@@ -17,8 +17,9 @@ public class Test_Hare : MonoBehaviour
 
     void OnMouseDown()
     {
-        boxNum = Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
-        Debug.Log("Hare boxNum: " + boxNum);
+        animalID = GetInstanceID();
+        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+        
     }
 
     

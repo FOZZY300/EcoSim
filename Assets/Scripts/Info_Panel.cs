@@ -25,7 +25,6 @@ public class Info_Panel : MonoBehaviour
     void Start()
     {
         box = GameObject.Find("Info Box 1 (1)");
-        Debug.Log(box);
         Infobox.SetActive(false);        
         myList.Add("Bear", animalImages[0]);                            // Populates list for animal images
         myList.Add("Hare", animalImages[1]);
@@ -43,18 +42,15 @@ public class Info_Panel : MonoBehaviour
         
     }
    
-    void Update()
-    {
-                
-    }
+    
 
-    public static int OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int animalID)
+    public static void OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int animalID)
     {        
         for (int j = 0; j < 8; j++)                                     // Checks if the animalID already has a UI box.
         {
             if (animalIDs[j] == animalID)
             {
-                return j;
+                return;
             }
         }
 
@@ -64,7 +60,7 @@ public class Info_Panel : MonoBehaviour
             i++;
             if (i == 8)                                                 // Returns 8 if there are no free boxes
             {
-                return 8;
+                return;
             }
         }
         animalIDs[i] = animalID;                                        // Adds animal array to list of animalIDs that are in use
@@ -78,7 +74,7 @@ public class Info_Panel : MonoBehaviour
         close.onClick.AddListener(() => CloseBox(i));                   // Adds listener for close button
         image = clones[i].GetComponentInChildren<Image>();
 
-        Debug.Log(i);
+        //Debug.Log(i);
         
         sliders[i][0].value = hungerLevel;                              // Set all required values
         sliders[i][1].value = tirednessLevel;
@@ -88,21 +84,28 @@ public class Info_Panel : MonoBehaviour
         texts[i][3].text = animalSex;
         image.sprite = myList[animalName];
 
-        return i;
+        return;
+    }
+
+    
+    void Update()
+    {
+         for (int i = 0; i < 8; i++)
+        {
+            if (isOpen[i])
+            {
+                UiUpdate(i);
+            }
+        }
     }
     
-    public static void UiUpdate(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int boxNum)
-    {
+    public static void UiUpdate(int boxNum)
+    {       
         
-        sliders[boxNum][0].value = hungerLevel;                         // Udates all slider values
-        sliders[boxNum][1].value = tirednessLevel;
-        sliders[boxNum][2].value = thirstLevel;
-
-        /*
-        texts[boxNum][0].text = animalName;
-        texts[boxNum][2].text = animalAge;
-        texts[boxNum][3].text = animalSex;
-        */
+        sliders[boxNum][0].value = Animal_Manager.GetHungerLevel(animalIDs[boxNum]);                         // Udates all slider values
+        sliders[boxNum][1].value = Animal_Manager.GetTirednessLevel(animalIDs[boxNum]);
+        sliders[boxNum][2].value = Animal_Manager.GetThirstLevel(animalIDs[boxNum]);
+        
     }
 
     public static void CloseBox(int boxNum)

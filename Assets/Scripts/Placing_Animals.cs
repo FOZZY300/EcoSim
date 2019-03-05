@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Placing_Animals : MonoBehaviour
-{
-    public GameObject Bear;
-    private GameObject clone;
+{   
 
     public void BearButton()
     {
-        Debug.Log("Button pressed");
-        clone = Instantiate(Bear);
-        clone.SetActive(true);
-        clone.transform.position = new Vector3(30, 30, 1);
+        Debug.Log("Button pressed");       
+        Animal_Manager.NewAnimal("Bear", new Vector3(0, 0, 1));
     }
 }

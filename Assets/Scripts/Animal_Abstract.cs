@@ -42,6 +42,31 @@ public class Bear : Animal_Abstract
     public int maximumHealth = 100;
     public int attackDamage = 20;
 
+    //semitest
+    public string animalSex = "F", animalAge = "8";
+    public float hungerLevel = 0.8f, tirednessLevel = 0.5f, thirstLevel = 0.8f;
+    public int animalID;
+
+    public void OMD()
+    {
+        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+    }
+
+    internal float GetHungerLevel()
+    {
+        return hungerLevel;
+    }
+    internal float GetTirednessLevel()
+    {
+        return tirednessLevel;
+    }
+    internal float GetThirstLevel()
+    {
+        return thirstLevel;
+    }
+
+    //semitest
+
 }
 
 public class Hare : Animal_Abstract
