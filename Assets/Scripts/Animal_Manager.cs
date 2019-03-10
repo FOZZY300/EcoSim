@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Animal_Manager : MonoBehaviour
 {
-    static int i = 0; 
-    static GameObject temp;
-    static List<GameObject> clones = new List<GameObject>();
-    static Dictionary<int, GameObject> cloneID = new Dictionary<int, GameObject>();
-    static Bear_Script script;
+    private static int i = 0; 
+    private static GameObject temp;
+    private static List<GameObject> clones = new List<GameObject>();
+    private static Dictionary<int, GameObject> cloneID = new Dictionary<int, GameObject>();
+    private static Hare_Script hScript;
+    private static Bear_Script bScript;  
 
     public static void NewAnimal(string animal, Vector3 place)
     {
@@ -16,34 +17,82 @@ public class Animal_Manager : MonoBehaviour
         clones[i].transform.position = place;
         cloneID.Add(clones[i].GetInstanceID(), clones[i]);       
         temp = cloneID[clones[i].GetInstanceID()];
-        script = temp.GetComponent<Bear_Script>();
-        script.SetAnimalID(clones[i].GetInstanceID());
+        switch (animal)
+        {
+            case "Bear":
+                bScript = temp.GetComponent<Bear_Script>();
+                bScript.SetAnimalID(clones[i].GetInstanceID());
+                break;
+
+            case "Hare":
+                hScript = temp.GetComponent<Hare_Script>();
+                hScript.SetAnimalID(clones[i].GetInstanceID());
+                break;
+
+            default:
+                break;
+
+        }               
         i++;
     }
 
-    public static float GetHungerLevel(int animalID)
+    public static float GetHungerLevel(int animalID, string animalName)
     {
         Debug.Log(animalID + "GetHungerLevel");
         temp = cloneID[animalID];
-        script = temp.GetComponent<Bear_Script>();        
-        return script.GetHungerLevel();      
+        switch (animalName)
+        {
+            case "Bear":
+                bScript = temp.GetComponent<Bear_Script>();
+                return bScript.GetHungerLevel();
+
+            case "Hare":
+                hScript = temp.GetComponent<Hare_Script>();
+                return hScript.GetHungerLevel();
+
+            default:
+                return 0;
+
+        }
     }
 
-    public static float GetTirednessLevel(int animalID)
+    public static float GetTirednessLevel(int animalID, string animalName)
     {
         Debug.Log(animalID + "GetTirednessLevel");
         temp = cloneID[animalID];
-        script = temp.GetComponent<Bear_Script>();
-        return script.GetTirednessLevel();
+        switch (animalName)
+        {
+            case "Bear":
+                bScript = temp.GetComponent<Bear_Script>();
+                return bScript.GetTirednessLevel();
+
+            case "Hare":
+                hScript = temp.GetComponent<Hare_Script>();
+                return hScript.GetTirednessLevel();
+
+            default:
+                return 0;
+
+        }
     }
 
-    public static float GetThirstLevel(int animalID)
+    public static float GetThirstLevel(int animalID, string animalName)
     {
         Debug.Log(animalID + "GetThirstLevel");
         temp = cloneID[animalID];
-        script = temp.GetComponent<Bear_Script>();
-        return script.GetThirstLevel();
-    }
+        switch (animalName)
+        {
+            case "Bear":
+                bScript = temp.GetComponent<Bear_Script>();
+                return bScript.GetThirstLevel();
 
+            case "Hare":
+                hScript = temp.GetComponent<Hare_Script>();
+                return hScript.GetThirstLevel();
 
+            default:
+                return 0;
+
+        }
+    }  
 }

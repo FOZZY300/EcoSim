@@ -89,6 +89,32 @@ public class Hare : Animal_Abstract
     public int maximumHealth = 15;
     public int attackDamage = 3;
 
+    //semitest
+    public string animalSex = "M", animalAge = "4";
+    public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
+    public int animalID;
+    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
+
+    public void Selected()
+    {
+        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+    }
+
+    internal float GetHungerLevel()
+    {
+        return hungerLevel;
+    }
+    internal float GetTirednessLevel()
+    {
+        return tirednessLevel;
+    }
+    internal float GetThirstLevel()
+    {
+        return thirstLevel;
+    }
+
+    //semitest
+
 }
 
 public class Moose : Animal_Abstract

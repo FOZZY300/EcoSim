@@ -2,38 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bear_Script : MonoBehaviour
+public class Hare_Script : MonoBehaviour
 {
-    Bear b = new Bear();
+    Hare h = new Hare();
 
     void OnMouseDown()
-    {       
-        b.Selected();
+    {
+        h.Selected();
     }
-        
+
     private void FixedUpdate()
     {
         Currency_Driver.AddMoney(1);
-        b.hungerLevel -= b.hungerDecayRate;
-        b.tirednessLevel -= b.tirednessDecayRate;
-        b.thirstLevel -= b.thirstDecayRate;
+        h.hungerLevel -= h.hungerDecayRate;
+        h.tirednessLevel -= h.tirednessDecayRate;
+        h.thirstLevel -= h.thirstDecayRate;
     }
 
     public float GetHungerLevel()
     {
-        return b.hungerLevel;
+        return h.hungerLevel;
     }
     public float GetTirednessLevel()
     {
-        return b.tirednessLevel;
+        return h.tirednessLevel;
     }
     public float GetThirstLevel()
     {
-        return b.thirstLevel;
-    }
-    public void SetAnimalID(int aID)
-    {
-        b.animalID = aID;
+        return h.thirstLevel;
     }
 
+    public void SetAnimalID(int aID)
+    {
+        h.animalID = aID;
+    }
 }
