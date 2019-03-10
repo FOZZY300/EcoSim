@@ -15,6 +15,7 @@ public class In_Game_UI : MonoBehaviour
     public GameObject carnivoresPanel;
     public GameObject omnivoresPanel;
     public GameObject herbivoresPanel;
+    public GameObject moreInfo;
     public Text currency;
 
     public static bool GameIsFrozen = false;
@@ -32,7 +33,8 @@ public class In_Game_UI : MonoBehaviour
         backButton.SetActive(false);
         carnivoresPanel.SetActive(false);
         herbivoresPanel.SetActive(false);
-        omnivoresPanel.SetActive(false);                    
+        omnivoresPanel.SetActive(false);
+        moreInfo.SetActive(false);
     }
     private void Update()
     {

@@ -8,7 +8,7 @@ public class Mouse_Over_Minimap : MonoBehaviour , IPointerEnterHandler, IPointer
     public static bool isOverMinimap = false;
 
     public void OnPointerEnter(PointerEventData eventData)
-    {
+    {        
         isOverMinimap = true;
         Mouse_Over_Object.isOverUI = true;       
     }
