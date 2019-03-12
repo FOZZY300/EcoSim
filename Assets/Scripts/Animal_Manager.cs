@@ -28,6 +28,13 @@ public class Animal_Manager : MonoBehaviour
                 hScript = temp.GetComponent<Hare_Script>();
                 hScript.SetAnimalID(clones[i].GetInstanceID());
                 break;
+                
+            case "Moose":
+                hScript = temp.GetComponent<Moose_Script>();
+                hScript.SetAnimalID(clones[i].GetInstanceID());
+                break;
+                
+                
 
             default:
                 break;
@@ -49,6 +56,10 @@ public class Animal_Manager : MonoBehaviour
             case "Hare":
                 hScript = temp.GetComponent<Hare_Script>();
                 return hScript.GetHungerLevel();
+                
+            case "Moose":
+                hScript = temp.GetComponent<Moose_Script>();
+                return hScript.GetHungerLevel();
 
             default:
                 return 0;
@@ -69,6 +80,10 @@ public class Animal_Manager : MonoBehaviour
             case "Hare":
                 hScript = temp.GetComponent<Hare_Script>();
                 return hScript.GetTirednessLevel();
+                
+            case "Moose":
+                hScript = temp.GetComponent<Moose_Script>();
+                return hScript.GetTirednessLevel();
 
             default:
                 return 0;
@@ -88,6 +103,10 @@ public class Animal_Manager : MonoBehaviour
 
             case "Hare":
                 hScript = temp.GetComponent<Hare_Script>();
+                return hScript.GetThirstLevel();
+                
+            case "Moose":
+                hScript = temp.GetComponent<Moose_Script>();
                 return hScript.GetThirstLevel();
 
             default:
