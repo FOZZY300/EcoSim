@@ -16,4 +16,9 @@ public class Placing_Animals : MonoBehaviour
         Debug.Log("Button pressed");
         Animal_Manager.NewAnimal("Hare", new Vector3(0, 0, 1));
     }
+
+    public void MooseButton()
+    {
+        Animal_Manager.NewAnimal("Moose", new Vector3(0, 0, 1));
+    }
 }

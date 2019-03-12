@@ -9,7 +9,8 @@ public class Animal_Manager : MonoBehaviour
     private static List<GameObject> clones = new List<GameObject>();
     private static Dictionary<int, GameObject> cloneID = new Dictionary<int, GameObject>();
     private static Hare_Script hScript;
-    private static Bear_Script bScript;  
+    private static Bear_Script bScript;
+    private static Moose_Script mScript;
 
     public static void NewAnimal(string animal, Vector3 place)
     {
@@ -30,8 +31,8 @@ public class Animal_Manager : MonoBehaviour
                 break;
                 
             case "Moose":
-                hScript = temp.GetComponent<Moose_Script>();
-                hScript.SetAnimalID(clones[i].GetInstanceID());
+                mScript = temp.GetComponent<Moose_Script>();
+                mScript.SetAnimalID(clones[i].GetInstanceID());
                 break;
                 
                 
@@ -58,8 +59,8 @@ public class Animal_Manager : MonoBehaviour
                 return hScript.GetHungerLevel();
                 
             case "Moose":
-                hScript = temp.GetComponent<Moose_Script>();
-                return hScript.GetHungerLevel();
+                mScript = temp.GetComponent<Moose_Script>();
+                return mScript.GetHungerLevel();
 
             default:
                 return 0;
@@ -82,8 +83,8 @@ public class Animal_Manager : MonoBehaviour
                 return hScript.GetTirednessLevel();
                 
             case "Moose":
-                hScript = temp.GetComponent<Moose_Script>();
-                return hScript.GetTirednessLevel();
+                mScript = temp.GetComponent<Moose_Script>();
+                return mScript.GetTirednessLevel();
 
             default:
                 return 0;
@@ -106,8 +107,8 @@ public class Animal_Manager : MonoBehaviour
                 return hScript.GetThirstLevel();
                 
             case "Moose":
-                hScript = temp.GetComponent<Moose_Script>();
-                return hScript.GetThirstLevel();
+                mScript = temp.GetComponent<Moose_Script>();
+                return mScript.GetThirstLevel();
 
             default:
                 return 0;
