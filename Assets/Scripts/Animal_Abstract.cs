@@ -25,7 +25,7 @@ public abstract class Animal_Abstract : MonoBehaviour
 
 public class Bear : Animal_Abstract
 {
-    public string animalName = "Bear";
+    public new string animalName = "Bear";
     public int currencyGain = 10;
     public bool herbivore = false;
     public bool carnivore = true;
@@ -135,6 +135,16 @@ public class Moose : Animal_Abstract
     public int breedRate = 2;
     public int maximumHealth = 40;
     public int attackDamage = 10;
+
+    public void Selected()
+    {
+        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+    }
+
+    public string animalSex = "M", animalAge = "4";
+    public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
+    public int animalID;
+    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 }
 
 public class Wolf : Animal_Abstract
@@ -155,5 +165,15 @@ public class Wolf : Animal_Abstract
     public int breedRate = 3;
     public int maximumHealth = 75;
     public int attackDamage = 20;
+
+    public void Selected()
+    {
+        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+    }
+
+    public string animalSex = "M", animalAge = "4";
+    public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
+    public int animalID;
+    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 }
 
