@@ -45,6 +45,12 @@ TagManager:
   - name: Map
     uniqueID: 2205482141
     locked: 0
+  - name: Grass
+    uniqueID: 30554491
+    locked: 0
+  - name: Tree
+    uniqueID: 2243768217
+    locked: 0
   - name: Animal
     uniqueID: 3987518789
     locked: 0

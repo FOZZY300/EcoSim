@@ -42,7 +42,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -85,3 +85,4 @@ MonoBehaviour:
   sunLight: {fileID: 3509423867029779724}
   moonLight: {fileID: 0}
   dayLength: 24
+  clock: {fileID: 0}

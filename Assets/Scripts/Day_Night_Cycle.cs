@@ -5,34 +5,37 @@ using UnityEngine.UI;
 
 public class Day_Night_Cycle : MonoBehaviour
 {
-    public Light sunLight, moonLight;
-    public float dayLength = 24f;
-    float RotationY;
+    public Light sunLight;
+    public float dayLength;
+    
     float hours, mins, seconds;
     public Text clock;
-    int h, m;
+    int h, m, time;
     string displayHours, displayMins;
+    Vector4 dayColor, nightColor;
 
     // Start is called before the first frame update
     void Start()
     {
+        time = 0;
         Time.timeScale = 1f;
-        Vector4 colorMoon = new Vector4(0.2f, 0.2f, 0.3f, 1);
-        sunLight.color = Color.white;
-        moonLight.color = colorMoon;       
-        RotationY = 72f / (600f * dayLength);                       // should prob change this to get fixed time stamp
+        dayColor = new Vector4(0.5f, 0.5f, 0.5f, 1f);
+        nightColor = new Vector4(0.2f, 0.2f, 0.2f, 1f);
+
+        sunLight.color = dayColor;                                          
     }
     
     void FixedUpdate()                                      // Runs 50 times a second (fixed time stamp = 0.02)
-    {      
-        Vector3 Direction = new Vector3(0, RotationY, 0);
-        sunLight.transform.Rotate(Direction);
-
-        // Clock
-        float currentRotation = sunLight.transform.rotation.eulerAngles.y;
-        hours = ((currentRotation / 15) + 12) % 24;
+    {
+        if (time > 50 * 60 * dayLength)
+        {
+            time = 0;
+        }
+        time++;
+        // Clock        
+        hours = (time / (dayLength * 2.08333f)) / 60f;
         mins = (hours % 1) * 60;
-        //seconds = (mins % 1) * 60;
+        //seconds = (mins % 1) * 60;        
         h = (int)hours;
         m = (int)mins;
         if (h < 10)
@@ -52,6 +55,24 @@ public class Day_Night_Cycle : MonoBehaviour
             displayMins = m.ToString();
         }
        
-        clock.text = displayHours + ":" + displayMins + " ";               
+        clock.text = displayHours + ":" + displayMins + " ";
+        
+        if(hours < 5 || hours > 19)
+        {
+            sunLight.color = nightColor;
+        }
+        else if(hours > 7 && hours < 17)
+        {
+            sunLight.color = dayColor + nightColor;
+        }
+        else if (hours > 5 && hours < 7)
+        {           
+            sunLight.color = dayColor * ((hours % 5)/ 2) + nightColor;
+        }
+
+        else if (hours > 17 && hours < 19)
+        {
+            sunLight.color = dayColor * (1f - ((hours % 17) / 2)) + nightColor;
+        }
     }
 }
