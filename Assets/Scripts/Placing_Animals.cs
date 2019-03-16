@@ -21,4 +21,9 @@ public class Placing_Animals : MonoBehaviour
     {
         Animal_Manager.NewAnimal("Moose", new Vector3(0, 0, 1));
     }
+
+    public void WolfButton()
+    {
+        Animal_Manager.NewAnimal("Wolf", new Vector3(0, 0, 1));
+    }
 }

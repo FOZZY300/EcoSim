@@ -30,6 +30,7 @@ public class Info_Panel : MonoBehaviour
         myList.Add("Bear", animalImages[0]);                            // Populates list for animal images
         myList.Add("Hare", animalImages[1]);
         myList.Add("Moose", animalImages[2]);
+        myList.Add("Wolf", animalImages[3]);
 
         place = new Transform[10];
         place = InfoPanel.GetComponentsInChildren<RectTransform>();     // Get array of RectTransform for placing boxes

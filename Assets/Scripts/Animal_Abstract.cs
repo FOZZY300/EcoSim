@@ -48,11 +48,12 @@ public class Bear : Animal_Abstract
     public int animalID;
     public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 
+    
     public void Selected()
     {
         Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
     }
-
+    /*
     internal float GetHungerLevel()
     {
         return hungerLevel;
@@ -65,6 +66,7 @@ public class Bear : Animal_Abstract
     {
         return thirstLevel;
     }
+    */
 
     //semitest
 
@@ -99,7 +101,7 @@ public class Hare : Animal_Abstract
     {
         Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
     }
-
+    /*
     internal float GetHungerLevel()
     {
         return hungerLevel;
@@ -112,6 +114,7 @@ public class Hare : Animal_Abstract
     {
         return thirstLevel;
     }
+    */
 
     //semitest
 

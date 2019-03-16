@@ -7,12 +7,12 @@ public class Day_Night_Cycle : MonoBehaviour
 {
     public Light sunLight;
     public float dayLength;
-    
-    float hours, mins, seconds;
     public Text clock;
-    int h, m, time;
-    string displayHours, displayMins;
-    Vector4 dayColor, nightColor;
+
+    private float hours, mins, seconds;    
+    private int h, m, time;
+    private string displayHours, displayMins;
+    private Vector4 dayColor, nightColor;
 
     // Start is called before the first frame update
     void Start()

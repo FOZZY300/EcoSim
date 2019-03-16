@@ -11,6 +11,7 @@ public class Animal_Manager : MonoBehaviour
     private static Hare_Script hScript;
     private static Bear_Script bScript;
     private static Moose_Script mScript;
+    private static Wolf_Script wScript;
 
     public static void NewAnimal(string animal, Vector3 place)
     {
@@ -34,8 +35,13 @@ public class Animal_Manager : MonoBehaviour
                 mScript = temp.GetComponent<Moose_Script>();
                 mScript.SetAnimalID(clones[i].GetInstanceID());
                 break;
-                
-                
+
+            case "Wolf":
+                wScript = temp.GetComponent<Wolf_Script>();
+                wScript.SetAnimalID(clones[i].GetInstanceID());
+                break;
+
+
 
             default:
                 break;
@@ -62,6 +68,10 @@ public class Animal_Manager : MonoBehaviour
                 mScript = temp.GetComponent<Moose_Script>();
                 return mScript.GetHungerLevel();
 
+            case "Wolf":
+                wScript = temp.GetComponent<Wolf_Script>();
+                return wScript.GetHungerLevel();
+
             default:
                 return 0;
 
@@ -86,6 +96,10 @@ public class Animal_Manager : MonoBehaviour
                 mScript = temp.GetComponent<Moose_Script>();
                 return mScript.GetTirednessLevel();
 
+            case "Wolf":
+                wScript = temp.GetComponent<Wolf_Script>();
+                return wScript.GetTirednessLevel();
+
             default:
                 return 0;
 
@@ -109,6 +123,10 @@ public class Animal_Manager : MonoBehaviour
             case "Moose":
                 mScript = temp.GetComponent<Moose_Script>();
                 return mScript.GetThirstLevel();
+
+            case "Wolf":
+                wScript = temp.GetComponent<Wolf_Script>();
+                return wScript.GetThirstLevel();
 
             default:
                 return 0;
