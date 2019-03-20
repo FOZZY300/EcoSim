@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Placing_Animals : MonoBehaviour
-{   
+{
+
 
     public void BearButton()
     {
         Debug.Log("Button pressed");       
         Animal_Manager.NewAnimal("Bear", new Vector3(0, 0, 1));
-    }
+
+        Placement_Script ps = new Placement_Script();
+
+       
+    } 
 
     public void HareButton()
     {
