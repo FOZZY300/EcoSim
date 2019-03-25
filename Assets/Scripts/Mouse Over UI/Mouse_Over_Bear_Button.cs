@@ -22,8 +22,9 @@ public class Mouse_Over_Bear_Button : MonoBehaviour , IPointerEnterHandler, IPoi
             "Lifespan: 20 - 25 \n" +
             //"Hibernate: 5 - 8 Months \n " +
             //"Size: head to tail, 8ft tall \n" +
-            "Weight: 400 to 600 lbs \n" +
-            //"Speed: 25mph \n";
+            "Weight: 400 to 600 lbs \n"
+            //"Speed: 25mph \n"
+            ;
     }
 
     public void OnPointerExit(PointerEventData eventData)
