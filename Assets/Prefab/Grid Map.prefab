@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7710481418638058546}
   - component: {fileID: 2274613276050530467}
   - component: {fileID: 4759728153231721870}
-  - component: {fileID: 6352391159793865110}
+  - component: {fileID: 6176601772639860055}
   m_Layer: 0
   m_Name: Fences Tilemap
   m_TagString: Untagged
@@ -1757,7 +1757,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!19719996 &6352391159793865110
+--- !u!19719996 &6176601772639860055
 TilemapCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19176,7 +19176,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4839357809381882157}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 1}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0

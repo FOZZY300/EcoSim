@@ -13,6 +13,7 @@ public class Placement_Script : MonoBehaviour
 
     private bool isAnObjectSelected = false;
     private bool objectInput = false;
+    private bool resetPlacer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,20 +33,26 @@ public class Placement_Script : MonoBehaviour
             currentlySelectedObject = (GameObject)Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             isAnObjectSelected = true;
             objectInput = false;
+
         }
 
-        if (Input.GetMouseButtonDown(1) && isAnObjectSelected == true)
+       if (resetPlacer == true)
         {
             Destroy(currentlySelectedObject);
             isAnObjectSelected = false;
             selectedObjectInArray = 0;
-        }
+            resetPlacer = false;
+        } 
     }
 
     public void setPlaceTrue(int animal){
         selectedObjectInArray = animal;
         objectInput = true;
 
+    }
+
+    public void destroyTemplate(){
+        resetPlacer = true;
     }
 
 }

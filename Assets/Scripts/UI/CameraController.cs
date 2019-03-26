@@ -49,22 +49,22 @@ public class CameraController : MonoBehaviour
             i = 5;
         }
         
-        if (Input.GetKey(KeyCode.W) || m_Position[1] > Screen.height - edgeSize)            // up
+        if (Input.GetKey(KeyCode.W)) // || m_Position[1] > Screen.height - edgeSize)            // up
         {
             p_Velocity += up * cameraSpeed * speedChange * i;
             i = i + cameraAccelaration;
         }
-        if (Input.GetKey(KeyCode.S) || m_Position[1] < edgeSize)                            // down
+        if (Input.GetKey(KeyCode.S)) // || m_Position[1] < edgeSize)                            // down
         {
             p_Velocity += down * cameraSpeed * speedChange * i;
             i = i + cameraAccelaration;
         }
-        if (Input.GetKey(KeyCode.A) || m_Position[0] < edgeSize)                            // left
+        if (Input.GetKey(KeyCode.A)) // || m_Position[0] < edgeSize)                            // left
         {
             p_Velocity += left * cameraSpeed * speedChange * i;
             i = i + cameraAccelaration;
         }
-        if (Input.GetKey(KeyCode.D) || m_Position[0] > Screen.width - edgeSize)             // right
+        if (Input.GetKey(KeyCode.D)) // || m_Position[0] > Screen.width - edgeSize)             // right
         {
             p_Velocity += right * cameraSpeed * speedChange * i;
             i = i + cameraAccelaration;

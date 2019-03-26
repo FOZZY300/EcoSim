@@ -10,11 +10,15 @@ public class Placing_Animals : MonoBehaviour
 
     [SerializeField]
     private GameObject[] selectableObjects;
-    private GameObject placementManager;
 
-    Placement_Script pm;
+
+  
 
     private bool isAnObjectSelected = false;
+
+    Placement_Script pm;
+    private GameObject placementManager;
+
 
     private void Start()
     {
