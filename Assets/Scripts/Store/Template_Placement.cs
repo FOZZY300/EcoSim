@@ -23,7 +23,7 @@ public class Template_Placement : MonoBehaviour
         {
 
             //checks if anything is below cursor when placing
-            Vector2 mouseRay = Camera.main.ScreenToWorldPoint(transform.position);
+            Vector3 mouseRay = Camera.main.ScreenToWorldPoint(transform.position);
             RaycastHit2D rayHit = Physics2D.Raycast(mouseRay, Vector2.zero, Mathf.Infinity, allTilesLayer);
 
             if (rayHit.collider == null)

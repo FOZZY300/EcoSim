@@ -12,14 +12,14 @@ public class Placement_Script : MonoBehaviour
     private GameObject[] selectableObjects;
 
     private bool isAnObjectSelected = false;
-
+    private bool objectInput = false;
     // Start is called before the first frame update
     void Start()
     {
-        selectedObjectInArray = 0;
+
     }
 
-    
+
     // Update is called once per frame
 
     void Update()
@@ -27,10 +27,11 @@ public class Placement_Script : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 spawnPos = new Vector2(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
 
-        if (Input.GetKeyDown("e") && isAnObjectSelected == false)
+        if (objectInput == true)
         {
             currentlySelectedObject = (GameObject)Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             isAnObjectSelected = true;
+            objectInput = false;
         }
 
         if (Input.GetMouseButtonDown(1) && isAnObjectSelected == true)
@@ -39,6 +40,12 @@ public class Placement_Script : MonoBehaviour
             isAnObjectSelected = false;
             selectedObjectInArray = 0;
         }
+    }
+
+    public void setPlaceTrue(int animal){
+        selectedObjectInArray = animal;
+        objectInput = true;
+
     }
 
 }
