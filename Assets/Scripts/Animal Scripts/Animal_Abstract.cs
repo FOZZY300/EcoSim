@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Animal_Abstract : MonoBehaviour
 {
     public string animalName;
+    public int animalIdentifier;
     public int currencyGain;
     public bool herbivore;
     public bool carnivore;
@@ -26,6 +27,7 @@ public abstract class Animal_Abstract : MonoBehaviour
 public class Bear : Animal_Abstract
 {
     public new string animalName = "Bear";
+    public int animalIdentifier = 0;
     public int currencyGain = 10;
     public bool herbivore = false;
     public bool carnivore = true;
@@ -75,6 +77,7 @@ public class Bear : Animal_Abstract
 public class Hare : Animal_Abstract
 {
     public string animalName = "Hare";
+    public int animalIdentifier = 1;
     public int currencyGain = 2;
     public bool herbivore = true;
     public bool carnivore = false;
@@ -123,6 +126,7 @@ public class Hare : Animal_Abstract
 public class Moose : Animal_Abstract
 {
     public string animalName = "Moose";
+    public int animalIdentifier = 2;
     public int currencyGain = 6;
     public bool herbivore = true;
     public bool carnivore = false;
@@ -153,6 +157,7 @@ public class Moose : Animal_Abstract
 public class Wolf : Animal_Abstract
 {
     public string animalName = "Wolf";
+    public int animalIdentifier = 3;
     public int currencyGain = 12;
     public bool herbivore = false;
     public bool carnivore = true;
