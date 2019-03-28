@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage1: {fileID: 21300000, guid: 233e7088d06054a4ba1e6fe54346b1cb, type: 3}
   stage2: {fileID: 21300000, guid: c54a36d00066de3419e2d28b866f400d, type: 3}
-  stage3: {fileID: 21300000, guid: 424563423b4e4634a8e4be0d444a8a29, type: 3}
+  stage3: {fileID: 21300000, guid: f110b496987a57a438a4465bfb43d367, type: 3}
 --- !u!61 &5843479191130252214
 BoxCollider2D:
   m_ObjectHideFlags: 0
