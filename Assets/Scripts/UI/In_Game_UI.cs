@@ -38,8 +38,7 @@ public class In_Game_UI : MonoBehaviour
     }
     private void Update()
     {
-        currency.text = "Currency: " + Currency_Driver.GetMoney();
-       
+        currency.text = "Currency: " + Currency_Driver.GetMoney();       
     }
 
     public void CanivoresButtonPressed()
@@ -122,8 +121,8 @@ public class In_Game_UI : MonoBehaviour
 
     public void ClosePauseMenu()
     {
-        pauseMenuUI.SetActive(false);           
         Pause_Menu.GameIsPaused = false;
+        pauseMenuUI.SetActive(false);                  
         if (!GameIsFrozen)
         {
             Time.timeScale = 1f;
