@@ -20,7 +20,7 @@ public class Day_Night_Cycle : MonoBehaviour
         time = 0;
         Time.timeScale = 1f;
         dayColor = new Vector4(0.5f, 0.5f, 0.5f, 1f);
-        nightColor = new Vector4(0.2f, 0.2f, 0.2f, 1f);
+        nightColor = new Vector4(0.16f, 0.16f, 0.16f, 1f);
 
         sunLight.color = dayColor;                                          
     }

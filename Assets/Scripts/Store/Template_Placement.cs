@@ -13,6 +13,16 @@ public class Template_Placement : MonoBehaviour
     [SerializeField]
     private LayerMask allTilesLayer;
 
+    Placement_Script pm;
+    private GameObject placementManager;
+
+
+    private void Start()
+    {
+        placementManager = GameObject.Find("PlacementManager");
+        pm = placementManager.GetComponent<Placement_Script>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -23,12 +33,19 @@ public class Template_Placement : MonoBehaviour
         {
 
             //checks if anything is below cursor when placing
-            Vector2 mouseRay = Camera.main.ScreenToWorldPoint(transform.position);
-            RaycastHit2D rayHit = Physics2D.Raycast(mouseRay, Vector2.zero, Mathf.Infinity, allTilesLayer);
+            Vector3 mouseRay = Camera.main.ScreenToWorldPoint(transform.position);
+            mouseRay[2] = 0;
+            Debug.Log(mouseRay);
+            RaycastHit rayHit; //= Physics.Raycast(mouseRay, Vector3.forward);
 
-            if (rayHit.collider == null)
+            if (!Physics.Raycast(mouseRay, new Vector3(0,0,1), out rayHit, Mathf.Infinity))
             {
+                Debug.Log("Collision NOT Detected");
                 Instantiate(finalObject, transform.position, Quaternion.identity);
+                pm.destroyTemplate();
+
+            } else {
+                Debug.Log("Collision Detected");
             }
 
         }

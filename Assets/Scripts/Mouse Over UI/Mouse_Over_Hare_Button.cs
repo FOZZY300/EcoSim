@@ -7,23 +7,22 @@ using UnityEngine.UI;
 public class Mouse_Over_Hare_Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject moreInfo;
-    public Text moreInfoText;
+    public Text name, sciName, type, diet, lifespan, length, weight;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse on bear button");
+        Debug.Log("Mouse on hare button");
         moreInfo.SetActive(true);
-        moreInfoText.text = "Name: Snowshoe Hare \n" +
-            "Scientific Name: Lepus Americanus \n" +
-            "Type: Mammal \n" +
-            "Diet: Herbivore \n" +
-            //"grass, ferns and leaves in the summer and twigs, buds and bark in the winter. The snowshoe hare either feeds alone or in small groups." +
-            //"Habitat: undergrowth, swamps and thickets." +
-            "Lifespan: up to 1 years \n" +
-            "Size: 16 to 20 in \n" +
-            "Weight: 2 to 4 lbs"
-            //"Speed: 27 mph"
-            ;
+        name.text = "Snowshoe Hare";
+        sciName.text = "Lepus Americanus";
+        type.text = "Mammal";
+        diet.text = "Herbivore";
+        //"grass, ferns and leaves in the summer and twigs, buds and bark in the winter. The snowshoe hare either feeds alone or in small groups." +
+        //"Habitat: undergrowth, swamps and thickets." +
+        lifespan.text = "up to 1 year";
+        length.text = "42cm";
+        weight.text = "1.6kg";
+            //"Speed: 27 mph"            
     }
 
     public void OnPointerExit(PointerEventData eventData)

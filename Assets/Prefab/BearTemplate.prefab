@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4285972533903175176}
   - component: {fileID: 6040222232558310659}
   - component: {fileID: 1176313844131829397}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: BearTemplate
   m_TagString: Bear
   m_Icon: {fileID: 0}
@@ -96,4 +96,4 @@ MonoBehaviour:
     type: 3}
   allTilesLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 4294967295
