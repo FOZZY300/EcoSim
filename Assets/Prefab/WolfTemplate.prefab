@@ -93,3 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalObject: {fileID: 231772616, guid: ff6c25b93e9cc4728aed71c02649cc59, type: 3}
+  allTilesLayer:
+    serializedVersion: 2
+    m_Bits: 0

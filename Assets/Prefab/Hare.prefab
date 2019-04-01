@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5157750788964543036}
   - component: {fileID: 5157750788964543037}
   - component: {fileID: 3109926472897956426}
-  m_Layer: 0
+  - component: {fileID: 3950929362055553380}
+  m_Layer: 10
   m_Name: Hare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -307448507
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4dc9304d8286842e6a7271199da8a811, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,3 +160,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bf41a57960a1e4295cc03e58667d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3950929362055553380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pRadius: 5
+  pAngle: 36
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 231772619}
   - component: {fileID: 231772618}
   - component: {fileID: 231772617}
-  m_Layer: 0
+  - component: {fileID: 164428239293237013}
+  m_Layer: 10
   m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231772616}
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &231772621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -307448507
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a3db49913d36d6499de4518c9d6d7bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,3 +160,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26b755a5b043474c81d97baac2f98a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &164428239293237013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231772616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pRadius: 5
+  pAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []

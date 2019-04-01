@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3603072607339239833}
   - component: {fileID: 3603072607339239837}
   - component: {fileID: 3513786740871665260}
-  m_Layer: 0
+  - component: {fileID: 6382042525895088844}
+  m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3603072607339239839}
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.504, y: 3.524, z: 1}
+  m_LocalRotation: {x: 0, y: 0.004625145, z: 0, w: 0.99998933}
+  m_LocalPosition: {x: -5.504, y: 3.524, z: 2}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.53, z: 0}
 --- !u!212 &3603072607339239835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -307448507
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 15c31a3dc3ec74d98bec1db4daddb4ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,3 +160,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9add8ac8e3d7cf4ea76bf5ff55ce3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6382042525895088844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603072607339239839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pRadius: 5
+  pAngle: 85
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []

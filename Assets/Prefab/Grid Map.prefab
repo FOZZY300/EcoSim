@@ -19191,7 +19191,7 @@ GameObject:
   - component: {fileID: 1967730195748010310}
   - component: {fileID: 3660925073040857928}
   - component: {fileID: 8217274698005453891}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trees Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19306,7 +19306,7 @@ GameObject:
   - component: {fileID: 7380181910200330365}
   - component: {fileID: 7087843157801348514}
   - component: {fileID: 4993263740822426856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mountain Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
