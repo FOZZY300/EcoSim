@@ -32,7 +32,13 @@ public class Pause_Menu : MonoBehaviour
         database.SetActive(true);
         mainPauseMenu.SetActive(false);
     }
-   
+    public void CloseDatabaseButtonPressed()
+    {
+        database.SetActive(false);
+        mainPauseMenu.SetActive(true);
+    }
+
+
     public void QuitButtonPressed()
     {
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
