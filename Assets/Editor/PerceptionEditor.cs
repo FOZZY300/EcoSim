@@ -10,7 +10,7 @@ public class PerceptionEditor : Editor
         //Reference to Perception script and target obj
         Perception prc = (Perception)target;
         //Sets color of circle
-        Handles.color = Color.white;
+        Handles.color = Color.black;
         //Draws circle from position of obj, dir circle will rotate around obj, angle begins, rotates 360, actual radius
         Handles.DrawWireArc(prc.transform.position, Vector3.forward, Vector3.up, 360, prc.pRadius);
         //Declare variables for Line of SIght. angleInDegrees, angleIsGlobal
