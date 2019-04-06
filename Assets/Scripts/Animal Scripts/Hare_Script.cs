@@ -8,6 +8,9 @@ public class Hare_Script : MonoBehaviour
 {
     Hare h = new Hare();
     private static System.Timers.Timer hareTimer;
+    Hare_Nest_Script closestNest;
+    bool hasNest;
+
 
     void OnMouseDown()
     {
@@ -31,6 +34,39 @@ public class Hare_Script : MonoBehaviour
     public void Start()
     {
        SetTimer();
+       hasNest = false;
+    }
+
+    public void Update()
+    {
+        if(hasNest == false)
+        {
+            findClosestNest();
+            hasNest = closestNest.addHareToNest(this.gameObject);
+        }
+
+    
+    }
+
+    public void findClosestNest()
+    {
+        float distanceToClosestNest = Mathf.Infinity;
+        closestNest = null;
+        Hare_Nest_Script[] allNests = GameObject.FindObjectsOfType<Hare_Nest_Script>();
+
+        foreach(Hare_Nest_Script currentNest in allNests){
+            float distanceToNest = (currentNest.transform.position - this.transform.position).sqrMagnitude;
+
+            if(distanceToNest < distanceToClosestNest)
+            {
+                distanceToClosestNest = distanceToNest;
+                closestNest = currentNest;
+                Debug.Log("Distance to closest nest found");
+            }
+
+        }
+
+        Debug.DrawLine(this.transform.position, closestNest.transform.position);
     }
 
     private void FixedUpdate()
