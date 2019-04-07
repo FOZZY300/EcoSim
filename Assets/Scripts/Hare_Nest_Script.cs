@@ -27,12 +27,30 @@ public class Hare_Nest_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawLine(this.transform.position, hare1.transform.position, Color.red);
-        Debug.DrawLine(this.transform.position, hare2.transform.position, Color.green);
-        Debug.DrawLine(this.transform.position, hare3.transform.position, Color.blue);
-        Debug.DrawLine(this.transform.position, hare4.transform.position, Color.yellow);
-        Debug.DrawLine(this.transform.position, hare5.transform.position, Color.cyan);
-        Debug.DrawLine(this.transform.position, hare6.transform.position, Color.magenta);
+        if(hare1 != null)
+        {
+            Debug.DrawLine(this.transform.position, hare1.transform.position, Color.red);
+        }
+        if (hare2 != null)
+        {
+            Debug.DrawLine(this.transform.position, hare2.transform.position, Color.green);
+        }
+        if (hare3 != null)
+        {
+            Debug.DrawLine(this.transform.position, hare3.transform.position, Color.blue);
+        }
+        if (hare4 != null)
+        {
+            Debug.DrawLine(this.transform.position, hare4.transform.position, Color.yellow);
+        }
+        if (hare5 != null)
+        {
+            Debug.DrawLine(this.transform.position, hare5.transform.position, Color.cyan);
+        }
+        if (hare6 != null)
+        {
+            Debug.DrawLine(this.transform.position, hare6.transform.position, Color.magenta);
+        }
 
     }
 
