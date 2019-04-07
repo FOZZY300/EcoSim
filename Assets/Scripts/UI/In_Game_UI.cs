@@ -16,6 +16,7 @@ public class In_Game_UI : MonoBehaviour
     public GameObject omnivoresPanel;
     public GameObject herbivoresPanel;
     public GameObject moreInfo;
+    public GameObject structuresPanel;
     public Text currency;
 
     public static bool GameIsFrozen = false;
@@ -35,6 +36,7 @@ public class In_Game_UI : MonoBehaviour
         herbivoresPanel.SetActive(false);
         omnivoresPanel.SetActive(false);
         moreInfo.SetActive(false);
+        structuresPanel.SetActive(false);
     }
     private void Update()
     {
@@ -83,6 +85,18 @@ public class In_Game_UI : MonoBehaviour
         OpenPlantsPanel();
     }
 
+    public void StructuresButtonPressed()
+    {
+        deafaultBottomLeftPanel.SetActive(false);
+        OpenStructuresPanel();
+    }
+
+    private void OpenStructuresPanel()
+    {
+        structuresPanel.SetActive(true);
+        backButton.SetActive(true);
+    }
+
     public void BackButtonPressed()
     {
         if (animalsPanel.activeInHierarchy)
@@ -93,6 +107,11 @@ public class In_Game_UI : MonoBehaviour
         else if (plantsPanel.activeInHierarchy)
         {
             plantsPanel.SetActive(false);
+            OpenDefaultBottomLeftPanel();
+        }
+        else if (structuresPanel.activeInHierarchy)
+        {
+            structuresPanel.SetActive(false);
             OpenDefaultBottomLeftPanel();
         }
         else if (carnivoresPanel.activeInHierarchy)

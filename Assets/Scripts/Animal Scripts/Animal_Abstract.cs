@@ -20,7 +20,9 @@ public abstract class Animal_Abstract : MonoBehaviour
     public int maximumThirst;
     public int breedRate;
     public int maximumHealth;
-    public int attackDamage;  
+    public int attackDamage;
+
+    public int cost;
 
 }
 
@@ -44,6 +46,8 @@ public class Bear : Animal_Abstract
     public int maximumHealth = 100;
     public int attackDamage = 20;
 
+    public int cost = 10;
+
     //semitest
     public string animalSex = "F", animalAge = "8";
     public float hungerLevel = 0.8f, tirednessLevel = 0.5f, thirstLevel = 0.8f;
@@ -55,22 +59,7 @@ public class Bear : Animal_Abstract
     {
         Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
     }
-    /*
-    internal float GetHungerLevel()
-    {
-        return hungerLevel;
-    }
-    internal float GetTirednessLevel()
-    {
-        return tirednessLevel;
-    }
-    internal float GetThirstLevel()
-    {
-        return thirstLevel;
-    }
-    */
-
-    //semitest
+    
 
 }
 
@@ -94,6 +83,8 @@ public class Hare : Animal_Abstract
     public int maximumHealth = 15;
     public int attackDamage = 3;
 
+    public int cost = 10;
+
     //semitest
     public string animalSex = "M", animalAge = "4";
     public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
@@ -104,22 +95,7 @@ public class Hare : Animal_Abstract
     {
         Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
     }
-    /*
-    internal float GetHungerLevel()
-    {
-        return hungerLevel;
-    }
-    internal float GetTirednessLevel()
-    {
-        return tirednessLevel;
-    }
-    internal float GetThirstLevel()
-    {
-        return thirstLevel;
-    }
-    */
-
-    //semitest
+   
 
 }
 
@@ -142,6 +118,8 @@ public class Moose : Animal_Abstract
     public int breedRate = 2;
     public int maximumHealth = 40;
     public int attackDamage = 10;
+
+    public int cost = 10;
 
     public void Selected()
     {
@@ -173,6 +151,8 @@ public class Wolf : Animal_Abstract
     public int breedRate = 3;
     public int maximumHealth = 75;
     public int attackDamage = 20;
+
+    public int cost = 10;
 
     public void Selected()
     {

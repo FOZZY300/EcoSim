@@ -4,26 +4,28 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Mouse_Over_Hare_Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Mouse_Over_Wolf_Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject moreInfo;
     public Text name, hp, speed, diet, cost, income;
-    private Hare h;
+    private Wolf w;
 
     private void Start()
     {
-        h = new Hare();
+        w = new Wolf();
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
+
         Debug.Log("Mouse on bear button");
         moreInfo.SetActive(true);
-        name.text = h.animalName;
-        hp.text = h.maximumHealth.ToString();
-        speed.text = h.animalSpeed.ToString();
-        diet.text = "Herbivore";
-        cost.text = h.cost.ToString();
-        income.text = h.currencyGain.ToString();
+        name.text = w.animalName;
+        hp.text = w.maximumHealth.ToString();
+        speed.text = w.animalSpeed.ToString();
+        diet.text = "Omnivore";
+        cost.text = w.cost.ToString();
+        income.text = w.currencyGain.ToString();
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
