@@ -755,7 +755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'During winter the Snowhoe hare''s fur turns white to help camoflage it
+  m_Text: 'During winter the Snowshoe hare''s fur turns white to help camoflage it
     in the snow.
 
     They are crepuscular animals meaning that they are most active at dawn and dusk.
@@ -956,8 +956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.749985, y: -82.5}
-  m_SizeDelta: {x: 147.5, y: 50}
+  m_AnchoredPosition: {x: -74.5, y: -84.7}
+  m_SizeDelta: {x: 147.5, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4266448063792876750
 CanvasRenderer:

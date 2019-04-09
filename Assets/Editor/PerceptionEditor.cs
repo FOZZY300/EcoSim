@@ -17,8 +17,8 @@ public class PerceptionEditor : Editor
         Vector3 losAngleA = prc.DirFromAngle(-prc.pAngle / 2, false);
         Vector3 losAngleB = prc.DirFromAngle(prc.pAngle / 2, false);
         //Draws the Line of Sight cone
-        Handles.DrawLine(prc.transform.position, prc.transform.position + losAngleA * prc.pRadius /*/ 2*/);
-        Handles.DrawLine(prc.transform.position, prc.transform.position + losAngleB * prc.pRadius /*/ 2*/);
+        Handles.DrawLine(prc.transform.position, prc.transform.position + losAngleA * prc.pRadius );
+        Handles.DrawLine(prc.transform.position, prc.transform.position + losAngleB * prc.pRadius );
         //Handles.DrawWireArc(prc.transform.position, Vector3.forward, losAngleB, prc.pAngle, prc.pRadius / 2);
 
         //Creates a red line between targets

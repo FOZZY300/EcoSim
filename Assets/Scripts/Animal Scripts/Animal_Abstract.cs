@@ -11,6 +11,7 @@ public abstract class Animal_Abstract : MonoBehaviour
     public bool carnivore;
     public int animalSpeed;
     public bool hunts;
+    public string[] prey;
     public string[] eatenPrey;
     public string[] eatenPlants;
     public bool canSwim;
@@ -35,6 +36,7 @@ public class Bear : Animal_Abstract
     public bool carnivore = true;
     public int animalSpeed = 5;
     public bool hunts = true;
+    public string[] prey = { "Hare", "Moose" };
     public string[] eatenPrey;
     public string[] eatenPlants;
     public bool canSwim = true;
@@ -72,6 +74,7 @@ public class Hare : Animal_Abstract
     public bool carnivore = false;
     public int animalSpeed = 8;
     public bool hunts = false;
+    public string[] prey = { "Grass" };
     public string[] eatenPrey;
     public string[] eatenPlants;
     public bool canSwim = true;
@@ -108,6 +111,7 @@ public class Moose : Animal_Abstract
     public bool carnivore = false;
     public int animalSpeed = 8;
     public bool hunts = false;
+    public string[] prey = { "Grass" };
     public string[] eatenPrey;
     public string[] eatenPlants;
     public bool canSwim = true;
@@ -141,6 +145,7 @@ public class Wolf : Animal_Abstract
     public bool carnivore = true;
     public int animalSpeed = 10;
     public bool hunts = true;
+    public string[] prey = { "Hare" };
     public string[] eatenPrey;
     public string[] eatenPlants;
     public bool canSwim = true;

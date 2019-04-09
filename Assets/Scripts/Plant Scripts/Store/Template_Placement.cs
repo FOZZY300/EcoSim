@@ -36,9 +36,9 @@ public class Template_Placement : MonoBehaviour
             Vector3 mouseRay = Camera.main.ScreenToWorldPoint(transform.position);
             mouseRay[2] = 0;
             Debug.Log(mouseRay);
-            RaycastHit rayHit; //= Physics.Raycast(mouseRay, Vector3.forward);
+            // !!!Not Needed!!! RaycastHit rayHit; //= Physics.Raycast(mouseRay, Vector3.forward);
 
-            if (!Physics.Raycast(mouseRay, new Vector3(0,0,1), out rayHit, Mathf.Infinity))
+            if (!Mouse_Over_Mountain.isOverMountain)
             {
                 Debug.Log("Collision NOT Detected");
                 Instantiate(finalObject, transform.position, Quaternion.identity);
