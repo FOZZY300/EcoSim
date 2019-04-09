@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3109926472897956426}
   - component: {fileID: 3950929362055553380}
   - component: {fileID: 3770348386884507369}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Hare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,11 +173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pRadius: 5
-  pAngle: 36
+  pRadius: 20
+  pAngle: 65
   targetMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 16384
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512

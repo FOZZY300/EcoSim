@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3659201551760175194}
   - component: {fileID: 5524540450056645200}
   - component: {fileID: 1968986858208114765}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Moose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,11 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pRadius: 5
+  pRadius: 10
   pAngle: 84
   targetMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 16384
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512

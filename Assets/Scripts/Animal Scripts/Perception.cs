@@ -25,7 +25,7 @@ public class Perception : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             FindVisibleTargets();
-            Debug.Log("Searching for target");
+            Debug.Log("Searching for Targets");
         }
     }
 
@@ -33,28 +33,25 @@ public class Perception : MonoBehaviour
     void FindVisibleTargets()
     {
         //Clears list to ensure no duplicates
-        Debug.Log("findvisibletargets");
         visibleTargets.Clear();
         //Gets an array of all targets within pRadius using colliders
         Collider2D[] targetsInpRadius = Physics2D.OverlapCircleAll(transform.position, pRadius, targetMask, 1, 1);
-        Debug.Log(targetsInpRadius[0]);
         //Loops through array
         for (int i = 0; i < targetsInpRadius.Length; i++)
         {
-            Transform target = targetsInpRadius[i].transform;
+            System.Console.Write(targetsInpRadius[i]);
+            Transform target = targetsInpRadius [i].transform;
             //Checks to see if the target falls within the pAngle
             Vector2 dirToTarget = (target.position - transform.position).normalized;
             //Checks if target is within range
-            if (Vector2.Angle(transform.right, dirToTarget) < pAngle / 2)
+            if (Vector2.Angle (transform.right, dirToTarget) < pAngle / 2)
             {
                 float disToTarget = Vector2.Distance(transform.position, target.position);
-                //Adds the target to the visibleTargets array if there is no collision
-                visibleTargets.Add(target);
-                if (!Physics2D.Raycast(transform.position, dirToTarget, disToTarget, obstacleMask, -10, 10))
+                
+                if (!Physics2D.Raycast(transform.position, dirToTarget, disToTarget, obstacleMask, 1, 1))
                 {
                     //Just creates a list of targets no action yet
-                    //visibleTargets.Add(target);
-                    Debug.Log("target found");
+                    visibleTargets.Add(target);
                 }
             }
         }
@@ -67,10 +64,10 @@ public class Perception : MonoBehaviour
         if (!angleIsGlobal)
         {
             //converts to a global angle by adding transforms own angle to it
-            angleInDegrees += transform.eulerAngles.y;
+            angleInDegrees += transform.eulerAngles.x;
         }
         //Sets angle (has to swap sin and cos around for Unity)
-        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), 0);
+        return new Vector2(Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), Mathf.Sin(angleInDegrees * Mathf.Deg2Rad));
 
     }
 }
