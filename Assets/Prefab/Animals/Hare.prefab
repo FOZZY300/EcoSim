@@ -16,7 +16,12 @@ GameObject:
   - component: {fileID: 3109926472897956426}
   - component: {fileID: 3950929362055553380}
   - component: {fileID: 3770348386884507369}
+<<<<<<< HEAD
   m_Layer: 12
+=======
+  - component: {fileID: 779441989551719764}
+  m_Layer: 10
+>>>>>>> 305c83f1878adea908c64e62e14c29a16a7eb41c
   m_Name: Hare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,3 +200,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectID: 7144103
+--- !u!95 &779441989551719764
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13b3a0ad885b6ed46a5b22fc388ec17b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

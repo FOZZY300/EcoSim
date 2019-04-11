@@ -8,6 +8,9 @@ public class Animal_Movement : MonoBehaviour
     private Vector2 minWalkPoint;
     private Vector2 maxWalkPoint;
 
+    [SerializeField]
+    private Sprite facingLeft;
+
     private Rigidbody2D myRigidBody;
 
     public bool isWalking;
@@ -16,6 +19,8 @@ public class Animal_Movement : MonoBehaviour
     private float walkCounter;
     public float waitTime;
     private float waitCounter;
+
+    public bool facingRight = true;
 
     private int walkDirection;
 
@@ -27,6 +32,7 @@ public class Animal_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         myRigidBody = GetComponent<Rigidbody2D>();
 
         waitCounter = walkTime;
@@ -42,6 +48,24 @@ public class Animal_Movement : MonoBehaviour
         }
     }
 
+
+   /* private void FixedUpdate()
+    {
+        float move = Input.GetAxis("Horizontal");
+
+        if (move < 0) GetComponent<Rigidbody2D>().velocity = new Vector3(move * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        if (move > 0) GetComponent<Rigidbody2D>().velocity = new Vector3(move * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+        if (move < 0 && facingRight) Flip();
+        if (move > 0 && !facingRight) Flip();
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(Vector3.up * 180);
+    }
+    */
     // Update is called once per frame
     void Update()
     {
@@ -112,6 +136,7 @@ public class Animal_Movement : MonoBehaviour
     public void ChooseDirection()
     {
         walkDirection = Random.Range(0, 4);
+
         isWalking = true;
         walkCounter = walkTime;
     }

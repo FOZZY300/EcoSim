@@ -49,14 +49,14 @@ TagManager:
   - name: Grass
     uniqueID: 30554491
     locked: 0
-  - name: Tree
-    uniqueID: 2243768217
+  - name: Water
+    uniqueID: 887433167
     locked: 0
   - name: Mountains
     uniqueID: 1714058099
     locked: 0
-  - name: Water
-    uniqueID: 887433167
+  - name: Tree
+    uniqueID: 2243768217
     locked: 0
   - name: Animal
     uniqueID: 3987518789
