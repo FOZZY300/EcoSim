@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal_Movement : MonoBehaviour
+public class Animal_Wander : MonoBehaviour
 {
+    /*
+     * --------------------------
+     * SET AS LOW PRIORITY BEHAVIOUR
+     *--------------------------- 
+     */
+
     public float moveSpeed;
     private Vector2 minWalkPoint;
     private Vector2 maxWalkPoint;
