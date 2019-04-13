@@ -17,12 +17,12 @@ public class Mouse_Over_Wolf_Button : MonoBehaviour, IPointerEnterHandler, IPoin
     public void OnPointerEnter(PointerEventData eventData)
     {
 
-        Debug.Log("Mouse on bear button");
+        Debug.Log("Mouse on wolf button");
         moreInfo.SetActive(true);
         name.text = w.animalName;
         hp.text = w.maximumHealth.ToString();
         speed.text = w.animalSpeed.ToString();
-        diet.text = "Omnivore";
+        diet.text = "Carnivore";
         cost.text = w.cost.ToString();
         income.text = w.currencyGain.ToString();
 

@@ -98,15 +98,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_OrthographicCamera: {fileID: 600974224001092568}
   edgeSize: 5
-  cameraSpeed: 0.25
+  cameraSpeed: 0.05
   zoomSpeed: 2
-  minZoom: 1
-  maxZoom: 30
-  maxX: 10
-  minX: -10
-  maxY: 10
-  minY: -10
-  cameraAccelaration: 1
+  minZoom: 2
+  maxZoom: 18
+  maxX: 70
+  minX: 0
+  maxY: 70
+  minY: 0
+  cameraAccelaration: 0.25
 --- !u!114 &600974224001092565
 MonoBehaviour:
   m_ObjectHideFlags: 0

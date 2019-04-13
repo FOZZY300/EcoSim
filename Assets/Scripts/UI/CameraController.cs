@@ -76,21 +76,21 @@ public class CameraController : MonoBehaviour
 
         transform.Translate(p_Velocity, Space.World);                                       // Moves camera
 
-        if(m_OrthographicCamera.transform.position.x > maxX)
+        if(m_OrthographicCamera.transform.position.x > maxX - (m_OrthographicCamera.orthographicSize * 2.1f))
         {
-            m_OrthographicCamera.transform.position = new Vector3(maxX, m_OrthographicCamera.transform.position.y, 0);
+            m_OrthographicCamera.transform.position = new Vector3(maxX - (m_OrthographicCamera.orthographicSize * 2.1f), m_OrthographicCamera.transform.position.y, 0);
         }
-        if (m_OrthographicCamera.transform.position.x < minX)
+        if (m_OrthographicCamera.transform.position.x < minX + (m_OrthographicCamera.orthographicSize * 2.1f))
         {
-            m_OrthographicCamera.transform.position = new Vector3(minX, m_OrthographicCamera.transform.position.y, 0);
+            m_OrthographicCamera.transform.position = new Vector3(minX + (m_OrthographicCamera.orthographicSize * 2.1f), m_OrthographicCamera.transform.position.y, 0);
         }
-        if (m_OrthographicCamera.transform.position.y > maxY)
+        if (m_OrthographicCamera.transform.position.y > maxY - m_OrthographicCamera.orthographicSize)
         {
-            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, maxY, 0);
+            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, maxY - m_OrthographicCamera.orthographicSize, 0);
         }
-        if (m_OrthographicCamera.transform.position.y < minX)
+        if (m_OrthographicCamera.transform.position.y < minY + m_OrthographicCamera.orthographicSize)
         {
-            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, minY, 0);
+            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, minY + m_OrthographicCamera.orthographicSize, 0);
         }
     } 
 }

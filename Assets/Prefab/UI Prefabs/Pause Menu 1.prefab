@@ -227,7 +227,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e720858d245515d4187140e2eb8a5917, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b42ecfaf656164f971c75c5c1de99f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -254,11 +254,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0}
-    m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.60784316}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.21568628}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -391,7 +391,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e720858d245515d4187140e2eb8a5917, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b42ecfaf656164f971c75c5c1de99f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -418,11 +418,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0}
-    m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.60784316}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.21568628}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -784,7 +784,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e720858d245515d4187140e2eb8a5917, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b42ecfaf656164f971c75c5c1de99f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -811,11 +811,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0}
-    m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.60784316}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.21568628}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1153,8 +1153,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c9b42ecfaf656164f971c75c5c1de99f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1183,8 +1183,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.60784316}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.21568628}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1442,7 +1442,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e720858d245515d4187140e2eb8a5917, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b42ecfaf656164f971c75c5c1de99f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1469,11 +1469,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0}
-    m_HighlightedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.39215687}
-    m_PressedColor: {r: 0.4666667, g: 1, b: 0.4666667, a: 0.78431374}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.60784316}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.21568628}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1893,23 +1893,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 300
       objectReference: {fileID: 0}
-    - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: "Moose\r (Alces Alces Anderson\r)\n"
-      objectReference: {fileID: 0}
     - target: {fileID: 2588533683931330669, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 44ce16517f97c9447ae35e4d1d5d6397,
         type: 3}
-    - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: "Diet (Herbivore):  leaves, twigs, buds, bark, lichens, aquatic plants
-        and some of the taller herbaceous land plants\r.\n"
-      objectReference: {fileID: 0}
     - target: {fileID: 8595227032544237334, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
@@ -1917,20 +1906,21 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
-    - target: {fileID: 1560526590393143168, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+    - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: 2.1
+      value: "Diet (Herbivore):  leaves, twigs, buds, bark, lichens, aquatic plants
+        and some of the taller herbaceous land plants\r.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: "Moose\r (Alces Alces Anderson\r)\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2449713935827456570, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
       value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 5505913993730425815, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 8154026990527851217, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
@@ -1941,6 +1931,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560526590393143168, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505913993730425815, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2afd7bae39eb774bbe9e5ac873c80cb, type: 3}
@@ -2107,23 +2107,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.38039216
       objectReference: {fileID: 0}
-    - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: Gray Wolf (CanisLupus)
-      objectReference: {fileID: 0}
     - target: {fileID: 2588533683931330669, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 00794b5b4f7b95a419a06b9002b34f4f,
         type: 3}
-    - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Diet (Carnivore): deer, moose, caribou, elk, bison and musk-oxen, beaver,
-        hares and other small rodents.'
-      objectReference: {fileID: 0}
     - target: {fileID: 8595227032544237334, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
@@ -2131,20 +2120,21 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
-    - target: {fileID: 1560526590393143168, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+    - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: 81
+      value: 'Diet (Carnivore): deer, moose, caribou, elk, bison and musk-oxen, beaver,
+        hares and other small rodents.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: Gray Wolf (CanisLupus)
       objectReference: {fileID: 0}
     - target: {fileID: 2449713935827456570, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
       value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 5505913993730425815, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8154026990527851217, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
@@ -2155,6 +2145,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560526590393143168, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505913993730425815, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2afd7bae39eb774bbe9e5ac873c80cb, type: 3}
@@ -2306,16 +2306,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 300
       objectReference: {fileID: 0}
-    - target: {fileID: 1529963078506314206, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 904899898095468427, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 3972211276758032193, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2346,10 +2336,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+    - target: {fileID: 904899898095468427, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
-      propertyPath: m_Text
-      value: Grizzly Bear (Ursus Arctos Horribilis)
+      propertyPath: m_AnchoredPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529963078506314206, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2588533683931330669, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
@@ -2357,17 +2352,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5ba2c4bd6c4759d4f8d3e302ea24b800,
         type: 3}
-    - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: "Diet (Omnivores): moose, deer, sheep, bison, various rodents, fish,
-        pine nuts, sedges, bulbs, roots, berries and grasses\r.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4850437089703367467, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8595227032544237334, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
@@ -2375,20 +2359,26 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
-    - target: {fileID: 1560526590393143168, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+    - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: 1
+      value: "Diet (Omnivores): moose, deer, sheep, bison, various rodents, fish,
+        pine nuts, sedges, bulbs, roots, berries and grasses\r.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: Grizzly Bear (Ursus Arctos Horribilis)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850437089703367467, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2449713935827456570, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
       value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 5505913993730425815, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
-        type: 3}
-      propertyPath: m_Text
-      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 8154026990527851217, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
@@ -2399,6 +2389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560526590393143168, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505913993730425815, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
+        type: 3}
+      propertyPath: m_Text
+      value: 56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2afd7bae39eb774bbe9e5ac873c80cb, type: 3}

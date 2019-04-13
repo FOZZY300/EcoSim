@@ -83,6 +83,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sunLight: {fileID: 3509423867029779724}
-  moonLight: {fileID: 0}
   dayLength: 24
   clock: {fileID: 0}
