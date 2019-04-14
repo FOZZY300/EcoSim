@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Mouse_Over_Wolf_Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject moreInfo;
-    public Text name, hp, speed, diet, cost, income;
+    public Text name, hp, diet, cost, income;
     private Wolf w;
 
     private void Start()
@@ -21,7 +21,7 @@ public class Mouse_Over_Wolf_Button : MonoBehaviour, IPointerEnterHandler, IPoin
         moreInfo.SetActive(true);
         name.text = w.animalName;
         hp.text = w.maximumHealth.ToString();
-        speed.text = w.animalSpeed.ToString();
+        //speed.text = w.animalSpeed.ToString();
         diet.text = "Carnivore";
         cost.text = w.cost.ToString();
         income.text = w.currencyGain.ToString();

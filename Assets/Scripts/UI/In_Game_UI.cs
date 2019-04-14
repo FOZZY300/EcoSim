@@ -17,6 +17,8 @@ public class In_Game_UI : MonoBehaviour
     public GameObject herbivoresPanel;
     public GameObject moreInfo;
     public GameObject structuresPanel;
+    public GameObject treesPanel;
+    public GameObject smallPlantsPanel;
     public Text currency;
 
     public static bool GameIsFrozen = false;
@@ -37,6 +39,8 @@ public class In_Game_UI : MonoBehaviour
         omnivoresPanel.SetActive(false);
         moreInfo.SetActive(false);
         structuresPanel.SetActive(false);
+        treesPanel.SetActive(false);
+        smallPlantsPanel.SetActive(false);
     }
     private void Update()
     {
@@ -96,6 +100,32 @@ public class In_Game_UI : MonoBehaviour
         structuresPanel.SetActive(true);
         backButton.SetActive(true);
     }
+    
+    public void TreesButtonPressed()
+    {
+        plantsPanel.SetActive(false);
+        OpenTreesPanel();
+    }
+
+    private void OpenTreesPanel()
+    {
+        treesPanel.SetActive(true);
+        backButton.SetActive(true);
+    }
+
+    public void SmallPlantsButtonPressed()
+    {
+        plantsPanel.SetActive(false);
+        OpenSmallPlantsPanel();
+    }
+
+    private void OpenSmallPlantsPanel()
+    {
+        smallPlantsPanel.SetActive(true);
+        backButton.SetActive(true);
+    }
+
+
 
     public void BackButtonPressed()
     {
@@ -108,6 +138,16 @@ public class In_Game_UI : MonoBehaviour
         {
             plantsPanel.SetActive(false);
             OpenDefaultBottomLeftPanel();
+        }
+        else if (treesPanel.activeInHierarchy)
+        {
+            treesPanel.SetActive(false);
+            OpenPlantsPanel();
+        }
+        else if (smallPlantsPanel.activeInHierarchy)
+        {
+            smallPlantsPanel.SetActive(false);
+            OpenPlantsPanel();
         }
         else if (structuresPanel.activeInHierarchy)
         {

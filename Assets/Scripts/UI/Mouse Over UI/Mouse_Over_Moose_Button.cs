@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Mouse_Over_Moose_Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject moreInfo;
-    public Text name, hp, speed, diet, cost, income;
+    public Text name, hp, diet, cost, income;
     private Moose m;
 
     private void Start()
@@ -21,7 +21,7 @@ public class Mouse_Over_Moose_Button : MonoBehaviour, IPointerEnterHandler, IPoi
         moreInfo.SetActive(true);
         name.text = m.animalName;
         hp.text = m.maximumHealth.ToString();
-        speed.text = m.animalSpeed.ToString();
+        //speed.text = m.animalSpeed.ToString();
         diet.text = "Herbivore";
         cost.text = m.cost.ToString();
         income.text = m.currencyGain.ToString();

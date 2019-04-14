@@ -47,7 +47,8 @@ public class Placing_Animals : MonoBehaviour
         pm.setPlaceTrue(3);
     }
 
-    public void GrassButton(){
+    public void GrassButton()
+    {
         pm.setPlaceTrue(4);
     }
 
