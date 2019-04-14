@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 6382042525895088844}
   - component: {fileID: 7855495031665142584}
   - component: {fileID: 3095542361867604301}
+  - component: {fileID: 7840048628338913853}
+  - component: {fileID: 4793728747680994666}
   m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
@@ -119,9 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  facingLeft: {fileID: 0}
   isWalking: 0
   walkTime: 1
   waitTime: 2
+  facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &3513786740871665260
 MonoBehaviour:
@@ -195,3 +199,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &7840048628338913853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603072607339239839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f175a6c29df9d67419da5ced5ba865cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  hunger: 100
+  hungerPerSecond: 5
+  speed: 0
+  entityType: Bear
+--- !u!114 &4793728747680994666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603072607339239839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a830f6abcde354eb4002077e4722ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Moose
+  eatingRange: 10
+  eatHPPerSecond: 50
+  eatHP2Hunger: 2

@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 3109926472897956426}
   - component: {fileID: 3950929362055553380}
   - component: {fileID: 3770348386884507369}
+  - component: {fileID: 5503695142323510308}
+  - component: {fileID: 3643187835338403763}
+  - component: {fileID: 7140223388884047469}
   m_Layer: 10
   m_Name: Hare
   m_TagString: Untagged
@@ -139,15 +142,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5157750788964543026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  facingLeft: {fileID: 0}
   isWalking: 0
   walkTime: 2
   waitTime: 2
+  facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &3109926472897956426
 MonoBehaviour:
@@ -177,7 +182,7 @@ MonoBehaviour:
   pAngle: 36
   targetMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 16384
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
@@ -195,3 +200,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectID: 7144103
+--- !u!114 &5503695142323510308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffcd6b92f4f2cd40a58a030d9d58b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Wolf
+--- !u!114 &3643187835338403763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a830f6abcde354eb4002077e4722ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Grass
+  eatingRange: 10
+  eatHPPerSecond: 50
+  eatHP2Hunger: 2
+--- !u!114 &7140223388884047469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f175a6c29df9d67419da5ced5ba865cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  hunger: 100
+  hungerPerSecond: 5
+  speed: 6
+  entityType: Hare

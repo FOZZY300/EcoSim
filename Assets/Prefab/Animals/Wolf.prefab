@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 164428239293237013}
   - component: {fileID: 4559289923724377689}
   - component: {fileID: 7781975247965257456}
+  - component: {fileID: 7142395367067826454}
+  - component: {fileID: 3009974499620197364}
   m_Layer: 11
   m_Name: Wolf
   m_TagString: Untagged
@@ -113,15 +115,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231772616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  facingLeft: {fileID: 0}
   isWalking: 0
   walkTime: 1
   waitTime: 2
+  facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &231772617
 MonoBehaviour:
@@ -195,3 +199,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &7142395367067826454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231772616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a830f6abcde354eb4002077e4722ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Hare
+  eatingRange: 10
+  eatHPPerSecond: 50
+  eatHP2Hunger: 2
+--- !u!114 &3009974499620197364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231772616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f175a6c29df9d67419da5ced5ba865cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  hunger: 100
+  hungerPerSecond: 5
+  speed: 4
+  entityType: Wolf

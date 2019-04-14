@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 3659201551760175194}
   - component: {fileID: 5524540450056645200}
   - component: {fileID: 1968986858208114765}
+  - component: {fileID: 6851955096137969847}
+  - component: {fileID: 4707984709249875573}
+  - component: {fileID: 5582697890948355511}
   m_Layer: 13
   m_Name: Moose
   m_TagString: Untagged
@@ -119,9 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  facingLeft: {fileID: 0}
   isWalking: 0
   walkTime: 1
   waitTime: 2
+  facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &2448098521372981688
 MonoBehaviour:
@@ -195,3 +200,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectID: 3391959
+--- !u!114 &6851955096137969847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113481178247995663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffcd6b92f4f2cd40a58a030d9d58b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Bear
+--- !u!114 &4707984709249875573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113481178247995663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a830f6abcde354eb4002077e4722ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Grass
+  eatingRange: 10
+  eatHPPerSecond: 50
+  eatHP2Hunger: 2
+--- !u!114 &5582697890948355511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113481178247995663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f175a6c29df9d67419da5ced5ba865cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  hunger: 100
+  hungerPerSecond: 5
+  speed: 0
+  entityType: Moose
