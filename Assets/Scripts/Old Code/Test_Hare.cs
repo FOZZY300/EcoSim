@@ -18,7 +18,7 @@ public class Test_Hare : MonoBehaviour
     void OnMouseDown()
     {
         animalID = GetInstanceID();
-        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
+        //Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
         
     }
 

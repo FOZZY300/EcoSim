@@ -2,6 +2,5 @@
 
 public class GameObjectGUID : MonoBehaviour
 {
-
-    public int gameObjectID = 0;
+    public int gameObjectID = 0;    
 }

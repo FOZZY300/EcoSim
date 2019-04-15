@@ -15,17 +15,14 @@ public class Mouse_Over_Bear_Button : MonoBehaviour, IPointerEnterHandler, IPoin
         b = new Bear();
     }
     public void OnPointerEnter(PointerEventData eventData)
-    {
-
-        Debug.Log("Mouse on bear button");
+    {      
         moreInfo.SetActive(true);        
         name.text = b.animalName;
         hp.text = b.maximumHealth.ToString();
         //speed.text = b.animalSpeed.ToString();
         diet.text = "Omnivore";
         cost.text = b.cost.ToString();
-        income.text = b.currencyGain.ToString();
-        
+        income.text = b.currencyGain.ToString();        
     }
 
     public void OnPointerExit(PointerEventData eventData)

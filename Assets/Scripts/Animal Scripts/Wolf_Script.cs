@@ -7,11 +7,27 @@ using System.Timers;
 public class Wolf_Script : MonoBehaviour
 {
     Wolf w = new Wolf();
+    GameObjectGUID guid;
+    System.Random rnd = new System.Random();
     private static System.Timers.Timer wolfTimer;
+
+    public void Start()
+    {
+        SetTimer();
+        guid = GetComponent<GameObjectGUID>();
+        guid.gameObjectID = rnd.Next();
+    }
+
+    private void FixedUpdate()
+    {
+        w.hungerLevel -= w.hungerDecayRate;
+        w.tirednessLevel -= w.tirednessDecayRate;
+        w.thirstLevel -= w.thirstDecayRate;
+    }
 
     void OnMouseDown()
     {
-        w.Selected();
+        Info_Panel.OpenBox(w.hungerLevel, w.tirednessLevel, w.thirstLevel, w.animalName, w.animalAge, w.animalSex, guid.gameObjectID);
     }
 
     private void SetTimer()
@@ -22,22 +38,9 @@ public class Wolf_Script : MonoBehaviour
         wolfTimer.Enabled = true;
     }
 
-    public void Start()
-    {
-        SetTimer();
-    }
-
-
     private void OnTimedEvent(object source, ElapsedEventArgs e)
     {
         Currency_Driver.AddMoney(w.currencyGain);
-    }
-
-    private void FixedUpdate()
-    {
-        w.hungerLevel -= w.hungerDecayRate;
-        w.tirednessLevel -= w.tirednessDecayRate;
-        w.thirstLevel -= w.thirstDecayRate;
     }
 
     public float GetHungerLevel()
@@ -51,10 +54,5 @@ public class Wolf_Script : MonoBehaviour
     public float GetThirstLevel()
     {
         return w.thirstLevel;
-    }
-
-    public void SetAnimalID(int aID)
-    {
-        w.animalID = aID;
     }
 }

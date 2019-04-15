@@ -7,14 +7,34 @@ using System.Timers;
 public class Hare_Script : MonoBehaviour
 {
     Hare h = new Hare();
+    GameObjectGUID guid;
+    System.Random rnd = new System.Random();
     private static System.Timers.Timer hareTimer;
     Hare_Nest_Script closestNest;
     bool hasNest;
 
-
-    void OnMouseDown()
+    public void Start()
     {
-        h.Selected();
+        SetTimer();
+        hasNest = false;
+        guid = GetComponent<GameObjectGUID>();
+        guid.gameObjectID = rnd.Next();
+    }
+
+    public void Update()
+    {
+        if(hasNest == false)
+        {
+            findClosestNest();
+            hasNest = closestNest.addHareToNest(this.gameObject);
+        }  
+    }
+
+    private void FixedUpdate()
+    {
+        h.hungerLevel -= h.hungerDecayRate;
+        h.tirednessLevel -= h.tirednessDecayRate;
+        h.thirstLevel -= h.thirstDecayRate;
     }
 
     private void SetTimer()
@@ -25,27 +45,9 @@ public class Hare_Script : MonoBehaviour
         hareTimer.Enabled = true;
     }
 
-
     private void OnTimedEvent(object source, ElapsedEventArgs e)
     {
         Currency_Driver.AddMoney(h.currencyGain);
-    }
-
-    public void Start()
-    {
-       SetTimer();
-       hasNest = false;
-    }
-
-    public void Update()
-    {
-        if(hasNest == false)
-        {
-            findClosestNest();
-            hasNest = closestNest.addHareToNest(this.gameObject);
-        }
-
-    
     }
 
     public void findClosestNest()
@@ -69,13 +71,11 @@ public class Hare_Script : MonoBehaviour
         Debug.DrawLine(this.transform.position, closestNest.transform.position);
     }
 
-    private void FixedUpdate()
+    void OnMouseDown()
     {
-        h.hungerLevel -= h.hungerDecayRate;
-        h.tirednessLevel -= h.tirednessDecayRate;
-        h.thirstLevel -= h.thirstDecayRate;
+        Info_Panel.OpenBox(h.hungerLevel, h.tirednessLevel, h.thirstLevel, h.animalName, h.animalAge, h.animalSex, guid.gameObjectID);
     }
-
+   
     public float GetHungerLevel()
     {
         return h.hungerLevel;
@@ -88,9 +88,5 @@ public class Hare_Script : MonoBehaviour
     {
         return h.thirstLevel;
     }
-
-    public void SetAnimalID(int aID)
-    {
-        h.animalID = aID;
-    }
+    
 }

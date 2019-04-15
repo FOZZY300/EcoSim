@@ -15,8 +15,7 @@ public class Mouse_Over_Hare_Button : MonoBehaviour, IPointerEnterHandler, IPoin
         h = new Hare();
     }
     public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("Mouse on bear button");
+    {        
         moreInfo.SetActive(true);
         name.text = h.animalName;
         hp.text = h.maximumHealth.ToString();

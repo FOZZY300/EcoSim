@@ -14,10 +14,9 @@ public class Mouse_Over_Moose_Button : MonoBehaviour, IPointerEnterHandler, IPoi
     {
         m = new Moose();
     }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-
-        Debug.Log("Mouse on bear button");
         moreInfo.SetActive(true);
         name.text = m.animalName;
         hp.text = m.maximumHealth.ToString();
@@ -25,7 +24,6 @@ public class Mouse_Over_Moose_Button : MonoBehaviour, IPointerEnterHandler, IPoi
         diet.text = "Herbivore";
         cost.text = m.cost.ToString();
         income.text = m.currencyGain.ToString();
-
     }
 
     public void OnPointerExit(PointerEventData eventData)

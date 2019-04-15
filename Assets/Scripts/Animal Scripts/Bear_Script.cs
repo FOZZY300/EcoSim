@@ -6,10 +6,25 @@ using System.Timers;
 
 public class Bear_Script : MonoBehaviour
 {
-    Bear b = new Bear(); 
+    Bear b = new Bear();
+    GameObjectGUID guid;
+    System.Random rnd = new System.Random();
     private static System.Timers.Timer bearTimer;
 
-  
+    public void Start()
+    {
+        SetTimer();
+        guid = GetComponent<GameObjectGUID>();
+        guid.gameObjectID = rnd.Next();
+    }
+
+    private void FixedUpdate()
+    {
+        b.hungerLevel -= b.hungerDecayRate;
+        b.tirednessLevel -= b.tirednessDecayRate;
+        b.thirstLevel -= b.thirstDecayRate;
+    }
+
     private void SetTimer()
     {
         bearTimer = new System.Timers.Timer(60000); 
@@ -17,32 +32,16 @@ public class Bear_Script : MonoBehaviour
         bearTimer.AutoReset = true;
         bearTimer.Enabled = true;
     }
-
-   
+  
     private void OnTimedEvent(object source, ElapsedEventArgs e)
     {
         Currency_Driver.AddMoney(b.currencyGain);
-    }
-
+    }   
 
     void OnMouseDown()
-    {       
-        b.Selected();
+    {                      
+        Info_Panel.OpenBox(b.hungerLevel, b.tirednessLevel, b.thirstLevel, b.animalName, b.animalAge, b.animalSex, guid.gameObjectID);       
     }
-
-    public void Start()
-    {
-        SetTimer();
-    }
-
-    private void FixedUpdate()
-    {
-
-        b.hungerLevel -= b.hungerDecayRate;
-        b.tirednessLevel -= b.tirednessDecayRate;
-        b.thirstLevel -= b.thirstDecayRate;
-    }
-
     public float GetHungerLevel()
     {
         return b.hungerLevel;
@@ -54,10 +53,5 @@ public class Bear_Script : MonoBehaviour
     public float GetThirstLevel()
     {
         return b.thirstLevel;
-    }
-    public void SetAnimalID(int aID)
-    {
-        b.animalID = aID;
-    }
-
+    }    
 }

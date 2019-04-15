@@ -24,7 +24,6 @@ public abstract class Animal_Abstract : MonoBehaviour
     public int attackDamage;
 
     public int cost;
-
 }
 
 public class Bear : Animal_Abstract
@@ -56,13 +55,7 @@ public class Bear : Animal_Abstract
     public int animalID;
     public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 
-    
-    public void Selected()
-    {
-        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
-    }
-    
-
+       
 }
 
 public class Hare : Animal_Abstract
@@ -92,14 +85,7 @@ public class Hare : Animal_Abstract
     public string animalSex = "M", animalAge = "4";
     public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
     public int animalID;
-    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
-
-    public void Selected()
-    {
-        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
-    }
-   
-
+    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;  
 }
 
 public class Moose : Animal_Abstract
@@ -123,12 +109,7 @@ public class Moose : Animal_Abstract
     public int maximumHealth = 40;
     public int attackDamage = 10;
 
-    public int cost = 10;
-
-    public void Selected()
-    {
-        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
-    }
+    public int cost = 10;   
 
     public string animalSex = "M", animalAge = "4";
     public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
@@ -158,11 +139,6 @@ public class Wolf : Animal_Abstract
     public int attackDamage = 20;
 
     public int cost = 10;
-
-    public void Selected()
-    {
-        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);
-    }
 
     public string animalSex = "M", animalAge = "4";
     public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;

@@ -13,6 +13,7 @@ public class Animal_Manager : MonoBehaviour
     private static Moose_Script mScript;
     private static Wolf_Script wScript;
 
+    /*
     public static void NewAnimal(string animal, Vector3 place)
     {
         clones.Add(Instantiate(GameObject.Find(animal)));
@@ -132,5 +133,6 @@ public class Animal_Manager : MonoBehaviour
                 return 0;
 
         }
-    }  
+    } 
+    */
 }

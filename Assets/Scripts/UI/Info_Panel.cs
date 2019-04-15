@@ -25,7 +25,7 @@ public class Info_Panel : MonoBehaviour
 
     void Start()
     {
-        box = GameObject.Find("Info Box 1 (1)");
+        box = Infobox;
         Infobox.SetActive(false);        
         myList.Add("Bear", animalImages[0]);                            // Populates list for animal images
         myList.Add("Hare", animalImages[1]);
@@ -51,7 +51,7 @@ public class Info_Panel : MonoBehaviour
             {
                 return;
             }
-        }
+        }        
 
         int i = 0;
         while (isOpen[i])                                               // Finds the first free space to place a new box
@@ -85,7 +85,7 @@ public class Info_Panel : MonoBehaviour
         return;
     }
 
-    
+    /*
     void Update()
     {
          for (int i = 0; i < 8; i++)
@@ -97,12 +97,14 @@ public class Info_Panel : MonoBehaviour
         }
     }
     
+
     public static void UiUpdate(int boxNum, string animalName)
     {               
         sliders[boxNum][0].value = Animal_Manager.GetHungerLevel(animalIDs[boxNum], animalName);                         // Udates all slider values
         sliders[boxNum][1].value = Animal_Manager.GetTirednessLevel(animalIDs[boxNum], animalName);
-        sliders[boxNum][2].value = Animal_Manager.GetThirstLevel(animalIDs[boxNum], animalName);        
+        sliders[boxNum][2].value = Animal_Manager.GetThirstLevel(animalIDs[boxNum], animalName);
     }
+    */
 
     public static void CloseBox(int boxNum)
     {       

@@ -14,7 +14,7 @@ public class Test_Bear : MonoBehaviour
 
     public void OMD()
     {       
-        Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);        
+        //Info_Panel.OpenBox(hungerLevel, tirednessLevel, thirstLevel, animalName, animalAge, animalSex, animalID);        
     }
       
    

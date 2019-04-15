@@ -14,10 +14,9 @@ public class Mouse_Over_Wolf_Button : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         w = new Wolf();
     }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-
-        Debug.Log("Mouse on wolf button");
         moreInfo.SetActive(true);
         name.text = w.animalName;
         hp.text = w.maximumHealth.ToString();
@@ -25,7 +24,6 @@ public class Mouse_Over_Wolf_Button : MonoBehaviour, IPointerEnterHandler, IPoin
         diet.text = "Carnivore";
         cost.text = w.cost.ToString();
         income.text = w.currencyGain.ToString();
-
     }
 
     public void OnPointerExit(PointerEventData eventData)

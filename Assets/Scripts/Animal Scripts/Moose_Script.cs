@@ -7,30 +7,15 @@ using System.Timers;
 public class Moose_Script : MonoBehaviour
 {
     Moose m = new Moose();
-    private static System.Timers.Timer wolfTimer;
-
-    void OnMouseDown()
-    {
-        m.Selected();
-    }
-
-    private void SetTimer()
-    {
-        wolfTimer = new System.Timers.Timer(60000);
-        wolfTimer.Elapsed += OnTimedEvent;
-        wolfTimer.AutoReset = true;
-        wolfTimer.Enabled = true;
-    }
-
-
-    private void OnTimedEvent(object source, ElapsedEventArgs e)
-    {
-        Currency_Driver.AddMoney(m.currencyGain);
-    }
+    GameObjectGUID guid;
+    System.Random rnd = new System.Random();
+    //private static System.Timers.Timer wolfTimer;
 
     public void Start()
     {
         //SetTimer();
+        guid = GetComponent<GameObjectGUID>();
+        guid.gameObjectID = rnd.Next();
     }
 
     private void FixedUpdate()
@@ -40,6 +25,25 @@ public class Moose_Script : MonoBehaviour
         m.thirstLevel -= m.thirstDecayRate;
     }
 
+    void OnMouseDown()
+    {
+        Info_Panel.OpenBox(m.hungerLevel, m.tirednessLevel, m.thirstLevel, m.animalName, m.animalAge, m.animalSex, guid.gameObjectID);
+    }
+    /*
+    private void SetTimer()
+    {
+        wolfTimer = new System.Timers.Timer(60000);
+        wolfTimer.Elapsed += OnTimedEvent;
+        wolfTimer.AutoReset = true;
+        wolfTimer.Enabled = true;
+    }
+    
+    private void OnTimedEvent(object source, ElapsedEventArgs e)
+    {
+        Currency_Driver.AddMoney(m.currencyGain);
+    }
+    */
+      
     public float GetHungerLevel()
     {
         return m.hungerLevel;
@@ -51,11 +55,6 @@ public class Moose_Script : MonoBehaviour
     public float GetThirstLevel()
     {
         return m.thirstLevel;
-    }
-
-    public void SetAnimalID(int aID)
-    {
-        m.animalID = aID;
-    }
+    }    
 }
 
