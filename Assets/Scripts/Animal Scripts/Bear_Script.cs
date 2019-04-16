@@ -11,6 +11,8 @@ public class Bear_Script : MonoBehaviour
     System.Random rnd = new System.Random();
     private static System.Timers.Timer bearTimer;
 
+    private int boxNum = 8;
+
     public void Start()
     {
         SetTimer();
@@ -23,6 +25,14 @@ public class Bear_Script : MonoBehaviour
         b.hungerLevel -= b.hungerDecayRate;
         b.tirednessLevel -= b.tirednessDecayRate;
         b.thirstLevel -= b.thirstDecayRate;
+    }
+
+    private void Update()
+    {
+        if(boxNum != 8)
+        {
+            boxNum = Info_Panel.UpdateUI(b.hungerLevel, b.tirednessLevel, b.thirstLevel, boxNum);
+        }
     }
 
     private void SetTimer()
@@ -40,8 +50,9 @@ public class Bear_Script : MonoBehaviour
 
     void OnMouseDown()
     {                      
-        Info_Panel.OpenBox(b.hungerLevel, b.tirednessLevel, b.thirstLevel, b.animalName, b.animalAge, b.animalSex, guid.gameObjectID);       
+        boxNum = Info_Panel.OpenBox(b.hungerLevel, b.tirednessLevel, b.thirstLevel, b.animalName, b.animalAge, b.animalSex, guid.gameObjectID);       
     }
+
     public float GetHungerLevel()
     {
         return b.hungerLevel;

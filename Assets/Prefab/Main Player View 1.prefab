@@ -101,11 +101,11 @@ MonoBehaviour:
   cameraSpeed: 0.05
   zoomSpeed: 2
   minZoom: 2
-  maxZoom: 18
-  maxX: 70
-  minX: 0
-  maxY: 70
-  minY: 0
+  maxZoom: 17.5
+  maxX: 74
+  minX: -3
+  maxY: 74
+  minY: -3
   cameraAccelaration: 0.25
 --- !u!114 &600974224001092565
 MonoBehaviour:

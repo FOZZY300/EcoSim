@@ -11,6 +11,8 @@ public class Wolf_Script : MonoBehaviour
     System.Random rnd = new System.Random();
     private static System.Timers.Timer wolfTimer;
 
+    private int boxNum = 8;
+
     public void Start()
     {
         SetTimer();
@@ -25,9 +27,17 @@ public class Wolf_Script : MonoBehaviour
         w.thirstLevel -= w.thirstDecayRate;
     }
 
+    private void Update()
+    {
+        if (boxNum != 8)
+        {
+            boxNum = Info_Panel.UpdateUI(w.hungerLevel, w.tirednessLevel, w.thirstLevel, boxNum);
+        }
+    }
+
     void OnMouseDown()
     {
-        Info_Panel.OpenBox(w.hungerLevel, w.tirednessLevel, w.thirstLevel, w.animalName, w.animalAge, w.animalSex, guid.gameObjectID);
+        boxNum = Info_Panel.OpenBox(w.hungerLevel, w.tirednessLevel, w.thirstLevel, w.animalName, w.animalAge, w.animalSex, guid.gameObjectID);
     }
 
     private void SetTimer()

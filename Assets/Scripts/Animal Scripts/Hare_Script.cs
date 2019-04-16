@@ -13,6 +13,8 @@ public class Hare_Script : MonoBehaviour
     Hare_Nest_Script closestNest;
     bool hasNest;
 
+    private int boxNum = 8;
+
     public void Start()
     {
         SetTimer();
@@ -22,12 +24,17 @@ public class Hare_Script : MonoBehaviour
     }
 
     public void Update()
-    {
-        if(hasNest == false)
+    {        
+        if (boxNum != 8)
+        {
+            boxNum = Info_Panel.UpdateUI(h.hungerLevel, h.tirednessLevel, h.thirstLevel, boxNum);
+        }
+
+        if (hasNest == false)
         {
             findClosestNest();
             hasNest = closestNest.addHareToNest(this.gameObject);
-        }  
+        }        
     }
 
     private void FixedUpdate()
@@ -73,7 +80,7 @@ public class Hare_Script : MonoBehaviour
 
     void OnMouseDown()
     {
-        Info_Panel.OpenBox(h.hungerLevel, h.tirednessLevel, h.thirstLevel, h.animalName, h.animalAge, h.animalSex, guid.gameObjectID);
+        boxNum = Info_Panel.OpenBox(h.hungerLevel, h.tirednessLevel, h.thirstLevel, h.animalName, h.animalAge, h.animalSex, guid.gameObjectID);
     }
    
     public float GetHungerLevel()

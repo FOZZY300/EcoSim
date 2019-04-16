@@ -20,6 +20,9 @@ public class In_Game_UI : MonoBehaviour
     public GameObject treesPanel;
     public GameObject smallPlantsPanel;
     public Text currency;
+    public Sprite[] timeScales;
+
+    public Image timeScale;
 
     public static bool GameIsFrozen = false;
 
@@ -40,7 +43,7 @@ public class In_Game_UI : MonoBehaviour
         moreInfo.SetActive(false);
         structuresPanel.SetActive(false);
         treesPanel.SetActive(false);
-        smallPlantsPanel.SetActive(false);
+        smallPlantsPanel.SetActive(false);        
     }
     private void Update()
     {
@@ -175,7 +178,8 @@ public class In_Game_UI : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        Pause_Menu.GameIsPaused = true;      
+        Pause_Menu.GameIsPaused = true;
+        timeScale.sprite = timeScales[0];
     }
 
     public void ClosePauseMenu()
@@ -185,6 +189,7 @@ public class In_Game_UI : MonoBehaviour
         if (!GameIsFrozen)
         {
             Time.timeScale = 1f;
+            timeScale.sprite = timeScales[1];
         }
     }
 
@@ -192,18 +197,21 @@ public class In_Game_UI : MonoBehaviour
     {
         Time.timeScale = 0f;
         GameIsFrozen = true;
+        timeScale.sprite = timeScales[0];
     }
 
     public void NormalTime()
     {
         Time.timeScale = 1f;
         GameIsFrozen = false;
+        timeScale.sprite = timeScales[1];
     }
 
     public void FastForwardTime()
     {
         Time.timeScale = 2f;
         GameIsFrozen = false;
+        timeScale.sprite = timeScales[2];
     }
 
     private void OpenDefaultBottomLeftPanel()

@@ -41,15 +41,16 @@ public class Info_Panel : MonoBehaviour
         texts = new Text[8][];        
         animalIDs = new int[8];
         animalNames = new string[8];
+
     }
       
-    public static void OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int animalID)
+    public static int OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int animalID)
     {        
         for (int j = 0; j < 8; j++)                                     // Checks if the animalID already has a UI box.
         {
             if (animalIDs[j] == animalID)
             {
-                return;
+                return 8;
             }
         }        
 
@@ -59,7 +60,7 @@ public class Info_Panel : MonoBehaviour
             i++;
             if (i == 8)                                                 // Returns 8 if there are no free boxes
             {
-                return;
+                return 8;
             }
         }
         animalIDs[i] = animalID;                                        // Adds animal array to list of animalIDs that are in use
@@ -82,29 +83,21 @@ public class Info_Panel : MonoBehaviour
         texts[i][3].text = animalSex;
         image.sprite = myList[animalName];
 
-        return;
-    }
-
-    /*
-    void Update()
+        return i;
+    }  
+   
+    public static int UpdateUI(float hungerLevel, float tirednessLevel, float thirstLevel, int boxNum)
     {
-         for (int i = 0; i < 8; i++)
+        if (!isOpen[boxNum])
         {
-            if (isOpen[i])
-            {
-                UiUpdate(i, animalNames[i]);
-            }
+            return 8;
         }
+        sliders[boxNum][0].value = hungerLevel;                         // Udates all slider values
+        sliders[boxNum][1].value = tirednessLevel;
+        sliders[boxNum][2].value = thirstLevel;
+        return boxNum;
     }
     
-
-    public static void UiUpdate(int boxNum, string animalName)
-    {               
-        sliders[boxNum][0].value = Animal_Manager.GetHungerLevel(animalIDs[boxNum], animalName);                         // Udates all slider values
-        sliders[boxNum][1].value = Animal_Manager.GetTirednessLevel(animalIDs[boxNum], animalName);
-        sliders[boxNum][2].value = Animal_Manager.GetThirstLevel(animalIDs[boxNum], animalName);
-    }
-    */
 
     public static void CloseBox(int boxNum)
     {       

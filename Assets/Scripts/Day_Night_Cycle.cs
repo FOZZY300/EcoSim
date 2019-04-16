@@ -8,7 +8,7 @@ public class Day_Night_Cycle : MonoBehaviour
     public Light sunLight;
     public float dayLength;
     public Text clock;
-
+    
     private float hours, mins, seconds;    
     private int h, m, time;
     private string displayHours, displayMins;
