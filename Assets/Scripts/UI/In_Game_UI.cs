@@ -12,9 +12,7 @@ public class In_Game_UI : MonoBehaviour
     public GameObject backButton;
     public GameObject normalBottomMiddlePanel;
     public GameObject minimisedBottomMiddlePanel;
-    public GameObject carnivoresPanel;
-    public GameObject omnivoresPanel;
-    public GameObject herbivoresPanel;
+    
     public GameObject moreInfo;
     public GameObject structuresPanel;
     public GameObject treesPanel;
@@ -37,9 +35,7 @@ public class In_Game_UI : MonoBehaviour
         animalsPanel.SetActive(false);
         plantsPanel.SetActive(false);
         backButton.SetActive(false);
-        carnivoresPanel.SetActive(false);
-        herbivoresPanel.SetActive(false);
-        omnivoresPanel.SetActive(false);
+        
         moreInfo.SetActive(false);
         structuresPanel.SetActive(false);
         treesPanel.SetActive(false);
@@ -50,23 +46,7 @@ public class In_Game_UI : MonoBehaviour
         currency.text = "Currency: " + Currency_Driver.GetMoney();       
     }
 
-    public void CanivoresButtonPressed()
-    {
-        animalsPanel.SetActive(false);
-        carnivoresPanel.SetActive(true);
-    }
 
-    public void OmnivoresButtonPressed()
-    {
-        animalsPanel.SetActive(false);
-        omnivoresPanel.SetActive(true);
-    }
-
-    public void HerbivoresButtonPressed()
-    {
-        animalsPanel.SetActive(false);
-        herbivoresPanel.SetActive(true);
-    }
 
     public void MinimiseButtonPressed()
     {
@@ -156,22 +136,7 @@ public class In_Game_UI : MonoBehaviour
         {
             structuresPanel.SetActive(false);
             OpenDefaultBottomLeftPanel();
-        }
-        else if (carnivoresPanel.activeInHierarchy)
-        {
-            animalsPanel.SetActive(true);
-            carnivoresPanel.SetActive(false);
-        }
-        else if (omnivoresPanel.activeInHierarchy)
-        {
-            animalsPanel.SetActive(true);
-            omnivoresPanel.SetActive(false);
-        }
-        else if (herbivoresPanel.activeInHierarchy)
-        {
-            animalsPanel.SetActive(true);
-            herbivoresPanel.SetActive(false);
-        }
+        }        
     }
 
     public void OpenPauseMenu()

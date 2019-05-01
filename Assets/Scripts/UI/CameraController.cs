@@ -30,67 +30,71 @@ public class CameraController : MonoBehaviour
 
         float zoom = Input.GetAxis("Mouse ScrollWheel");
         float speedChange = m_OrthographicCamera.orthographicSize / 5;                      // Changes the speed of the camera based on size
-        if (!Mouse_Over_Object.isOverUI)
-        {
-            m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * speedChange;            // Camera zoom
-        }
-        
-        if (m_OrthographicCamera.orthographicSize < minZoom)
-        {
-            m_OrthographicCamera.orthographicSize = minZoom;
-        }
-        if (m_OrthographicCamera.orthographicSize > maxZoom)
-        {
-            m_OrthographicCamera.orthographicSize = maxZoom;
-        }
 
-        if (i > 5)
+        if (!Pause_Menu.GameIsPaused)
         {
-            i = 5;
-        }
-        
-        if (Input.GetKey(KeyCode.W)) // || m_Position[1] > Screen.height - edgeSize)            // up
-        {
-            p_Velocity += up * cameraSpeed * speedChange * i;
-            i = i + cameraAccelaration;
-        }
-        if (Input.GetKey(KeyCode.S)) // || m_Position[1] < edgeSize)                            // down
-        {
-            p_Velocity += down * cameraSpeed * speedChange * i;
-            i = i + cameraAccelaration;
-        }
-        if (Input.GetKey(KeyCode.A)) // || m_Position[0] < edgeSize)                            // left
-        {
-            p_Velocity += left * cameraSpeed * speedChange * i;
-            i = i + cameraAccelaration;
-        }
-        if (Input.GetKey(KeyCode.D)) // || m_Position[0] > Screen.width - edgeSize)             // right
-        {
-            p_Velocity += right * cameraSpeed * speedChange * i;
-            i = i + cameraAccelaration;
-        }
-        if (p_Velocity == new Vector3(0, 0, 0))
-        {
-            i = 1;
-        }
+            if (!Mouse_Over_Object.isOverUI)
+            {
+                m_OrthographicCamera.orthographicSize -= zoom * zoomSpeed * speedChange;            // Camera zoom
+            }
 
-        transform.Translate(p_Velocity, Space.World);                                       // Moves camera
+            if (m_OrthographicCamera.orthographicSize < minZoom)
+            {
+                m_OrthographicCamera.orthographicSize = minZoom;
+            }
+            if (m_OrthographicCamera.orthographicSize > maxZoom)
+            {
+                m_OrthographicCamera.orthographicSize = maxZoom;
+            }
 
-        if(m_OrthographicCamera.transform.position.x > maxX - (m_OrthographicCamera.orthographicSize * 2.1f))
-        {
-            m_OrthographicCamera.transform.position = new Vector3(maxX - (m_OrthographicCamera.orthographicSize * 2.1f), m_OrthographicCamera.transform.position.y, 0);
-        }
-        if (m_OrthographicCamera.transform.position.x < minX + (m_OrthographicCamera.orthographicSize * 2.1f))
-        {
-            m_OrthographicCamera.transform.position = new Vector3(minX + (m_OrthographicCamera.orthographicSize * 2.1f), m_OrthographicCamera.transform.position.y, 0);
-        }
-        if (m_OrthographicCamera.transform.position.y > maxY - m_OrthographicCamera.orthographicSize)
-        {
-            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, maxY - m_OrthographicCamera.orthographicSize, 0);
-        }
-        if (m_OrthographicCamera.transform.position.y < minY + m_OrthographicCamera.orthographicSize)
-        {
-            m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, minY + m_OrthographicCamera.orthographicSize, 0);
+            if (i > 5)
+            {
+                i = 5;
+            }
+
+            if (Input.GetKey(KeyCode.W)) // || m_Position[1] > Screen.height - edgeSize)            // up
+            {
+                p_Velocity += up * cameraSpeed * speedChange * i;
+                i = i + cameraAccelaration;
+            }
+            if (Input.GetKey(KeyCode.S)) // || m_Position[1] < edgeSize)                            // down
+            {
+                p_Velocity += down * cameraSpeed * speedChange * i;
+                i = i + cameraAccelaration;
+            }
+            if (Input.GetKey(KeyCode.A)) // || m_Position[0] < edgeSize)                            // left
+            {
+                p_Velocity += left * cameraSpeed * speedChange * i;
+                i = i + cameraAccelaration;
+            }
+            if (Input.GetKey(KeyCode.D)) // || m_Position[0] > Screen.width - edgeSize)             // right
+            {
+                p_Velocity += right * cameraSpeed * speedChange * i;
+                i = i + cameraAccelaration;
+            }
+            if (p_Velocity == new Vector3(0, 0, 0))
+            {
+                i = 1;
+            }
+
+            transform.Translate(p_Velocity, Space.World);                                       // Moves camera
+
+            if (m_OrthographicCamera.transform.position.x > maxX - (m_OrthographicCamera.orthographicSize * 2.1f))
+            {
+                m_OrthographicCamera.transform.position = new Vector3(maxX - (m_OrthographicCamera.orthographicSize * 2.1f), m_OrthographicCamera.transform.position.y, 0);
+            }
+            if (m_OrthographicCamera.transform.position.x < minX + (m_OrthographicCamera.orthographicSize * 2.1f))
+            {
+                m_OrthographicCamera.transform.position = new Vector3(minX + (m_OrthographicCamera.orthographicSize * 2.1f), m_OrthographicCamera.transform.position.y, 0);
+            }
+            if (m_OrthographicCamera.transform.position.y > maxY - m_OrthographicCamera.orthographicSize)
+            {
+                m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, maxY - m_OrthographicCamera.orthographicSize, 0);
+            }
+            if (m_OrthographicCamera.transform.position.y < minY + m_OrthographicCamera.orthographicSize)
+            {
+                m_OrthographicCamera.transform.position = new Vector3(m_OrthographicCamera.transform.position.x, minY + m_OrthographicCamera.orthographicSize, 0);
+            }
         }
     } 
 }
