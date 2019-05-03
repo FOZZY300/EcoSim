@@ -2121,7 +2121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000025145027, y: 0.00000068074803}
+  m_AnchoredPosition: {x: -0.000024093963, y: -0.00000054621}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1528604574001806409
@@ -2340,7 +2340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000009270516, y: 0.00000068074803}
+  m_AnchoredPosition: {x: 0.00005609322, y: -0.00000054621}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2088628367153202592
@@ -2766,7 +2766,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2680686851107469240}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99598336
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2998,7 +2998,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7405853208787692254}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99598336
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3896,7 +3896,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2759101376468881281}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99598336
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4757,7 +4757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00000905247, y: 0.00000068074803}
+  m_AnchoredPosition: {x: 0.000055875174, y: -0.00000054621}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4703447264723169445
@@ -7086,7 +7086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000090907415, y: 0.00000068074803}
+  m_AnchoredPosition: {x: 0.000055913446, y: -0.00000054621}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6128182817956714589
@@ -7205,7 +7205,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2298138831918425133}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99598336
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7555,7 +7555,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1261048989508747400}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.99598336
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9062,7 +9062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000009380528, y: 0.00000068074803}
+  m_AnchoredPosition: {x: 0.000056203233, y: -0.00000054621}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &7818994051234518949
@@ -11211,7 +11211,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: ' Eco-Sim Alpha'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11280,13 +11280,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 14
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0

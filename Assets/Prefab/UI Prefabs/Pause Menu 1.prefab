@@ -1622,12 +1622,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 44ce16517f97c9447ae35e4d1d5d6397,
+      objectReference: {fileID: 21300000, guid: af634b67a1f10b5428f251629ebdef6b,
         type: 3}
     - target: {fileID: 8595227032544237334, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: '
+      value: 'Moose are a species of dear that can grow past 2 meters tall making
+        them the largest dear species. In winter they can use their hooves to move
+        snow to get at lichens and mosses. These hooves also help them move around
+        on snowy ground by acting like a snowshoe.
 
 '
       objectReference: {fileID: 0}
@@ -1640,7 +1643,7 @@ PrefabInstance:
     - target: {fileID: 1214228721963761993, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: "Moose\r (Alces Alces Anderson\r)\n"
+      value: "Moose\r (Alces Alces)\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2449713935827456570, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
@@ -1836,14 +1839,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 00794b5b4f7b95a419a06b9002b34f4f,
+      objectReference: {fileID: 21300000, guid: a02304f878ea04140bc4e1fa819edd2e,
         type: 3}
     - target: {fileID: 8595227032544237334, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: '
-
-'
+      value: Wolves are famous for their howl which they use to communicate with each
+        other. Wolves are the largest member of the dog family and the gray wolf is
+        by far the most common wolf.  Gray wolves were hunted to near extinction in
+        some areas but they continue to thrive in Alaska, Canada and parts of Asia.
       objectReference: {fileID: 0}
     - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
@@ -2080,9 +2084,11 @@ PrefabInstance:
     - target: {fileID: 8595227032544237334, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
       propertyPath: m_Text
-      value: '
+      value: 'The grizzly bear is a subspecies of the brown bear that spend most of
+        their time alone. They do sometimes congregate most famously while fishing
+        for salmon in Alaska when the salmon are returning upstream for summer spawning.
 
-'
+        During winter mounts they dig dens for hibernation.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6383594648186583352, guid: f2afd7bae39eb774bbe9e5ac873c80cb,
         type: 3}
