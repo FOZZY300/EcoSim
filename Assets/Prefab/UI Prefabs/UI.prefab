@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 7742631888348992789}
   - component: {fileID: 4210940504101066283}
   - component: {fileID: 3640188629882811592}
+  - component: {fileID: 934047400461105924}
   m_Layer: 5
   m_Name: Hare Button
   m_TagString: Untagged
@@ -517,6 +518,19 @@ MonoBehaviour:
   diet: {fileID: 5823641400992084402}
   cost: {fileID: 8476916869139514051}
   income: {fileID: 6039290478871978942}
+--- !u!114 &934047400461105924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227163653992404052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &265121349628376616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1801,7 @@ GameObject:
   - component: {fileID: 8014821490981065207}
   - component: {fileID: 74949354233554492}
   - component: {fileID: 7734467334201163685}
+  - component: {fileID: 8899618035579098393}
   m_Layer: 5
   m_Name: Bear Button
   m_TagString: Untagged
@@ -1924,6 +1939,19 @@ MonoBehaviour:
   diet: {fileID: 5823641400992084402}
   cost: {fileID: 8476916869139514051}
   income: {fileID: 6039290478871978942}
+--- !u!114 &8899618035579098393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360373694665754847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &1393398780444327839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,7 +2149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000024093963, y: -0.00000054621}
+  m_AnchoredPosition: {x: 0.000040207495, y: 0.000028650926}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1528604574001806409
@@ -2340,7 +2368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00005609322, y: -0.00000054621}
+  m_AnchoredPosition: {x: 0.0000007640124, y: 0.000020831309}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2088628367153202592
@@ -2766,7 +2794,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2680686851107469240}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99598336
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2998,7 +3026,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7405853208787692254}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99598336
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3488,6 +3516,7 @@ GameObject:
   - component: {fileID: 5885896437231426047}
   - component: {fileID: 5722090438461290362}
   - component: {fileID: 1648028375778026881}
+  - component: {fileID: 501021469219668805}
   m_Layer: 5
   m_Name: Moose Button
   m_TagString: Untagged
@@ -3625,6 +3654,19 @@ MonoBehaviour:
   diet: {fileID: 5823641400992084402}
   cost: {fileID: 8476916869139514051}
   income: {fileID: 6039290478871978942}
+--- !u!114 &501021469219668805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500592357993885471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &3539043964407819594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,6 +3679,7 @@ GameObject:
   - component: {fileID: 8260508194960291212}
   - component: {fileID: 3037939107819016639}
   - component: {fileID: 3556413012232657592}
+  - component: {fileID: 9142020258007076755}
   m_Layer: 5
   m_Name: Tree 3 Button
   m_TagString: Untagged
@@ -3744,6 +3787,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &9142020258007076755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3539043964407819594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &3652887168176005996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,7 +3952,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2759101376468881281}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99598336
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4757,7 +4813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000055875174, y: -0.00000054621}
+  m_AnchoredPosition: {x: 0.0000005459665, y: 0.000020831309}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4703447264723169445
@@ -5353,6 +5409,7 @@ GameObject:
   - component: {fileID: 8516705738201332972}
   - component: {fileID: 1154043297455210013}
   - component: {fileID: 4405954466096542058}
+  - component: {fileID: 1456261244357078048}
   m_Layer: 5
   m_Name: Minimise Button
   m_TagString: Untagged
@@ -5471,6 +5528,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1456261244357078048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182028085745179784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &5227073737844758388
 GameObject:
   m_ObjectHideFlags: 0
@@ -6579,6 +6649,7 @@ GameObject:
   - component: {fileID: 1222463949146996266}
   - component: {fileID: 674672052810467897}
   - component: {fileID: 7492379276691502202}
+  - component: {fileID: 2930258536526024524}
   m_Layer: 5
   m_Name: Hare Den Button
   m_TagString: Untagged
@@ -6686,6 +6757,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2930258536526024524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5806672193420592172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &5866704654792190083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,7 +7170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000055913446, y: -0.00000054621}
+  m_AnchoredPosition: {x: 0.000000584238, y: 0.000020831309}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6128182817956714589
@@ -7205,7 +7289,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2298138831918425133}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99598336
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7555,7 +7639,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1261048989508747400}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99598336
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9062,7 +9146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000056203233, y: -0.00000054621}
+  m_AnchoredPosition: {x: 0.00000087402486, y: 0.000020831309}
   m_SizeDelta: {x: -0.00002123732, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &7818994051234518949
@@ -9376,6 +9460,7 @@ GameObject:
   - component: {fileID: 7330422497540055975}
   - component: {fileID: 7220476794913792915}
   - component: {fileID: 1685096963156858514}
+  - component: {fileID: 2288530514663518774}
   m_Layer: 5
   m_Name: Tree 1 Button
   m_TagString: Untagged
@@ -9483,6 +9568,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2288530514663518774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8111885800428466123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &8137252189570749296
 GameObject:
   m_ObjectHideFlags: 0
@@ -9986,6 +10084,7 @@ GameObject:
   - component: {fileID: 2958715098765115360}
   - component: {fileID: 5485730745333738514}
   - component: {fileID: 859627121686559090}
+  - component: {fileID: 2856357296917949358}
   m_Layer: 5
   m_Name: Tree 2 Button
   m_TagString: Untagged
@@ -10093,6 +10192,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2856357296917949358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391480198090509361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &8421626526270457486
 GameObject:
   m_ObjectHideFlags: 0
@@ -10272,6 +10384,7 @@ GameObject:
   - component: {fileID: 4528490625953730041}
   - component: {fileID: 1982604273291279797}
   - component: {fileID: 1670036215043016354}
+  - component: {fileID: 5440704619281399358}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -10404,6 +10517,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf651cb1d497ce4da1a0fdd415d7d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &5440704619281399358
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8555786950794045049}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8663717826408158723
 GameObject:
   m_ObjectHideFlags: 0
@@ -10651,6 +10860,7 @@ GameObject:
   - component: {fileID: 8543027292984016348}
   - component: {fileID: 8682214069030620590}
   - component: {fileID: 686627661270077769}
+  - component: {fileID: 5691342614245820766}
   m_Layer: 5
   m_Name: Tree 4 Button
   m_TagString: Untagged
@@ -10758,6 +10968,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5691342614245820766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721941465590776512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &8802600127730623952
 GameObject:
   m_ObjectHideFlags: 0
@@ -10770,6 +10993,7 @@ GameObject:
   - component: {fileID: 5930212841067641108}
   - component: {fileID: 3646657583687745447}
   - component: {fileID: 6126214014898958301}
+  - component: {fileID: 1611768007154629602}
   m_Layer: 5
   m_Name: Grass Button
   m_TagString: Untagged
@@ -10888,6 +11112,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1611768007154629602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802600127730623952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
 --- !u!1 &8807893955085411854
 GameObject:
   m_ObjectHideFlags: 0
@@ -11319,6 +11556,7 @@ GameObject:
   - component: {fileID: 7830678001839193655}
   - component: {fileID: 1368517236214068824}
   - component: {fileID: 2770524561605684300}
+  - component: {fileID: 3749505046226042987}
   m_Layer: 5
   m_Name: Wolf Button
   m_TagString: Untagged
@@ -11456,3 +11694,16 @@ MonoBehaviour:
   diet: {fileID: 5823641400992084402}
   cost: {fileID: 8476916869139514051}
   income: {fileID: 6039290478871978942}
+--- !u!114 &3749505046226042987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9038405029187689423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab8b0aa78815c94d859d95fa9f1afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: c4b1d169a55c8ea498b32458ac5123e0, type: 3}
