@@ -18,6 +18,7 @@ public class Placing_Animals : MonoBehaviour
 
     Placement_Script pm;
     private GameObject placementManager;
+    private Currency_Driver cd = new Currency_Driver();
 
 
     private void Start()
@@ -28,28 +29,49 @@ public class Placing_Animals : MonoBehaviour
 
     public void BearButton()
     {
-        pm.setPlaceTrue(0);
+        if (cd.SubtractMoney(10).Equals(true))
+        {
+            pm.setPlaceTrue(0);
+        }
+        else { Debug.Log("Cant place no money"); }
+
        
     } 
 
     public void HareButton()
     {
-        pm.setPlaceTrue(1);
+        if (cd.SubtractMoney(5).Equals(true))
+        {
+            pm.setPlaceTrue(1);
+        }
+        else { Debug.Log("Cant place no money"); }
     }
 
     public void MooseButton()
     {
-        pm.setPlaceTrue(2);
+        if (cd.SubtractMoney(10).Equals(true))
+        {
+            pm.setPlaceTrue(2);
+        }
+        else { Debug.Log("Cant place no money"); }
     }
 
     public void WolfButton()
     {
-        pm.setPlaceTrue(3);
+        if (cd.SubtractMoney(10).Equals(true))
+        {
+            pm.setPlaceTrue(3);
+        }
+        else { Debug.Log("Cant place no money"); }
     }
 
     public void GrassButton()
     {
-        pm.setPlaceTrue(4);
+        if (cd.SubtractMoney(1).Equals(true))
+        {
+            pm.setPlaceTrue(4);
+        }
+        else { Debug.Log("Cant place no money"); }
     }
 
 
