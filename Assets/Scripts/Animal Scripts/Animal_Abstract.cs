@@ -146,3 +146,9 @@ public class Wolf : Animal_Abstract
     public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 }
 
+public class Grass : Animal_Abstract
+{
+    public int cost = 1;
+    public int currencyGain = 1;
+}
+

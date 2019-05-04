@@ -50,7 +50,7 @@ public class Plant_Aging_Script : MonoBehaviour
     private void stage1Timer()
     {
         Debug.Log("seed timer has started");
-        seedTimer = new System.Timers.Timer(3000);
+        seedTimer = new System.Timers.Timer(25000);
         seedTimer.Elapsed += setStage2;
         seedTimer.AutoReset = false;
         seedTimer.Enabled = true;
@@ -60,7 +60,7 @@ public class Plant_Aging_Script : MonoBehaviour
     private void stage2Timer()
     {
         Debug.Log("sapling timer has gone off");
-        saplingTimer = new System.Timers.Timer(3000);
+        saplingTimer = new System.Timers.Timer(20000);
         saplingTimer.Elapsed += setStage3;
         saplingTimer.AutoReset = false;
         saplingTimer.Enabled = true;
