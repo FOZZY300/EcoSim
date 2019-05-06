@@ -1,21 +1,20 @@
 fileFormatVersion: 2
-guid: 6a78af7f40f66d243bdeca181b4efd11
+guid: a276cff3a9f072649884af09104d3422
 TextureImporter:
   fileIDToRecycleName:
-    21300000: moose animation_0
-    21300002: moose animation_1
-    21300004: moose animation_2
-    21300006: moose animation_3
-    21300008: moose animation_4
-    21300010: moose animation_5
-    21300012: moose animation_6
-    21300014: moose animation_7
-    21300016: moose animation_8
-    21300018: moose animation_9
-    21300020: moose animation_10
-    21300022: moose animation_11
-    21300024: moose animation_12
-    21300026: moose animation_13
+    21300000: bear animation_0
+    21300002: bear animation_1
+    21300004: bear animation_2
+    21300006: bear animation_3
+    21300008: bear animation_4
+    21300010: bear animation_5
+    21300012: bear animation_6
+    21300014: bear animation_7
+    21300016: bear animation_8
+    21300018: bear animation_9
+    21300020: bear animation_10
+    21300022: bear animation_11
+    21300024: bear animation_12
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -120,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: moose animation_0
+      name: bear animation_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,19 +133,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11f02e79e43577440bbd6ea9114e0892
+      spriteID: 0cdaa44d8ec14df44a1bbf1465d752fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_1
+      name: bear animation_1
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5707d86af9fcb904bbda71c474bb6632
+      spriteID: f186bf04722c9594d90b0eea6bce4bf6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_2
+      name: bear animation_2
       rect:
         serializedVersion: 2
         x: 192
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,19 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14bedc9485de37043bb3424333851ebd
+      spriteID: 83989ac877fd58645bfebd78bd36e5f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_3
+      name: bear animation_3
       rect:
         serializedVersion: 2
         x: 288
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,19 +193,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b3298def4abd0f41a0567e7870ccf31
+      spriteID: eecfc5a85f39be54ea59c4a22d20598f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_4
+      name: bear animation_4
       rect:
         serializedVersion: 2
         x: 384
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,19 +213,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf66af75fca99843ac4eade62ca8264
+      spriteID: 0a285daabb9968a40bb46a45a10ae75b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_5
+      name: bear animation_5
       rect:
         serializedVersion: 2
         x: 480
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,19 +233,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8abd2e9e1ab0f6a41b03f3875ab5d0d4
+      spriteID: 295c538c3efd0db47b940addeee05642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_6
+      name: bear animation_6
       rect:
         serializedVersion: 2
         x: 576
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,19 +253,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f8894a9f1478d46805bebf0741f999
+      spriteID: 0dfe2027465f94c47a66364c47cfeaad
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_7
+      name: bear animation_7
       rect:
         serializedVersion: 2
         x: 672
-        y: 96
+        y: 64
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,19 +273,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b949c7e1960294ca2707d79a98c93d
+      spriteID: f443d8953907482479ff99362528c7f6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_8
+      name: bear animation_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,19 +293,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56c4c0e7cb4910249b8213aafca413cb
+      spriteID: 90ec43273882ec04cbeefd7aa37aea19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_9
+      name: bear animation_9
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,19 +313,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24f228d9269b76f449ec0264ebc546eb
+      spriteID: c5a62d42cc47d4c479a8bc7fe2fb5aee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_10
+      name: bear animation_10
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,19 +333,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3e3c7bb70312f489ea1563e17d0fbb
+      spriteID: 887917dca2730e246b3b115b55eca5e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_11
+      name: bear animation_11
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,19 +353,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8bb3c2d16799a14d9b41b988026ef4f
+      spriteID: 9c9cd14ce3cc4414382d29a28eecae50
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: moose animation_12
+      name: bear animation_12
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 96
-        height: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,27 +373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ea30a20aa250d745898306619f4f753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: moose animation_13
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 671583dceb44cc54ba3f6af0608d6cd4
+      spriteID: 91b2d5eb57516714d9e8d8901802eddb
       vertices: []
       indices: 
       edges: []
@@ -402,7 +381,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4daa1216a6e579d4ea512a0f533993aa
+    spriteID: a73ca707c7e63b24aa0a8e3b41232820
     vertices: []
     indices: 
     edges: []

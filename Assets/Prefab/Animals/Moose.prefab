@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5582697890948355511}
   - component: {fileID: 4397704752699523248}
   - component: {fileID: 2469420858713004948}
+  - component: {fileID: 4808629589647023609}
   m_Layer: 13
   m_Name: Moose
   m_TagString: Untagged
@@ -202,7 +203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  healthRegen: 0.1
   hunger: 100
   hungerPerSecond: 2
   speed: 7
@@ -222,8 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 2
   facingLeft: {fileID: 0}
+  animator: {fileID: 4808629589647023609}
   isWalking: 0
   walkTime: 2
   waitTime: 2
@@ -250,3 +251,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   visibleTargets: []
+--- !u!95 &4808629589647023609
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113481178247995663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fe9e00170a4aaa4e8d702c607078082, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
