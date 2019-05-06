@@ -51,12 +51,13 @@ public class Animal_Wander : MonoBehaviour
 
         ChooseDirection();
 
-        if (playArea != null)
+    /*    if (playArea != null)
         {
             minWalkPoint = playArea.bounds.min;
             maxWalkPoint = playArea.bounds.max;
             hasplayArea = true;
         }
+        */
     }
 
 
