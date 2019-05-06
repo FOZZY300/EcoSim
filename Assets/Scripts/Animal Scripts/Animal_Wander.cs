@@ -14,8 +14,12 @@ public class Animal_Wander : MonoBehaviour
     private Vector2 minWalkPoint;
     private Vector2 maxWalkPoint;
 
+   
+
     [SerializeField]
     private Sprite facingLeft;
+
+    public Animator animator;
 
     private Rigidbody2D myRigidBody;
 
@@ -75,6 +79,8 @@ public class Animal_Wander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("IsWalking")
+
         if (isWalking)
         {
             walkCounter -= Time.deltaTime;

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5503695142323510308}
   - component: {fileID: 3643187835338403763}
   - component: {fileID: 7140223388884047469}
+  - component: {fileID: 6241955065843365625}
   m_Layer: 10
   m_Name: Hare
   m_TagString: Untagged
@@ -246,3 +247,22 @@ MonoBehaviour:
   hungerPerSecond: 5
   speed: 6
   entityType: Hare
+--- !u!95 &6241955065843365625
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a4bc71ca52564e4bb9d7c2dfa45fced, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
