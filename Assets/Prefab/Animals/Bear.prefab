@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 3603072607339239836}
   - component: {fileID: 3603072607339239835}
   - component: {fileID: 3603072607339239833}
-  - component: {fileID: 3603072607339239837}
   - component: {fileID: 3513786740871665260}
-  - component: {fileID: 6382042525895088844}
   - component: {fileID: 7855495031665142584}
   - component: {fileID: 3095542361867604301}
   - component: {fileID: 7840048628338913853}
   - component: {fileID: 4793728747680994666}
+  - component: {fileID: 3603072607339239837}
+  - component: {fileID: 7043990453916350228}
   m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
@@ -32,13 +32,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3603072607339239839}
-  m_LocalRotation: {x: 0, y: 0.004625145, z: 0, w: 0.99998933}
-  m_LocalPosition: {x: -5.886, y: 3.329, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.93, y: 4.84, z: 1}
   m_LocalScale: {x: 0.75, y: 0.818, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0.53, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3603072607339239835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -108,25 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3603072607339239837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3603072607339239839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  facingLeft: {fileID: 0}
-  isWalking: 0
-  walkTime: 1
-  waitTime: 2
-  facingRight: 1
-  playArea: {fileID: 0}
 --- !u!114 &3513786740871665260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,27 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9add8ac8e3d7cf4ea76bf5ff55ce3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6382042525895088844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3603072607339239839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pRadius: 15
-  pAngle: 85
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 12288
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 512
-  visibleTargets: []
 --- !u!114 &7855495031665142584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,9 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthRegen: 0.1
   hunger: 100
-  hungerPerSecond: 5
-  speed: 0
+  hungerPerSecond: 0.5
+  speed: 5
+  huntingSpeed: 5
   entityType: Bear
 --- !u!114 &4793728747680994666
 MonoBehaviour:
@@ -229,6 +191,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: Moose
-  eatingRange: 10
+  eatingRange: 2
   eatHPPerSecond: 50
   eatHP2Hunger: 2
+--- !u!114 &3603072607339239837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603072607339239839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  facingLeft: {fileID: 0}
+  isWalking: 0
+  walkTime: 1
+  waitTime: 2
+  facingRight: 1
+  playArea: {fileID: 0}
+--- !u!114 &7043990453916350228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603072607339239839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pRadius: 15
+  pAngle: 49
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []

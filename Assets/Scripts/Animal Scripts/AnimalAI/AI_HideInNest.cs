@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI_HideInDen : MonoBehaviour
+public class AI_HideInNest : MonoBehaviour
 {
-    public string entityType = "Bear";
+    public string entityType = "Wolf";
 
-    public float fearDistance = 5f;
+    public float fearDistance = 10f;
 
     Entities myEntity;
 
@@ -20,21 +20,17 @@ public class AI_HideInDen : MonoBehaviour
     {
         if (Entities.entitiesByType.ContainsKey(entityType) == false)
         {
-            //Nothing to eat.
+            //No predator near by.
             return;
         }
 
         bool predatorNearby = false;
 
-        //Finds the closest target.
-        Entities closest = null;
-        float dist = Mathf.Infinity;
-
         foreach (Entities c in Entities.entitiesByType[entityType])
         {
             float d = Vector2.Distance(this.transform.position, c.transform.position);
 
-            if(d < fearDistance)
+            if (d < fearDistance)
             {
                 predatorNearby = true;
                 break;
@@ -55,11 +51,31 @@ public class AI_HideInDen : MonoBehaviour
          */
 
         //Move towards the closest nest.
-        
-        //Move toward closest existing target.
+        Hare_Nest[] nests = GameObject.FindObjectsOfType<Hare_Nest>();
+
+        Hare_Nest closest = null;
+        float dist = Mathf.Infinity;
+
+        foreach (Hare_Nest n in nests)
+        {
+            float d = Vector2.Distance(this.transform.position, n.transform.position);
+
+            if (closest == null || d < dist)
+            {
+                closest = n;
+                dist = d;
+            }
+        }
+
+        if (closest == null)
+        {
+            //no nests
+            return;
+        }
+
         Vector2 dir = closest.transform.position - this.transform.position;
 
-        WeightedDirection wd = new WeightedDirection(dir, 100);
+        WeightedDirection wd = new WeightedDirection(dir, 20);
 
         myEntity.desiredDirections.Add(wd);
 
