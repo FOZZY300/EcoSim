@@ -101,13 +101,21 @@ public class Entities : MonoBehaviour
     {
         Debug.Log(gameObject.name + "collided with " + other.name);
 
-        if (other.GetComponent<Hare_Nest>() != null)
+        if (gameObject.GetComponent("Hare_Script") != null)
+        {
+             if (other.GetComponent<Hare_Nest>() != null)
             {
-            isInNest = true;
-            SpriteRenderer r = GetComponent<SpriteRenderer>();
-            r.enabled = false;
-            entityType = null;
-            }        
+                isInNest = true;
+                SpriteRenderer r = GetComponent<SpriteRenderer>();
+                r.enabled = false;
+                entityType = null;
+            }     
+
+
+        }
+
+
+       
     }
 
     private void OnTriggerExit2D(Collider2D other)

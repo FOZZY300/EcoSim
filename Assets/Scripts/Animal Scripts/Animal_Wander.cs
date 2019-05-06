@@ -80,14 +80,14 @@ public class Animal_Wander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        animator.SetBool("IsWalking")
-=======
+
+        //animator.SetBool("IsWalking")
+
         if (hp.health <= 30f)
         {
             moveSpeed = moveSpeed + 0.01f;
         }
->>>>>>> 1ce6083a3e6c36ad9cad385780f3a1358405d4e0
+
 
         if (isWalking)
         {
