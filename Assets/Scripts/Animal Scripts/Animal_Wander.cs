@@ -51,12 +51,13 @@ public class Animal_Wander : MonoBehaviour
 
         ChooseDirection();
 
-        if (playArea != null)
+    /*    if (playArea != null)
         {
             minWalkPoint = playArea.bounds.min;
             maxWalkPoint = playArea.bounds.max;
             hasplayArea = true;
         }
+        */
     }
 
 
@@ -92,8 +93,7 @@ public class Animal_Wander : MonoBehaviour
                     myRigidBody.velocity = new Vector2(0, moveSpeed);
                     animator.SetBool("isWalkingRight", true);
                     if (hasplayArea && transform.position.y > maxWalkPoint.y)
-                    {
-                        
+                    {                       
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -103,8 +103,7 @@ public class Animal_Wander : MonoBehaviour
                     myRigidBody.velocity = new Vector2(moveSpeed, 0);
                     animator.SetBool("isWalkingRight", true);
                     if (hasplayArea && transform.position.x > maxWalkPoint.x)
-                    {
-                     
+                    {                    
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -114,8 +113,7 @@ public class Animal_Wander : MonoBehaviour
                     myRigidBody.velocity = new Vector2(0, -moveSpeed);
                     animator.SetBool("isWalkingLeft", true);
                     if (hasplayArea && transform.position.y < minWalkPoint.y)
-                    {
-                        
+                    {                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -126,7 +124,6 @@ public class Animal_Wander : MonoBehaviour
                     animator.SetBool("isWalkingLeft", true);
                     if (hasplayArea && transform.position.x < minWalkPoint.x)
                     {
-                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -162,10 +159,7 @@ public class Animal_Wander : MonoBehaviour
         walkDirection = Random.Range(0, 4);
 
         isWalking = true;
-
-        
-        
-       
+                    
         walkCounter = walkTime;
     }
 

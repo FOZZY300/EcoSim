@@ -66,8 +66,8 @@ public class AI_SeekFood : MonoBehaviour
 
         if (dist < eatingRange)
         {
-            myEntity.huntingSpeed = 0;
-            closest.speed = 0;
+            //myEntity.huntingSpeed = 0f;
+            //closest.speed = 0f;
             float hpEaten = Mathf.Clamp(eatHPPerSecond * Time.deltaTime, 0, closest.health);
             closest.health -= hpEaten;
             myEntity.hunger += hpEaten * eatHP2Hunger;

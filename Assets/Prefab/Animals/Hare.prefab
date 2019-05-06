@@ -151,7 +151,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   facingLeft: {fileID: 0}
+<<<<<<< HEAD
   animator: {fileID: 5094835468541210130}
+=======
+  animator: {fileID: 0}
+>>>>>>> 1804de11027226d1ddb0491f65019b42e2a79708
   isWalking: 0
   walkTime: 2
   waitTime: 1

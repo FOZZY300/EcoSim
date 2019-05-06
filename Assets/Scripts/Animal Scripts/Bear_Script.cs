@@ -27,6 +27,11 @@ public class Bear_Script : MonoBehaviour
         b.thirstLevel -= b.thirstDecayRate;
     }
 
+    public void SetHunger(float hunger)  //will added this
+    {
+        b.hungerLevel = hunger / 100f;
+    }
+
     private void Update()
     {
         if(boxNum != 8)
