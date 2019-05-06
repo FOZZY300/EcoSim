@@ -21,9 +21,11 @@ public class In_Game_UI : MonoBehaviour
     public Sprite[] timeScales;
 
     public Image timeScale;
+    
 
     public static bool GameIsFrozen = false;
 
+    private AudioSource source;
       
     private void Start()
     {
@@ -39,43 +41,54 @@ public class In_Game_UI : MonoBehaviour
         moreInfo.SetActive(false);
         structuresPanel.SetActive(false);
         treesPanel.SetActive(false);
-        smallPlantsPanel.SetActive(false);        
+        smallPlantsPanel.SetActive(false);
+
+        source = GetComponent<AudioSource>();
+        
     }
     private void Update()
     {
         currency.text = "Currency: " + Currency_Driver.GetMoney();       
     }
 
-
+    private void PlayClickSound()
+    {
+        source.Play();
+    }
 
     public void MinimiseButtonPressed()
     {
         normalBottomMiddlePanel.SetActive(false);
         minimisedBottomMiddlePanel.SetActive(true);
+        PlayClickSound();
     }
 
     public void MaximiseButtonPressed()
     {
         normalBottomMiddlePanel.SetActive(true);
         minimisedBottomMiddlePanel.SetActive(false);
+        PlayClickSound();
     }
 
     public void AnimalsButtonPressed()
     {
         deafaultBottomLeftPanel.SetActive(false);
         OpenAnimalsPanel();
+        PlayClickSound();
     }
 
     public void PlantsButtonPressed()
     {
         deafaultBottomLeftPanel.SetActive(false);
         OpenPlantsPanel();
+        PlayClickSound();
     }
 
     public void StructuresButtonPressed()
     {
         deafaultBottomLeftPanel.SetActive(false);
         OpenStructuresPanel();
+        PlayClickSound();
     }
 
     private void OpenStructuresPanel()
@@ -88,6 +101,7 @@ public class In_Game_UI : MonoBehaviour
     {
         plantsPanel.SetActive(false);
         OpenTreesPanel();
+        PlayClickSound();
     }
 
     private void OpenTreesPanel()
@@ -100,6 +114,7 @@ public class In_Game_UI : MonoBehaviour
     {
         plantsPanel.SetActive(false);
         OpenSmallPlantsPanel();
+        PlayClickSound();
     }
 
     private void OpenSmallPlantsPanel()
@@ -136,7 +151,8 @@ public class In_Game_UI : MonoBehaviour
         {
             structuresPanel.SetActive(false);
             OpenDefaultBottomLeftPanel();
-        }        
+        }
+        PlayClickSound();
     }
 
     public void OpenPauseMenu()
@@ -145,6 +161,7 @@ public class In_Game_UI : MonoBehaviour
         Time.timeScale = 0f;
         Pause_Menu.GameIsPaused = true;
         timeScale.sprite = timeScales[0];
+        PlayClickSound();
     }
 
     public void ClosePauseMenu()
@@ -156,6 +173,7 @@ public class In_Game_UI : MonoBehaviour
             Time.timeScale = 1f;
             timeScale.sprite = timeScales[1];
         }
+        PlayClickSound();
     }
 
     public void FreezTime()
@@ -163,6 +181,7 @@ public class In_Game_UI : MonoBehaviour
         Time.timeScale = 0f;
         GameIsFrozen = true;
         timeScale.sprite = timeScales[0];
+        PlayClickSound();
     }
 
     public void NormalTime()
@@ -170,6 +189,7 @@ public class In_Game_UI : MonoBehaviour
         Time.timeScale = 1f;
         GameIsFrozen = false;
         timeScale.sprite = timeScales[1];
+        PlayClickSound();
     }
 
     public void FastForwardTime()
@@ -177,6 +197,7 @@ public class In_Game_UI : MonoBehaviour
         Time.timeScale = 2f;
         GameIsFrozen = false;
         timeScale.sprite = timeScales[2];
+        PlayClickSound();
     }
 
     private void OpenDefaultBottomLeftPanel()

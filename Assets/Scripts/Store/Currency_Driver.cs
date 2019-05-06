@@ -24,15 +24,17 @@ public class Currency_Driver : MonoBehaviour
         PlayerPrefsManager.UpdateCoins();
     }
 
-    public void SubtractMoney(int amount)
+    public bool SubtractMoney(int amount)
     {
         if(PlayerPrefsManager.money < amount)
         {
             Debug.Log("Insufficient Funds");
+            return false;
        
         } else{
             PlayerPrefsManager.money -= amount;
             PlayerPrefsManager.UpdateCoins();
+            return true;
         }
 
         

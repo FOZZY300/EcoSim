@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1878585846988166887}
   - component: {fileID: 9122771200720028344}
   - component: {fileID: 8668503243839598898}
+  - component: {fileID: 1889493061839001570}
   - component: {fileID: 5843479191130252214}
   m_Layer: 14
   m_Name: Grass
@@ -96,6 +97,18 @@ MonoBehaviour:
   stage1: {fileID: 21300000, guid: 24f415e1f8935dd4c9863ad639e80d80, type: 3}
   stage2: {fileID: 21300000, guid: 2310f9ff17eb50f4ba3cae07db000d96, type: 3}
   stage3: {fileID: 21300000, guid: dcccd26cfb8234b9f9e1275f44db382b, type: 3}
+--- !u!114 &1889493061839001570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452271172059344142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa576721691e4d898a63f19023be943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &5843479191130252214
 BoxCollider2D:
   m_ObjectHideFlags: 0
