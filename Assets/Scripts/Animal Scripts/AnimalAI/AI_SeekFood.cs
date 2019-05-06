@@ -22,70 +22,68 @@ public class AI_SeekFood : MonoBehaviour
     //Alter update value if pathfinding is enabled such as A*
     void DoAIBehaviour()
     {
-        
+        if (Entities.entitiesByType.ContainsKey(entityType) == false)
+        {
+            //Nothing to eat.
+            wander.ChooseDirection();
+            return;
+        }
 
-            if (Entities.entitiesByType.ContainsKey(entityType) == false)
+        //Finds the closest target.
+        Entities closest = null;
+        float dist = Mathf.Infinity;
+
+        foreach (Entities c in Entities.entitiesByType[entityType])
+        {
+            if (c.isInNest)
             {
-                //Nothing to eat.
+                //This target is hiddent
                 wander.ChooseDirection();
-                return;
+                continue;
             }
 
-            //Finds the closest target.
-            Entities closest = null;
-            float dist = Mathf.Infinity;
-
-            foreach (Entities c in Entities.entitiesByType[entityType])
+            float d = Vector2.Distance(this.transform.position, c.transform.position);
+            if (closest == null || d < dist)
             {
-                if (c.isInNest)
-                {
-                    //This target is hiddent
-                    wander.ChooseDirection();
-                    continue;
-                }
-
-                float d = Vector2.Distance(this.transform.position, c.transform.position);
-
-                if (closest == null || d < dist)
-                {
-                    closest = c;
-                    dist = d;
-                }
-
-                else
-                {
-                    //Destroy(gameObject);
-                    wander.ChooseDirection();
-                }
-
+                closest = c;
+                dist = d;
             }
 
-            if (closest == null)
-            {
-                //No valid targets exist.
-                Animal_Wander wander = new Animal_Wander();
-                wander.ChooseDirection();
-                return;
-            }
-
-            if (dist < eatingRange)
-            {
-                myEntity.huntingSpeed = 0;
-                closest.speed = 0;
-                float hpEaten = Mathf.Clamp(eatHPPerSecond * Time.deltaTime, 0, closest.health);
-                closest.health -= hpEaten;
-                myEntity.hunger += hpEaten * eatHP2Hunger;
-            }
             else
             {
-                myEntity.huntingSpeed = myEntity.speed;
+                //Destroy(gameObject);
+                wander.ChooseDirection();
             }
-            //Move toward closest existing target.
-            Vector2 dir = closest.transform.position - this.transform.position;
+        }
 
-            WeightedDirection wd = new WeightedDirection(dir, 5);
+        if (closest == null)
+        {
+            //No valid targets exist.
+            Animal_Wander wander = new Animal_Wander();
+            wander.ChooseDirection();
+            return;
+        }
 
-            myEntity.desiredDirections.Add(wd);
+        if (dist < eatingRange)
+        {
+            myEntity.huntingSpeed = 0;
+            closest.speed = 0;
+            float hpEaten = Mathf.Clamp(eatHPPerSecond * Time.deltaTime, 0, closest.health);
+            closest.health -= hpEaten;
+            myEntity.hunger += hpEaten * eatHP2Hunger;
+        }
+        else
+        {
+            myEntity.huntingSpeed = myEntity.speed;
+        }
+
+        //Move toward closest existing target.
+        Vector2 dir = closest.transform.position - this.transform.position;
+
+        WeightedDirection wd = new WeightedDirection(dir, 5);
+
+        if (myEntity.hunger <= 40)
+        myEntity.desiredDirections.Add(wd);
         
         
     }
