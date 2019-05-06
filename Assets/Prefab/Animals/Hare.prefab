@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 3643187835338403763}
   - component: {fileID: 7140223388884047469}
   - component: {fileID: 3158815047772959329}
-  - component: {fileID: 5094835468541210130}
+  - component: {fileID: 3028118405231258956}
   m_Layer: 10
   m_Name: Hare
   m_TagString: Untagged
@@ -151,11 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   facingLeft: {fileID: 0}
-<<<<<<< HEAD
-  animator: {fileID: 5094835468541210130}
-=======
-  animator: {fileID: 0}
->>>>>>> 1804de11027226d1ddb0491f65019b42e2a79708
+  animator: {fileID: 3028118405231258956}
   isWalking: 0
   walkTime: 2
   waitTime: 1
@@ -270,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityType: Wolf
   fearDistance: 7
---- !u!95 &5094835468541210130
+--- !u!95 &3028118405231258956
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -280,7 +276,7 @@ Animator:
   m_GameObject: {fileID: 5157750788964543026}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03f7e49ff96f9dd49811cafdbdae32a2, type: 2}
+  m_Controller: {fileID: 9100000, guid: c7e40cf54c0e2534892cb1418b537596, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
