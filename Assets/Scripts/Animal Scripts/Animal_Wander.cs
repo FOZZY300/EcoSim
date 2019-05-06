@@ -67,21 +67,14 @@ public class Animal_Wander : MonoBehaviour
         if (move < 0) GetComponent<Rigidbody2D>().velocity = new Vector3(move * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         if (move > 0) GetComponent<Rigidbody2D>().velocity = new Vector3(move * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
-        if (move < 0 && facingRight) Flip();
-        if (move > 0 && !facingRight) Flip();
+
     }
 
-    void Flip()
-    {
-        facingRight = !facingRight;
-        transform.Rotate(Vector3.up * 180);
-    }
-    
     // Update is called once per frame
     void Update()
     {
 
-        //animator.SetBool("IsWalking")
+        
 
         if (hp.health <= 30f)
         {
@@ -97,8 +90,10 @@ public class Animal_Wander : MonoBehaviour
             {
                 case 0:
                     myRigidBody.velocity = new Vector2(0, moveSpeed);
+                    animator.SetBool("isWalkingRight", true);
                     if (hasplayArea && transform.position.y > maxWalkPoint.y)
                     {
+                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -106,8 +101,10 @@ public class Animal_Wander : MonoBehaviour
 
                 case 1:
                     myRigidBody.velocity = new Vector2(moveSpeed, 0);
+                    animator.SetBool("isWalkingRight", true);
                     if (hasplayArea && transform.position.x > maxWalkPoint.x)
                     {
+                     
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -115,8 +112,10 @@ public class Animal_Wander : MonoBehaviour
 
                 case 2:
                     myRigidBody.velocity = new Vector2(0, -moveSpeed);
+                    animator.SetBool("isWalkingLeft", true);
                     if (hasplayArea && transform.position.y < minWalkPoint.y)
                     {
+                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -124,8 +123,10 @@ public class Animal_Wander : MonoBehaviour
 
                 case 3:
                     myRigidBody.velocity = new Vector2(-moveSpeed, 0);
+                    animator.SetBool("isWalkingLeft", true);
                     if (hasplayArea && transform.position.x < minWalkPoint.x)
                     {
+                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -136,6 +137,8 @@ public class Animal_Wander : MonoBehaviour
             if (walkCounter < 0)
             {
                 isWalking = false;
+                animator.SetBool("isWalkingRight", false);
+                animator.SetBool("isWalkingLeft", false);
                 waitCounter = waitTime;
             }
         }
@@ -155,9 +158,14 @@ public class Animal_Wander : MonoBehaviour
 
     public void ChooseDirection()
     {
+       
         walkDirection = Random.Range(0, 4);
 
         isWalking = true;
+
+        
+        
+       
         walkCounter = walkTime;
     }
 

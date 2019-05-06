@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7781975247965257456}
   - component: {fileID: 7142395367067826454}
   - component: {fileID: 3009974499620197364}
+  - component: {fileID: 2632560675199560817}
   m_Layer: 11
   m_Name: Wolf
   m_TagString: Untagged
@@ -122,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   facingLeft: {fileID: 0}
+  animator: {fileID: 2632560675199560817}
   isWalking: 0
   walkTime: 1
   waitTime: 2
@@ -236,3 +238,22 @@ MonoBehaviour:
   animalType: Wolf
   entityType: Wolf
   isInNest: 0
+--- !u!95 &2632560675199560817
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231772616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0899411eacc4a034e8b4d69f7778a92c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
