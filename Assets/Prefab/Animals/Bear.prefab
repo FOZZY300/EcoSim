@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  healthRegen: 0.1
   hunger: 100
   hungerPerSecond: 1
   speed: 5
@@ -194,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityType: Moose
   eatingRange: 3
-  eatHPPerSecond: 50
+  eatHPPerSecond: 10
   eatHP2Hunger: 2
 --- !u!114 &3603072607339239837
 MonoBehaviour:
@@ -210,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   facingLeft: {fileID: 0}
+  animator: {fileID: 0}
   isWalking: 0
   walkTime: 1
   waitTime: 0.5

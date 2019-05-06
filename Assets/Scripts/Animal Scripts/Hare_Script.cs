@@ -42,6 +42,13 @@ public class Hare_Script : MonoBehaviour
         h.hungerLevel -= h.hungerDecayRate;
         h.tirednessLevel -= h.tirednessDecayRate;
         h.thirstLevel -= h.thirstDecayRate;
+
+        Debug.Log(h.hungerLevel);
+    }
+
+    public void SetHunger(float hunger)  //will added this
+    {
+        h.hungerLevel = hunger / 100f;
     }
 
     private void SetTimer()

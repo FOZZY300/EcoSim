@@ -27,6 +27,11 @@ public class Moose_Script : MonoBehaviour
         m.thirstLevel -= m.thirstDecayRate;
     }
 
+    public void SetHunger(float hunger)  //will added this
+    {
+        m.hungerLevel = hunger / 100f;
+    }
+
     private void Update()
     {
         if (boxNum != 8)

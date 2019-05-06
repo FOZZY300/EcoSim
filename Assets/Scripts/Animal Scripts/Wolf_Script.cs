@@ -27,6 +27,11 @@ public class Wolf_Script : MonoBehaviour
         w.thirstLevel -= w.thirstDecayRate;
     }
 
+    public void SetHunger(float hunger)  //will added this
+    {
+        w.hungerLevel = hunger / 100f;
+    }
+
     private void Update()
     {
         if (boxNum != 8)

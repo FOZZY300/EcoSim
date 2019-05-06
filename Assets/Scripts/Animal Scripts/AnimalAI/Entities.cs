@@ -25,10 +25,20 @@ public class Entities : MonoBehaviour
 
     public List<WeightedDirection> desiredDirections;
 
+    private Bear_Script b;
+    private Moose_Script m;
+    private Wolf_Script w;
+    private Hare_Script h;//will added this
+
 
     // Start is called before the first frame update
     void Start()
     {
+        b = gameObject.GetComponent<Bear_Script>();
+        m = gameObject.GetComponent<Moose_Script>();
+        w = gameObject.GetComponent<Wolf_Script>();
+        h = gameObject.GetComponent<Hare_Script>();//will added this
+        
         //Make sure we're in entitiesByType list.
         if (entitiesByType == null)
         {
@@ -53,9 +63,26 @@ public class Entities : MonoBehaviour
     void FixedUpdate()
     {
         //Entities regenerate health.
-       // health = Mathf.Clamp(health + Time.deltaTime * healthRegen, 0, 100);
-        
+        // health = Mathf.Clamp(health + Time.deltaTime * healthRegen, 0, 100);
+
         //Entities lose hunger per second.
+        if ((gameObject.GetComponent("Hare_Script") != null))
+            h.SetHunger(hunger);
+
+        else if ((gameObject.GetComponent("Bear_Script") != null))
+            b.SetHunger(hunger);
+
+        else if ((gameObject.GetComponent("Moose_Script") != null))
+            m.SetHunger(hunger);
+
+        else if ((gameObject.GetComponent("Wolf_Script") != null))
+            w.SetHunger(hunger);
+
+
+        //will added these
+
+        //hunger = Mathf.Clamp(h.GetHungerLevel() * 100, 0, 100); //will added this
+
         hunger = Mathf.Clamp(hunger - Time.deltaTime * hungerPerSecond, 0, 100);
 
         if (hunger <= 0)
@@ -110,12 +137,7 @@ public class Entities : MonoBehaviour
                 r.enabled = false;
                 entityType = null;
             }     
-
-
-        }
-
-
-       
+        }       
     }
 
     private void OnTriggerExit2D(Collider2D other)
