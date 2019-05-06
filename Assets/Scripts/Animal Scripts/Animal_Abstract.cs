@@ -85,7 +85,7 @@ public class Hare : Animal_Abstract
     public string animalSex = "M", animalAge = "4";
     public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
     public int animalID;
-    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;  
+    public float hungerDecayRate = 0.0004f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;  
 }
 
 public class Moose : Animal_Abstract

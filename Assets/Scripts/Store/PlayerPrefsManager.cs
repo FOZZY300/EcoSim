@@ -6,7 +6,11 @@ public class PlayerPrefsManager : MonoBehaviour
 {
 
     public const string Money = "Money";
+<<<<<<< HEAD
     public static int money = 3000;
+=======
+    public static int money = 100;
+>>>>>>> 1ce6083a3e6c36ad9cad385780f3a1358405d4e0
 
     // Start is called before the first frame update
     void Start()

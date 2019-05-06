@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hare_Nest_Script : MonoBehaviour
 {
+    
     [SerializeField]
     GameObject hare1;
     [SerializeField]
@@ -16,12 +17,12 @@ public class Hare_Nest_Script : MonoBehaviour
     GameObject hare5;
     [SerializeField]
     GameObject hare6;
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

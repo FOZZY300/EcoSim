@@ -14,7 +14,7 @@ public class Info_Panel : MonoBehaviour
     private static Image image;
 
     private static Transform[] place;
-    private static Button close;
+    private static Button close, moreInfo;
     private static GameObject[] clones;
     private static Slider[][] sliders;
     private static Text[][] texts;
@@ -22,6 +22,10 @@ public class Info_Panel : MonoBehaviour
     private static int[] animalIDs;
     private static string[] animalNames;
     private static Dictionary<string, Sprite> myList = new Dictionary<string, Sprite>();
+
+    private static In_Game_UI igu;
+    private static Pause_Menu pm;
+
 
     void Start()
     {
@@ -42,6 +46,8 @@ public class Info_Panel : MonoBehaviour
         animalIDs = new int[8];
         animalNames = new string[8];
 
+        igu = FindObjectOfType<In_Game_UI>();
+        pm = FindObjectOfType<Pause_Menu>();
     }
       
     public static int OpenBox(float hungerLevel, float tirednessLevel, float thirstLevel, string animalName, string animalAge, string animalSex, int animalID)
@@ -74,7 +80,10 @@ public class Info_Panel : MonoBehaviour
         close = clones[i].GetComponentInChildren<Button>();             // Gets buttons
         close.onClick.AddListener(() => CloseBox(i));                   // Adds listener for close button
         image = clones[i].GetComponentInChildren<Image>();
-              
+
+        moreInfo = clones[i].GetComponentsInChildren<Button>()[1];
+        moreInfo.onClick.AddListener(() => OpenDatabase());
+
         sliders[i][0].value = hungerLevel;                              // Set all required values
         sliders[i][1].value = tirednessLevel;
         sliders[i][2].value = thirstLevel;
@@ -104,5 +113,11 @@ public class Info_Panel : MonoBehaviour
         Destroy(clones[boxNum]);                                                
         isOpen[boxNum] = false;
         animalIDs[boxNum] = 0;       
-    }    
+    }
+
+    public static void OpenDatabase()
+    {
+        igu.OpenPauseMenu();
+        pm.DatabaseButtonPressed();
+    }
 }
