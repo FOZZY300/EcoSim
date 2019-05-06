@@ -6,7 +6,7 @@ public class AI_SeekFood : MonoBehaviour
 {
     
     public string entityType = "Moose";
-    public float eatingRange = 10f;
+    public float eatingRange = 3f;
     public float eatHPPerSecond = 50f;
     public float eatHP2Hunger = 2f;
 
@@ -68,13 +68,15 @@ public class AI_SeekFood : MonoBehaviour
 
         if(dist < eatingRange)
         {
+            myEntity.huntingSpeed = 0;
+            closest.speed = 0;
             float hpEaten = Mathf.Clamp(eatHPPerSecond * Time.deltaTime, 0, closest.health);
             closest.health -= hpEaten;
             myEntity.hunger += hpEaten * eatHP2Hunger;
         }
         else
         {
-
+            myEntity.huntingSpeed = myEntity.speed;
         }
         //Move toward closest existing target.
         Vector2 dir = closest.transform.position - this.transform.position;

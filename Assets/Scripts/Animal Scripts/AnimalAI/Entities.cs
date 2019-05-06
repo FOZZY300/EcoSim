@@ -52,7 +52,7 @@ public class Entities : MonoBehaviour
     void FixedUpdate()
     {
         //Entities regenerate health.
-        health = Mathf.Clamp(health + Time.deltaTime * healthRegen, 0, 100);
+       // health = Mathf.Clamp(health + Time.deltaTime * healthRegen, 0, 100);
         
         //Entities lose hunger per second.
         hunger = Mathf.Clamp(hunger - Time.deltaTime * hungerPerSecond, 0, 100);
@@ -74,6 +74,7 @@ public class Entities : MonoBehaviour
         if (health <= 0)
         {
             //Entity has been died.
+            healthRegen = 0f;
             Destroy(gameObject);
             return;
         }
