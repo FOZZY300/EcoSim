@@ -6,7 +6,7 @@ public class Entities : MonoBehaviour
 
 {
     public float health = 100f;
-    public float healthRegen = 0.1f;
+    //public float healthRegen = 0.1f;
 
     public float hunger = 100f;
     public float hungerPerSecond = 0.25f;
@@ -75,8 +75,8 @@ public class Entities : MonoBehaviour
         if (health <= 0)
         {
             //Entity has been died.
-            healthRegen = 0f;
-            Destroy(gameObject);
+            //healthRegen = 0f;
+            Destroy(this.gameObject);
             return;
         }
 

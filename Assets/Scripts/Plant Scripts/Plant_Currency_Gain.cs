@@ -45,7 +45,7 @@ public class Plant_Currency_Gain : MonoBehaviour
 
     void PlantTimer_Elapsed(object source, System.Timers.ElapsedEventArgs e)
     {
-        Debug.Log("Plant Currenct Triggered");
+        Debug.Log("Plant Currency Triggered");
         Currency_Driver.AddMoney(g.currencyGain);
     }
 

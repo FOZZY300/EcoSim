@@ -80,7 +80,7 @@ public class AI_SeekFood : MonoBehaviour
         //Move toward closest existing target.
         Vector2 dir = closest.transform.position - this.transform.position;
 
-        WeightedDirection wd = new WeightedDirection(dir, 5);
+        WeightedDirection wd = new WeightedDirection(dir, 10);
 
         if (myEntity.hunger <= 40)
         myEntity.desiredDirections.Add(wd);
