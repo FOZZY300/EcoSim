@@ -48,7 +48,7 @@ public class In_Game_UI : MonoBehaviour
     }
     private void Update()
     {
-        currency.text = "Currency: " + Currency_Driver.GetMoney();       
+        currency.text = "Eco-Points: " + Currency_Driver.GetMoney();       
     }
 
     private void PlayClickSound()

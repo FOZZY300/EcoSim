@@ -18,7 +18,7 @@ public class Plant_Currency_Gain : MonoBehaviour
     private void SetTimer2()
     {
         Debug.Log("Currency timer started");
-        plantTimer = new System.Timers.Timer(30000);
+        plantTimer = new System.Timers.Timer(10000);
         plantTimer.Elapsed += PlantTimer_Elapsed;
         plantTimer.AutoReset = true;
         plantTimer.Enabled = true;
@@ -27,7 +27,7 @@ public class Plant_Currency_Gain : MonoBehaviour
     private void SetTimer1()
     {
         Debug.Log("started age timer 4 currency");
-        ageTimer = new System.Timers.Timer(45000);
+        ageTimer = new System.Timers.Timer(5000);
         ageTimer.Elapsed += AgeTimer_Elapsed;
         ageTimer.AutoReset = false;
         ageTimer.Enabled = true;
