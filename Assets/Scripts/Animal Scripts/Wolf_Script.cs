@@ -41,13 +41,13 @@ public class Wolf_Script : MonoBehaviour
     {
         if (boxNum != 8)
         {
-            boxNum = Info_Panel.UpdateUI(w.hungerLevel, w.tirednessLevel, w.thirstLevel, boxNum);
+            boxNum = Info_Panel.UpdateUI(w.hungerLevel, w.healthLevel, w.thirstLevel, boxNum);
         }
     }
 
     void OnMouseDown()
     {
-        boxNum = Info_Panel.OpenBox(w.hungerLevel, w.tirednessLevel, w.thirstLevel, w.animalName, w.animalAge, w.animalSex, guid.gameObjectID);
+        boxNum = Info_Panel.OpenBox(w.hungerLevel, w.healthLevel, w.thirstLevel, w.animalName, w.animalAge, w.animalSex, guid.gameObjectID);
     }
 
     private void SetTimer()
@@ -67,9 +67,9 @@ public class Wolf_Script : MonoBehaviour
     {
         return w.hungerLevel;
     }
-    public float GetTirednessLevel()
+    public float GetHealthLevel()
     {
-        return w.tirednessLevel;
+        return w.healthLevel;
     }
     public float GetThirstLevel()
     {

@@ -41,13 +41,13 @@ public class Moose_Script : MonoBehaviour
     {
         if (boxNum != 8)
         {
-            boxNum = Info_Panel.UpdateUI(m.hungerLevel, m.tirednessLevel, m.thirstLevel, boxNum);
+            boxNum = Info_Panel.UpdateUI(m.hungerLevel, m.healthLevel, m.thirstLevel, boxNum);
         }
     }
 
     void OnMouseDown()
     {
-        boxNum = Info_Panel.OpenBox(m.hungerLevel, m.tirednessLevel, m.thirstLevel, m.animalName, m.animalAge, m.animalSex, guid.gameObjectID);
+        boxNum = Info_Panel.OpenBox(m.hungerLevel, m.healthLevel, m.thirstLevel, m.animalName, m.animalAge, m.animalSex, guid.gameObjectID);
     }
 
     /*
