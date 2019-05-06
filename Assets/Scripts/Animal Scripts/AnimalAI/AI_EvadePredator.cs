@@ -58,14 +58,18 @@ public class AI_EvadePredator : MonoBehaviour
         //If the predator is close have high weight
         float weight = 300 / (dist * dist);
 
-        //Move toward closest existing target.
-        Vector2 dir = closest.transform.position - this.transform.position;
-        //Rather than swapping the above vectors this method allows for smoother transitions between targets.
-        dir *= -1;
+        if (dist < 20)
+        {
+            //Move toward closest existing target.
+            Vector2 dir = closest.transform.position - this.transform.position;
+            //Rather than swapping the above vectors this method allows for smoother transitions between targets.
+            dir *= -1;
 
-        WeightedDirection wd = new WeightedDirection(dir, weight);
+            WeightedDirection wd = new WeightedDirection(dir, weight);
 
-        myEntity.desiredDirections.Add(wd);
-
+            myEntity.desiredDirections.Add(wd);
+        }
+        else
+            wander.ChooseDirection();
     }
 }

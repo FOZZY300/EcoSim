@@ -177,7 +177,9 @@ MonoBehaviour:
   hungerPerSecond: 0.5
   speed: 5
   huntingSpeed: 5
+  animalType: Bear
   entityType: Bear
+  isInNest: 0
 --- !u!114 &4793728747680994666
 MonoBehaviour:
   m_ObjectHideFlags: 0

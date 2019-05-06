@@ -14,6 +14,7 @@ public class Entities : MonoBehaviour
     public float speed;
     public float huntingSpeed;
 
+    public string animalType = "Moose";
     public string entityType = "Moose";
 
     static public Dictionary<string, List<Entities>> entitiesByType;
@@ -105,6 +106,7 @@ public class Entities : MonoBehaviour
             isInNest = true;
             SpriteRenderer r = GetComponent<SpriteRenderer>();
             r.enabled = false;
+            entityType = null;
             }        
     }
 
@@ -117,6 +119,7 @@ public class Entities : MonoBehaviour
             isInNest = false;
             SpriteRenderer r = GetComponent<SpriteRenderer>();
             r.enabled = enabled;
+            entityType = animalType;
         }
     }
 }
