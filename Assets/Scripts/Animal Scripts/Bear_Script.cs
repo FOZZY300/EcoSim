@@ -41,7 +41,7 @@ public class Bear_Script : MonoBehaviour
     {
         if(boxNum != 8)
         {
-            boxNum = Info_Panel.UpdateUI(b.hungerLevel, b.tirednessLevel, b.thirstLevel, boxNum);
+            boxNum = Info_Panel.UpdateUI(b.hungerLevel, b.healthLevel, b.thirstLevel, boxNum);
         }
     }
 
@@ -60,7 +60,7 @@ public class Bear_Script : MonoBehaviour
 
     void OnMouseDown()
     {                      
-        boxNum = Info_Panel.OpenBox(b.hungerLevel, b.tirednessLevel, b.thirstLevel, b.animalName, b.animalAge, b.animalSex, guid.gameObjectID);       
+        boxNum = Info_Panel.OpenBox(b.hungerLevel, b.healthLevel, b.thirstLevel, b.animalName, b.animalAge, b.animalSex, guid.gameObjectID);       
     }
 
     public float GetHungerLevel()

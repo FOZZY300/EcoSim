@@ -104,6 +104,10 @@ public class Info_Panel : MonoBehaviour
         sliders[boxNum][0].value = hungerLevel;                         // Udates all slider values
         sliders[boxNum][1].value = tirednessLevel;
         sliders[boxNum][2].value = thirstLevel;
+        if (tirednessLevel <= 0.002f)
+        {
+            CloseBox(boxNum);
+        }
         return boxNum;
     }
     
