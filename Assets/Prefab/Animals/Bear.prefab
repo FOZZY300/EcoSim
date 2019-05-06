@@ -174,7 +174,7 @@ MonoBehaviour:
   health: 100
   healthRegen: 0.1
   hunger: 100
-  hungerPerSecond: 0.5
+  hungerPerSecond: 1
   speed: 5
   huntingSpeed: 5
   animalType: Bear
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: Moose
-  eatingRange: 2
+  eatingRange: 3
   eatHPPerSecond: 50
   eatHP2Hunger: 2
 --- !u!114 &3603072607339239837
@@ -208,11 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   facingLeft: {fileID: 0}
   isWalking: 0
   walkTime: 1
-  waitTime: 2
+  waitTime: 0.5
   facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &7043990453916350228

@@ -204,7 +204,7 @@ MonoBehaviour:
   health: 100
   healthRegen: 0.1
   hunger: 100
-  hungerPerSecond: 0.4
+  hungerPerSecond: 2
   speed: 7
   huntingSpeed: 7
   animalType: Moose
@@ -222,10 +222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 7
   facingLeft: {fileID: 0}
   isWalking: 0
-  walkTime: 1
+  walkTime: 2
   waitTime: 2
   facingRight: 1
   playArea: {fileID: 0}

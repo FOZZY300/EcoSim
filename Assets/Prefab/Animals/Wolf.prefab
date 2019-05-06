@@ -120,10 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   facingLeft: {fileID: 0}
   isWalking: 0
-  walkTime: 1
+  walkTime: 3
   waitTime: 2
   facingRight: 1
   playArea: {fileID: 0}
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: Hare
-  eatingRange: 10
+  eatingRange: 2
   eatHPPerSecond: 50
   eatHP2Hunger: 2
 --- !u!114 &3009974499620197364
@@ -230,7 +230,7 @@ MonoBehaviour:
   health: 100
   healthRegen: 0.1
   hunger: 100
-  hungerPerSecond: 0.3
+  hungerPerSecond: 5
   speed: 5
   huntingSpeed: 6
   animalType: Wolf

@@ -56,7 +56,7 @@ public class AI_EvadePredator : MonoBehaviour
         }
 
         //If the predator is close have high weight
-        float weight = 300 / (dist * dist);
+        float weight = 100 / (dist * dist);
 
         if (dist < 20)
         {

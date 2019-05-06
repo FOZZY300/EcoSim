@@ -75,7 +75,7 @@ public class AI_HideInNest : MonoBehaviour
 
         Vector2 dir = closest.transform.position - this.transform.position;
 
-        WeightedDirection wd = new WeightedDirection(dir, 20);
+        WeightedDirection wd = new WeightedDirection(dir, 50);
 
         myEntity.desiredDirections.Add(wd);
 
