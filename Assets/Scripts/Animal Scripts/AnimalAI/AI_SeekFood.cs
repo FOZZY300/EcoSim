@@ -22,8 +22,7 @@ public class AI_SeekFood : MonoBehaviour
     //Alter update value if pathfinding is enabled such as A*
     void DoAIBehaviour()
     {
-        if (myEntity.hunger < 50)
-        {
+        
 
             if (Entities.entitiesByType.ContainsKey(entityType) == false)
             {
@@ -87,8 +86,7 @@ public class AI_SeekFood : MonoBehaviour
             WeightedDirection wd = new WeightedDirection(dir, 5);
 
             myEntity.desiredDirections.Add(wd);
-        }
-        else
-            wander.ChooseDirection();
+        
+        
     }
 }

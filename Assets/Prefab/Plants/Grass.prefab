@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8668503243839598898}
   - component: {fileID: 1889493061839001570}
   - component: {fileID: 5843479191130252214}
+  - component: {fileID: 3548598858316029665}
   m_Layer: 14
   m_Name: Grass
   m_TagString: Untagged
@@ -135,3 +136,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &3548598858316029665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452271172059344142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f175a6c29df9d67419da5ced5ba865cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthRegen: 0
+  hunger: 100
+  hungerPerSecond: 0
+  speed: 0
+  huntingSpeed: 0
+  animalType: Grass
+  entityType: Grass
+  isInNest: 0

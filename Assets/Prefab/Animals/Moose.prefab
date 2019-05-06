@@ -204,10 +204,12 @@ MonoBehaviour:
   health: 100
   healthRegen: 0.1
   hunger: 100
-  hungerPerSecond: 5
+  hungerPerSecond: 0.4
   speed: 7
   huntingSpeed: 7
+  animalType: Moose
   entityType: Moose
+  isInNest: 0
 --- !u!114 &4397704752699523248
 MonoBehaviour:
   m_ObjectHideFlags: 0

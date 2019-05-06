@@ -143,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5157750788964543026}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: Grass
-  eatingRange: 10
+  eatingRange: 2
   eatHPPerSecond: 50
   eatHP2Hunger: 2
 --- !u!114 &7140223388884047469
@@ -245,9 +245,10 @@ MonoBehaviour:
   health: 100
   healthRegen: 0.1
   hunger: 100
-  hungerPerSecond: 5
+  hungerPerSecond: 0.2
   speed: 6
   huntingSpeed: 6
+  animalType: Hare
   entityType: Hare
   isInNest: 0
 --- !u!114 &3158815047772959329
