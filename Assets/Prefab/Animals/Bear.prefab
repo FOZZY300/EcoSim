@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4793728747680994666}
   - component: {fileID: 3603072607339239837}
   - component: {fileID: 7043990453916350228}
+  - component: {fileID: 7972187396144334438}
   m_Layer: 10
   m_Name: Bear
   m_TagString: Untagged
@@ -207,11 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
   facingLeft: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 7972187396144334438}
   isWalking: 0
-  walkTime: 1
+  walkTime: 3
   waitTime: 2
   facingRight: 1
   playArea: {fileID: 0}
@@ -236,3 +237,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   visibleTargets: []
+--- !u!95 &7972187396144334438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603072607339239839}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 055260dbae0db434fa6b151bf05cc072, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
