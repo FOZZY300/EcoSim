@@ -27,6 +27,11 @@ public class Moose_Script : MonoBehaviour
         m.thirstLevel -= m.thirstDecayRate;
     }
 
+    public void SetHealth(float health)  //will added this
+    {
+        m.healthLevel = health / 100f;
+    }
+
     public void SetHunger(float hunger)  //will added this
     {
         m.hungerLevel = hunger / 100f;

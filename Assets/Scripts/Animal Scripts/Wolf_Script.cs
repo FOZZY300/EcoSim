@@ -27,6 +27,11 @@ public class Wolf_Script : MonoBehaviour
         w.thirstLevel -= w.thirstDecayRate;
     }
 
+    public void SetHealth(float health)  //will added this
+    {
+        w.healthLevel = health / 100f;
+    }
+
     public void SetHunger(float hunger)  //will added this
     {
         w.hungerLevel = hunger / 100f;

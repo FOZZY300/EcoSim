@@ -82,7 +82,6 @@ public class Animal_Wander : MonoBehaviour
             moveSpeed = moveSpeed + 0.01f;
         }
 
-
         if (isWalking)
         {
             walkCounter -= Time.deltaTime;

@@ -78,6 +78,18 @@ public class Entities : MonoBehaviour
         else if ((gameObject.GetComponent("Wolf_Script") != null))
             w.SetHunger(hunger);
 
+        if ((gameObject.GetComponent("Hare_Script") != null))
+            h.SetHealth(health);
+
+        else if ((gameObject.GetComponent("Bear_Script") != null))
+            b.SetHealth(health);
+
+        else if ((gameObject.GetComponent("Moose_Script") != null))
+            m.SetHealth(health);
+
+        else if ((gameObject.GetComponent("Wolf_Script") != null))
+            w.SetHealth(health);
+
 
         //will added these
 

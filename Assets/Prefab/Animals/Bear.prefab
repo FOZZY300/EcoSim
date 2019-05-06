@@ -212,7 +212,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   isWalking: 0
   walkTime: 1
-  waitTime: 0.5
+  waitTime: 2
   facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &7043990453916350228

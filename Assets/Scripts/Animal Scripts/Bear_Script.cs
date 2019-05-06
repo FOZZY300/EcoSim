@@ -27,6 +27,11 @@ public class Bear_Script : MonoBehaviour
         b.thirstLevel -= b.thirstDecayRate;
     }
 
+    public void SetHealth(float health)  //will added this
+    {
+        b.healthLevel = health / 100f;
+    }
+
     public void SetHunger(float hunger)  //will added this
     {
         b.hungerLevel = hunger / 100f;
