@@ -226,7 +226,7 @@ MonoBehaviour:
   facingLeft: {fileID: 0}
   animator: {fileID: 4808629589647023609}
   isWalking: 0
-  walkTime: 2
+  walkTime: 3
   waitTime: 2
   facingRight: 1
   playArea: {fileID: 0}
