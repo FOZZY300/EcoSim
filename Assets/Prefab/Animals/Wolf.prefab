@@ -126,7 +126,7 @@ MonoBehaviour:
   animator: {fileID: 2632560675199560817}
   isWalking: 0
   walkTime: 3
-  waitTime: 2
+  waitTime: 1
   facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &231772617
@@ -230,7 +230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  healthRegen: 0.1
   hunger: 100
   hungerPerSecond: 5
   speed: 5
