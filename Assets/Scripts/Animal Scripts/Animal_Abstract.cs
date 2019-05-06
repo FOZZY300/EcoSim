@@ -51,9 +51,9 @@ public class Bear : Animal_Abstract
 
     //semitest
     public string animalSex = "F", animalAge = "8";
-    public float hungerLevel = 0.8f, tirednessLevel = 0.5f, thirstLevel = 0.8f;
+    public float healthLevel = 1f, hungerLevel = 0.8f, tirednessLevel = 0.5f, thirstLevel = 0.8f;
     public int animalID;
-    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
+    public float healthDecayRate = 0.0001f, hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 
        
 }
@@ -83,9 +83,9 @@ public class Hare : Animal_Abstract
 
     //semitest
     public string animalSex = "M", animalAge = "4";
-    public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
+    public float healthLevel = 1f, hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
     public int animalID;
-    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;  
+    public float healthDecayRate = 0.0001f, hungerDecayRate = 0.0004f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;  
 }
 
 public class Moose : Animal_Abstract
@@ -112,9 +112,9 @@ public class Moose : Animal_Abstract
     public int cost = 10;   
 
     public string animalSex = "M", animalAge = "4";
-    public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
+    public float healthLevel = 1f, hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
     public int animalID;
-    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
+    public float healthDecayRate = 0.0001f, hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 }
 
 public class Wolf : Animal_Abstract
@@ -141,9 +141,9 @@ public class Wolf : Animal_Abstract
     public int cost = 10;
 
     public string animalSex = "M", animalAge = "4";
-    public float hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
+    public float healthLevel = 1f, hungerLevel = 0.4f, tirednessLevel = 0.4f, thirstLevel = 0.4f;
     public int animalID;
-    public float hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
+    public float healthDecayRate = 0.0001f, hungerDecayRate = 0.0001f, tirednessDecayRate = 0.0002f, thirstDecayRate = 0.0003f;
 }
 
 public class Grass : Animal_Abstract

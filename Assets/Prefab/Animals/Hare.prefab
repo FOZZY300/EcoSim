@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 5503695142323510308}
   - component: {fileID: 3643187835338403763}
   - component: {fileID: 7140223388884047469}
+  - component: {fileID: 3158815047772959329}
+  - component: {fileID: 3028118405231258956}
   m_Layer: 10
   m_Name: Hare
   m_TagString: Untagged
@@ -34,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5157750788964543026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.21, y: -2.1, z: 1}
+  m_LocalPosition: {x: 2.09, y: -3.68, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,7 +128,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -142,16 +144,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5157750788964543026}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 2
   facingLeft: {fileID: 0}
+  animator: {fileID: 3028118405231258956}
   isWalking: 0
-  walkTime: 2
-  waitTime: 2
+  walkTime: 3
+  waitTime: 1
   facingRight: 1
   playArea: {fileID: 0}
 --- !u!114 &3109926472897956426
@@ -178,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pRadius: 5
-  pAngle: 36
+  pRadius: 35
+  pAngle: 157
   targetMask:
     serializedVersion: 2
     m_Bits: 16384
@@ -226,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: Grass
-  eatingRange: 10
+  eatingRange: 2
   eatHPPerSecond: 50
   eatHP2Hunger: 2
 --- !u!114 &7140223388884047469
@@ -245,4 +248,40 @@ MonoBehaviour:
   hunger: 100
   hungerPerSecond: 5
   speed: 6
+  huntingSpeed: 6
+  animalType: Hare
   entityType: Hare
+  isInNest: 0
+--- !u!114 &3158815047772959329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb46b7f891ea7d4d8f6737ccbaad9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityType: Wolf
+  fearDistance: 7
+--- !u!95 &3028118405231258956
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157750788964543026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7e40cf54c0e2534892cb1418b537596, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7781975247965257456}
   - component: {fileID: 7142395367067826454}
   - component: {fileID: 3009974499620197364}
+  - component: {fileID: 2632560675199560817}
   m_Layer: 11
   m_Name: Wolf
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 15
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -115,15 +116,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231772616}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4774bd2d510cce7499dde385629818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   facingLeft: {fileID: 0}
+  animator: {fileID: 2632560675199560817}
   isWalking: 0
-  walkTime: 1
+  walkTime: 3
   waitTime: 2
   facingRight: 1
   playArea: {fileID: 0}
@@ -151,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02a68ee0d6d7a14084e143c4ad7fd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pRadius: 20
-  pAngle: 60
+  pRadius: 30
+  pAngle: 86
   targetMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -212,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: Hare
-  eatingRange: 10
+  eatingRange: 2
   eatHPPerSecond: 50
   eatHP2Hunger: 2
 --- !u!114 &3009974499620197364
@@ -228,7 +230,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthRegen: 0.1
   hunger: 100
   hungerPerSecond: 5
-  speed: 4
+  speed: 5
+  huntingSpeed: 6
+  animalType: Wolf
   entityType: Wolf
+  isInNest: 0
+--- !u!95 &2632560675199560817
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231772616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0899411eacc4a034e8b4d69f7778a92c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

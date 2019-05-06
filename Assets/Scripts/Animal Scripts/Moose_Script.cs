@@ -27,17 +27,27 @@ public class Moose_Script : MonoBehaviour
         m.thirstLevel -= m.thirstDecayRate;
     }
 
+    public void SetHealth(float health)  //will added this
+    {
+        m.healthLevel = health / 100f;
+    }
+
+    public void SetHunger(float hunger)  //will added this
+    {
+        m.hungerLevel = hunger / 100f;
+    }
+
     private void Update()
     {
         if (boxNum != 8)
         {
-            boxNum = Info_Panel.UpdateUI(m.hungerLevel, m.tirednessLevel, m.thirstLevel, boxNum);
+            boxNum = Info_Panel.UpdateUI(m.hungerLevel, m.healthLevel, m.thirstLevel, boxNum);
         }
     }
 
     void OnMouseDown()
     {
-        boxNum = Info_Panel.OpenBox(m.hungerLevel, m.tirednessLevel, m.thirstLevel, m.animalName, m.animalAge, m.animalSex, guid.gameObjectID);
+        boxNum = Info_Panel.OpenBox(m.hungerLevel, m.healthLevel, m.thirstLevel, m.animalName, m.animalAge, m.animalSex, guid.gameObjectID);
     }
 
     /*

@@ -27,7 +27,7 @@ public class Hare_Script : MonoBehaviour
     {        
         if (boxNum != 8)
         {
-            boxNum = Info_Panel.UpdateUI(h.hungerLevel, h.tirednessLevel, h.thirstLevel, boxNum);
+            boxNum = Info_Panel.UpdateUI(h.hungerLevel, h.healthLevel, h.thirstLevel, boxNum);
         }
 
         if (hasNest == false)
@@ -39,9 +39,20 @@ public class Hare_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        h.hungerLevel -= h.hungerDecayRate;
-        h.tirednessLevel -= h.tirednessDecayRate;
+        h.hungerLevel -= h.hungerDecayRate;       
         h.thirstLevel -= h.thirstDecayRate;
+
+        Debug.Log(h.hungerLevel);
+    }
+
+    public void SetHealth(float health)  //will added this
+    {
+        h.healthLevel = health / 100f;
+    }
+
+    public void SetHunger(float hunger)  //will added this
+    {
+        h.hungerLevel = hunger / 100f;
     }
 
     private void SetTimer()
@@ -80,16 +91,16 @@ public class Hare_Script : MonoBehaviour
 
     void OnMouseDown()
     {
-        boxNum = Info_Panel.OpenBox(h.hungerLevel, h.tirednessLevel, h.thirstLevel, h.animalName, h.animalAge, h.animalSex, guid.gameObjectID);
+        boxNum = Info_Panel.OpenBox(h.hungerLevel, h.healthLevel, h.thirstLevel, h.animalName, h.animalAge, h.animalSex, guid.gameObjectID);
     }
    
     public float GetHungerLevel()
     {
         return h.hungerLevel;
     }
-    public float GetTirednessLevel()
+    public float GetHealthLevel()
     {
-        return h.tirednessLevel;
+        return h.healthLevel;
     }
     public float GetThirstLevel()
     {

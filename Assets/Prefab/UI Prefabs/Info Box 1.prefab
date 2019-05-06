@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sleep
+  m_Text: Health
 --- !u!1 &1252581042290363784
 GameObject:
   m_ObjectHideFlags: 0
